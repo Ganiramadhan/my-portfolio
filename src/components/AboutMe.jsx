@@ -26,48 +26,78 @@ const HeroImage = () => (
     </div>
 );
 
-const TabContent = ({ activeTab, experienceStep, handlePrevStep, handleNextStep, handleDownloadResume }) => (
-    <div className="text-lg text-gray-700 dark:text-gray-300 space-y-4">
-        {activeTab === 'about' && (
-            <div key="about">
-                <h1 className="text-3xl font-bold text-center text-gray-800 dark:text-gray-200 mb-6">ABOUT ME</h1>
-                <p>
-                    Hello, I am <span className="highlight">Gani Ramadhan</span>, a passionate <span className="highlight">Fullstack Developer</span> with over a year of experience in building and maintaining web applications. My technical expertise includes <span className="highlight">PHP</span>, <span className="highlight">Laravel</span>, <span className="highlight">JavaScript</span>, <span className="highlight">ReactJS</span>, <span className="highlight">Next.js</span>, and <span className="highlight">Node.js</span>. I am proficient in using CSS frameworks such as <span className="highlight">Tailwind CSS</span> and <span className="highlight">Material UI</span> to create <span className='highlight'>responsive and visually appealing user interfaces.</span>  I have a strong enthusiasm for learning and continually expanding my knowledge, particularly in the field of technology. My high level of dedication and <span className='highlight'>problem-solving skills </span>enable me to tackle complex challenges effectively. I am committed to delivering high-quality solutions and am always eager to collaborate and create innovative projects.
-                </p>
-                <button
-                    onClick={handleDownloadResume}
-                    className="btn bg-blue-400 text-white px-4 py-2 mt-4 hover:bg-blue-500 transition duration-300 rounded-md flex items-center"
-                >
-                    My Resume <FiDownload className="ml-2" />
-                </button>
-            </div>
-        )}
-        {activeTab === 'experience' && (
-            <div key="experience">
-                <h1 className="text-3xl font-bold text-center text-gray-800 dark:text-gray-200 mb-8">Professional history</h1>
-                <h5 className="text-xl font-semibold text-gray-700 dark:text-gray-300 mb-2">{experienceContent[experienceStep].experience}</h5>
-                <p className="text-gray-600 dark:text-gray-400">{experienceContent[experienceStep].date}</p>
-                <p>{experienceContent[experienceStep].description}</p>
-                <div className="flex justify-between mt-6">
+const TabContent = ({ activeTab, experienceStep, handlePrevStep, handleNextStep, handleDownloadResume }) => {
+    const [showFullText, setShowFullText] = useState(false);
+    
+    const handleToggleText = () => {
+        setShowFullText(!showFullText);
+    };
+
+    return (
+        <div className="text-lg text-gray-700 dark:text-gray-300 space-y-4">
+            {activeTab === 'about' && (
+                <div key="about">
+                    <h1 className="text-3xl font-bold text-center text-gray-800 dark:text-gray-200 mb-6">ABOUT ME</h1>
+                    <p>
+                        Hello, I am <span className="highlight">Gani Ramadhan</span>, a passionate <span className="highlight">Fullstack Developer</span> with over a year of experience in building and maintaining web applications. My technical expertise includes <span className="highlight">PHP</span>, <span className="highlight">Laravel</span>, <span className="highlight">JavaScript</span>, <span className="highlight">ReactJS</span>, <span className="highlight">Next.js</span>, and <span className="highlight">Node.js</span>. I am proficient in using CSS frameworks such as <span className="highlight">Tailwind CSS</span> and <span className="highlight">Material UI</span> to create <span className='highlight'>responsive and visually appealing user interfaces.</span>  I have a strong enthusiasm for learning and continually expanding my knowledge, particularly in the field of technology. 
+                    </p>
+                    {!showFullText && (
+                        <span
+                            onClick={handleToggleText}
+                            className="cursor-pointer text-blue-500 hover:text-blue-700"
+                        >
+                            Load More
+                        </span>
+                    )}
+                    {showFullText && (
+                        <>
+                            <p>
+                            My high level of dedication and <span className='highlight'>problem-solving skills </span>enable me to tackle complex challenges effectively. I am committed to delivering high-quality solutions and am always eager to collaborate and create innovative projects. I have a strong enthusiasm for learning and continually expanding my knowledge, particularly in the field of technology. My high level of dedication and <span className='highlight'>problem-solving skills </span>enable me to tackle complex challenges effectively. I am committed to delivering high-quality solutions and am always eager to collaborate and create innovative projects.
+                            </p>
+                            <span
+                                onClick={handleToggleText}
+                                className="cursor-pointer text-blue-500 hover:text-blue-700"
+                            >
+                                Show Less
+                            </span>
+                        </>
+                    )}
                     <button
-                        onClick={handlePrevStep}
-                        disabled={experienceStep === 0}
-                        className={`p-4 rounded-md ${experienceStep === 0 ? 'bg-gray-300 dark:bg-gray-600' : 'bg-blue-400 text-white hover:bg-blue-500'}`}
+                        onClick={handleDownloadResume}
+                        className="btn bg-blue-400 text-white px-4 py-2 mt-4 hover:bg-blue-500 transition duration-300 rounded-md flex items-center justify-end ml-auto"
                     >
-                        <FaArrowLeft />
+                        My Resume <FiDownload className="ml-2" />
                     </button>
-                    <button
-                        onClick={handleNextStep}
-                        disabled={experienceStep === experienceContent.length - 1}
-                        className={`p-4 rounded-md ${experienceStep === experienceContent.length - 1 ? 'bg-gray-300 dark:bg-gray-600' : 'bg-blue-400 text-white hover:bg-blue-500'}`}
-                    >
-                        <FaArrowRight />
-                    </button>
+
                 </div>
-            </div>
-        )}
-    </div>
-);
+            )}
+            {activeTab === 'experience' && (
+                <div key="experience">
+                    <h1 className="text-3xl font-bold text-center text-gray-800 dark:text-gray-200 mb-8">Professional history</h1>
+                    <h5 className="text-xl font-semibold text-gray-700 dark:text-gray-300 mb-2">{experienceContent[experienceStep].experience}</h5>
+                    <p className="text-gray-600 dark:text-gray-400">{experienceContent[experienceStep].date}</p>
+                    <p>{experienceContent[experienceStep].description}</p>
+                    <div className="flex justify-between mt-6">
+                        <button
+                            onClick={handlePrevStep}
+                            disabled={experienceStep === 0}
+                            className={`p-4 rounded-md ${experienceStep === 0 ? 'bg-gray-300 dark:bg-gray-600' : 'bg-blue-400 text-white hover:bg-blue-500'}`}
+                        >
+                            <FaArrowLeft />
+                        </button>
+                        <button
+                            onClick={handleNextStep}
+                            disabled={experienceStep === experienceContent.length - 1}
+                            className={`p-4 rounded-md ${experienceStep === experienceContent.length - 1 ? 'bg-gray-300 dark:bg-gray-600' : 'bg-blue-400 text-white hover:bg-blue-500'}`}
+                        >
+                            <FaArrowRight />
+                        </button>
+                    </div>
+                </div>
+            )}
+        </div>
+    );
+};
 
 const AboutMe = () => {
     const [activeTab, setActiveTab] = useState('about');
@@ -113,19 +143,19 @@ const AboutMe = () => {
                                 About 
                             </button>
                             <button
-                                className={`px-6 py-2 rounded-t-lg ml-2 flex items-center ${activeTab === 'experience' ? 'bg-gray-200 dark:bg-blue-400 text-gray-800 dark:text-gray-200' : 'bg-gray-100 dark:bg-gray-600 text-gray-600 dark:text-gray-400'}`}
+                                className={`px-6 py-2 rounded-t-lg flex items-center ${activeTab === 'experience' ? 'bg-gray-200 dark:bg-blue-400 text-gray-800 dark:text-gray-200' : 'bg-gray-100 dark:bg-gray-600 text-gray-600 dark:text-gray-400'}`}
                                 onClick={() => setActiveTab('experience')}
                             >
                                 <FaBriefcase className="mr-2" />
                                 Experience
                             </button>
                         </div>
-                        <TabContent 
-                            activeTab={activeTab} 
-                            experienceStep={experienceStep} 
-                            handlePrevStep={handlePrevStep} 
-                            handleNextStep={handleNextStep} 
-                            handleDownloadResume={handleDownloadResume} 
+                        <TabContent
+                            activeTab={activeTab}
+                            experienceStep={experienceStep}
+                            handlePrevStep={handlePrevStep}
+                            handleNextStep={handleNextStep}
+                            handleDownloadResume={handleDownloadResume}
                         />
                     </div>
                 </div>

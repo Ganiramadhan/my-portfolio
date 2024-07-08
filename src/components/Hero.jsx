@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import { FaHandshake, FaArrowUp } from 'react-icons/fa';
 import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import heroImage from '../assets/dino-kuning.png';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Hero = () => {
     const [showScrollToTop, setShowScrollToTop] = useState(false);

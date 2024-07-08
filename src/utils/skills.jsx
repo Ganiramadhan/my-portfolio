@@ -17,7 +17,7 @@ export const skills = [
     { title: 'Node.js', imageSrc: nodejsImage, shortDescription: 'JavaScript runtime on the server side.', link: 'https://nodejs.org/' },
     { title: 'PostgreSQL', imageSrc: postgreSqlImage, shortDescription: 'Open-source relational database.', link: 'https://www.postgresql.org/' },
     { title: 'PHP', imageSrc: phpImage, shortDescription: 'Server-side scripting language.', link: 'https://www.php.net/' },
-    { title: 'Bootstrap', imageSrc: bootstrapImage, shortDescription: 'CSS framework for responsive design.', link: 'https://getbootstrap.com/' },
-    { title: 'jQuery', imageSrc: jqueryImage, shortDescription: 'JavaScript library for DOM manipulation.', link: 'https://jquery.com/' },
+    { title: 'Bootstrap', imageSrc: bootstrapImage, shortDescription: 'CSS framework.', link: 'https://getbootstrap.com/' },
+    { title: 'jQuery', imageSrc: jqueryImage, shortDescription: 'JavaScript DOM manipulation.', link: 'https://jquery.com/' },
     { title: 'Tailwind CSS', imageSrc: tailwindcssImage, shortDescription: 'Utility-first CSS framework.', link: 'https://tailwindcss.com/' },
 ];

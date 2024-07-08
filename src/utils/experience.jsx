@@ -9,7 +9,7 @@ export const experienceContent = [
     {
         id: 2, 
         experience: 'Web Developer at PT. Mega Kerasi Indotama',
-        date: 'May 2023 - August 2023',
+        date: 'August 2023 - Dec 2023',
         description: 'Served as a Fullstack Developer, creating a financial reporting website using Laravel and Bootstrap. Responsibilities included testing and deploying the application to production.'
     },
     {
