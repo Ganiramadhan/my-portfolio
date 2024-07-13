@@ -1,5 +1,4 @@
 import heroImage from '../assets/dino-kuning.png';
-import resumePDF from '../assets/cv.pdf';
 import { useState } from 'react';
 import { FaArrowLeft, FaArrowRight, FaInfoCircle, FaBriefcase } from 'react-icons/fa';
 import { FiDownload } from "react-icons/fi";
@@ -62,12 +61,12 @@ const TabContent = ({ activeTab, experienceStep, handlePrevStep, handleNextStep,
                             </span>
                         </>
                     )}
-                    <button
+                    {/* <button
                         onClick={handleDownloadResume}
                         className="btn bg-blue-400 text-white px-4 py-2 mt-4 hover:bg-blue-500 transition duration-300 rounded-md flex items-center justify-end ml-auto"
                     >
                         My Resume <FiDownload className="ml-2" />
-                    </button>
+                    </button> */}
 
                 </div>
             )}
