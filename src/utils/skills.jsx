@@ -8,6 +8,8 @@ import postgreSqlImage from '../assets/postgresql.png';
 import bootstrapImage from '../assets/boostrap.png';
 import jqueryImage from '../assets/jquery.png';
 import tailwindcssImage from '../assets/tailwindcss.png';
+import inertiaImage from '../assets/inertia.png';
+import gitImage from '../assets/git.png';
 
 export const skills = [
     { title: 'Laravel', imageSrc: laravelImage, shortDescription: 'PHP framework for web applications.', link: 'https://laravel.com/' },
@@ -20,4 +22,6 @@ export const skills = [
     { title: 'Bootstrap', imageSrc: bootstrapImage, shortDescription: 'CSS framework.', link: 'https://getbootstrap.com/' },
     { title: 'jQuery', imageSrc: jqueryImage, shortDescription: 'JavaScript DOM manipulation.', link: 'https://jquery.com/' },
     { title: 'Tailwind CSS', imageSrc: tailwindcssImage, shortDescription: 'Utility-first CSS framework.', link: 'https://tailwindcss.com/' },
+    { title: 'Inertia', imageSrc: inertiaImage, shortDescription: 'SPA framework without APIs.', link: 'https://inertiajs.com/' },
+    { title: 'Git', imageSrc: gitImage, shortDescription: 'Distributed version control syste.', link: 'https://git-scm.com/' },
 ];

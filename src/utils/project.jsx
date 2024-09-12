@@ -5,6 +5,7 @@ import projectImage4 from '../assets/project1.png';
 import projectImage5 from '../assets/project4.png';
 import projectImage6 from '../assets/project6.png';
 import projectImage7 from '../assets/project7.png';
+import projectImage8 from '../assets/project8.png';
 
 export const projects = [
     {
@@ -62,8 +63,16 @@ export const projects = [
         image: projectImage6,
         title: 'Movie List',
         description: "Description: This repository contains the code for a movie listing application that allows users to search, filter, and manage their watchlist of movies. The application is built using React and features responsive design, modern UI elements, and integration with The Movie Database (TMDb) API for fetching movie data.",
-        link: 'https://movie-pedia-sage.vercel.app',
+        link: 'https://movie-pedia-sage.vercel.app',    
         languages: ['React.js', 'Node.js', 'Tailwind CSS', 'TMDb API']
+    },
+    {
+        id: 8,
+        image: projectImage8,
+        title: 'GaniPedia Post',
+        description: "Web project built with Laravel 11, Inertia, and React using Breeze for authentication. It features CRUD functionality for products and posts using SQLite, and fetches and displays movie lists from an external API. The project includes login and register middleware to manage user authentication and access control.",
+        link: 'https://github.com/Ganiramadhan/ganipedia-laravel11',
+        languages: ['Laravel', 'SQLite', 'Tailwind CSS', 'TMDb API']
     },
     
 ];
