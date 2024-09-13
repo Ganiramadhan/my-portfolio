@@ -6,11 +6,14 @@ import { skills } from '../../utils/skills';
 const MySkills = () => {
     const [isAnimating, setIsAnimating] = useState(false);
     const [selectedSkillIndex, setSelectedSkillIndex] = useState(null);
+    const [isRotating, setIsRotating] = useState(true);
+    const [rotationAngle, setRotationAngle] = useState(0); 
 
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (!event.target.closest('.skill-card') && !event.target.closest('.skill-description')) {
                 setSelectedSkillIndex(null);
+                setIsRotating(true); 
             }
         };
 
@@ -24,17 +27,25 @@ const MySkills = () => {
     const handleCardClick = () => {
         setIsAnimating(!isAnimating);
         setSelectedSkillIndex(null);
+        setIsRotating(true); 
     };
 
     const handleSkillClick = (index, event) => {
         event.stopPropagation();
         setSelectedSkillIndex(index);
+        setIsRotating(false); 
     };
 
     const handleLearnMoreClick = () => {
         if (selectedSkillIndex !== null) {
             window.open(skills[selectedSkillIndex].link, '_blank');
         }
+    };
+
+    const rotateVariant = {
+        rotate: isRotating
+            ? { rotate: rotationAngle + 360, transition: { repeat: Infinity, ease: "linear", duration: 20 } }
+            : { rotate: rotationAngle }
     };
 
     return (
@@ -50,20 +61,28 @@ const MySkills = () => {
                         {isAnimating ? 'My Skills' : 'Click Me'}
                     </h3>
                 </motion.div>
-                <div className={`absolute w-full h-full flex justify-center items-center ${isAnimating ? 'animate-rotate' : ''}`}>
+                <motion.div
+                    className="absolute w-full h-full flex justify-center items-center"
+                    style={{ rotate: rotationAngle }}
+                    animate={rotateVariant.rotate}
+                    onUpdate={(latest) => {
+                        if (!isRotating) setRotationAngle(latest.rotate);
+                    }}
+                >
                     <AnimatePresence>
-                        {isAnimating && skills.map((skill, index) => (
-                            <SkillCard
-                                key={index}
-                                imageSrc={skill.imageSrc}
-                                index={index}
-                                totalSkills={skills.length}
-                                isSelected={index === selectedSkillIndex}
-                                onClick={(event) => handleSkillClick(index, event)}
-                            />
-                        ))}
+                        {isAnimating &&
+                            skills.map((skill, index) => (
+                                <SkillCard
+                                    key={index}
+                                    imageSrc={skill.imageSrc}
+                                    index={index}
+                                    totalSkills={skills.length}
+                                    isSelected={index === selectedSkillIndex}
+                                    onClick={(event) => handleSkillClick(index, event)}
+                                />
+                            ))}
                     </AnimatePresence>
-                </div>
+                </motion.div>
                 <AnimatePresence>
                     {selectedSkillIndex !== null && (
                         <motion.div
