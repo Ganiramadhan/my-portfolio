@@ -1,8 +1,7 @@
 import heroImage from '../assets/dino-kuning.png';
 import { useState } from 'react';
 import { FaArrowLeft, FaArrowRight, FaInfoCircle, FaBriefcase } from 'react-icons/fa';
-import { FiDownload } from "react-icons/fi";
-import { experienceContent } from '../utils/experience';
+import { experienceContent } from '../utils/experienceData';
 import { ClipLoader } from 'react-spinners'; 
 
 const HeroImage = () => (

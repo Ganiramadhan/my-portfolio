@@ -3,7 +3,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import React, { useState } from 'react';
 import Slider from 'react-slick';
 import { motion } from 'framer-motion';
-import { projects } from '../../utils/project';
+import { projects } from '../../utils/projectData';
 import ProjectCard from './ProjectCard';
 import ProjectModal from './ProjectModal';
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import SkillCard from './SkillCard';
-import { skills } from '../../utils/skills';
+import { skills } from '../../utils/skillsData';
 
 const MySkills = () => {
     const [isAnimating, setIsAnimating] = useState(false);

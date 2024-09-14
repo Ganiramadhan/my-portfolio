@@ -5,7 +5,7 @@ import projectImage4 from '../assets/project1.png';
 import projectImage5 from '../assets/project4.png';
 import projectImage6 from '../assets/project6.png';
 import projectImage7 from '../assets/project7.png';
-import projectImage8 from '../assets/project8.png';
+import projectImage9 from '../assets/project9.png';
 
 export const projects = [
     {
@@ -68,9 +68,9 @@ export const projects = [
     },
     {
         id: 8,
-        image: projectImage8,
+        image: projectImage9,
         title: 'GaniPedia Post',
-        description: "Web project built with Laravel 11, Inertia, and React using Breeze for authentication. It features CRUD functionality for products and posts using SQLite, and fetches and displays movie lists from an external API. The project includes login and register middleware to manage user authentication and access control.",
+        description: "Fish product marketplace built with Laravel 11, Inertia, and React, featuring a login and registration system using middleware for user authentication. The project includes product management with CRUD functionality, integrated with Midtrans as the payment gateway and RajaOngkir for checking shipping costs.",
         link: 'https://github.com/Ganiramadhan/ganipedia-laravel11',
         languages: ['Laravel', 'SQLite', 'Tailwind CSS', 'TMDb API']
     },
