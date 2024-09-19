@@ -41,7 +41,7 @@ const Hero = () => {
 
     return (
         <div>
-            <div id="#" className="bg-gradient-to-r from-gray-900 to-gray-700 py-20 px-6 md:px-10 md:flex md:items-center" style={{ minHeight: '100vh' }}>
+            <div id="home" className="bg-gradient-to-r from-gray-900 to-gray-700 py-20 px-6 md:px-10 md:flex md:items-center" style={{ minHeight: '100vh' }}>
                 <motion.div 
                     initial={{ opacity: 0, x: -100 }}
                     animate={{ opacity: 1, x: 0 }}
