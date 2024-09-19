@@ -153,7 +153,7 @@ const AboutMe = () => {
                             handlePrevStep={handlePrevStep}
                             handleNextStep={handleNextStep}
                         />
-                        <div className="flex justify-center mt-6">
+                        {/* <div className="flex justify-center mt-6">
                             <button
                                 onClick={handleDownloadResume}
                                 className="px-6 py-2 bg-blue-400 text-white rounded-lg hover:bg-blue-500 flex items-center"
@@ -161,7 +161,7 @@ const AboutMe = () => {
                                 <span className="mr-2">Download Resume</span>
                                 <FaArrowRight />
                             </button>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
