@@ -66,8 +66,7 @@ const Hero = () => {
                         repeat={Infinity}
                     />
                     <p className="mt-4 text-lg text-gray-300" style={{ fontFamily: 'Open Sans, sans-serif', userSelect: 'none' }}>
-                    I am a full-stack developer with 2 years of experience in React, Next.js, Node.js, Laravel, JavaScript, and TypeScript. If you are interested in learning more or discussing potential collaboration opportunities, please do not hesitate to reach out.
-
+                        I am a full-stack developer with 2 years of experience in React, Next.js, Node.js, Laravel, JavaScript, and TypeScript. If you are interested in learning more or discussing potential collaboration opportunities, please do not hesitate to reach out.
                     </p>
                     <button
                         className='btn bg-blue-400 text-white px-4 py-2 mt-4 hover:bg-blue-500 transition duration-300 rounded-md flex items-center'
@@ -80,7 +79,7 @@ const Hero = () => {
                     initial={{ opacity: 0, x: 100 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, ease: 'easeInOut' }}
-                    className="md:w-1/2 mt-10 md:mt-0 relative"
+                    className="md:w-1/2 mt-10 md:mt-0 relative hidden md:block"
                 >
                     <div className="relative flex justify-center items-center h-64 md:h-screen">
                         <svg

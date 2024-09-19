@@ -4,19 +4,20 @@ import { FaArrowLeft, FaArrowRight, FaInfoCircle, FaBriefcase } from 'react-icon
 import { experienceContent } from '../utils/experienceData';
 import { ClipLoader } from 'react-spinners'; 
 
+
 const HeroImage = () => (
-    <div className="flex justify-center md:justify-start md:w-1/2 md:block">
+    <div className="hidden md:flex justify-center md:justify-start md:w-1/2 relative">
         <div className="relative">
             <img 
                 src={heroImage} 
                 alt="Your Name" 
-                className="w-80 h-80 object-cover rounded-lg" 
+                className="w-80 h-80 object-cover rounded-lg shadow-lg" 
             />
             <svg
                 className="absolute inset-0 w-full h-full"
                 viewBox="0 0 200 200"
                 xmlns="http://www.w3.org/2000/svg"
-                style={{ zIndex: -1 }}
+                style={{ zIndex: -1, opacity: 0.4 }} 
             >
                 <path
                     fill="#87CEEB"
@@ -28,7 +29,6 @@ const HeroImage = () => (
     </div>
 );
 
-
 const TabContent = ({ activeTab, experienceStep, handlePrevStep, handleNextStep }) => {
     const [showFullText, setShowFullText] = useState(false);
     
@@ -37,7 +37,7 @@ const TabContent = ({ activeTab, experienceStep, handlePrevStep, handleNextStep 
     };
 
     return (
-        <div className="text-lg text-gray-700 dark:text-gray-300 space-y-4">
+        <div className="text-lg text-gray-700 dark:text-gray-300 space-y-4 no-select">
             {activeTab === 'about' && (
                 <div key="about">
                     <h1 className="text-3xl font-bold text-center text-gray-800 dark:text-gray-200 mb-6">ABOUT ME</h1>
@@ -65,7 +65,6 @@ const TabContent = ({ activeTab, experienceStep, handlePrevStep, handleNextStep 
                             </span>
                         </>
                     )}
-
                 </div>
             )}
             {activeTab === 'experience' && (
@@ -96,6 +95,7 @@ const TabContent = ({ activeTab, experienceStep, handlePrevStep, handleNextStep 
     );
 };
 
+
 const AboutMe = () => {
     const [activeTab, setActiveTab] = useState('about');
     const [experienceStep, setExperienceStep] = useState(0);
@@ -113,7 +113,7 @@ const AboutMe = () => {
         setLoading(true);
         setTimeout(() => {
             const link = document.createElement('a');
-            link.href = resumePDF;
+            link.href = resumePDF; 
             link.download = 'resume.pdf';
             link.click();
             setLoading(false);
@@ -147,13 +147,21 @@ const AboutMe = () => {
                                 Experience
                             </button>
                         </div>
-                        <TabContent
+                        <TabContent 
                             activeTab={activeTab}
                             experienceStep={experienceStep}
                             handlePrevStep={handlePrevStep}
                             handleNextStep={handleNextStep}
-                            handleDownloadResume={handleDownloadResume}
                         />
+                        <div className="flex justify-center mt-6">
+                            <button
+                                onClick={handleDownloadResume}
+                                className="px-6 py-2 bg-blue-400 text-white rounded-lg hover:bg-blue-500 flex items-center"
+                            >
+                                <span className="mr-2">Download Resume</span>
+                                <FaArrowRight />
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
