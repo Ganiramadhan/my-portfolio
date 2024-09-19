@@ -10,6 +10,7 @@ import jqueryImage from '../assets/jquery.png';
 import tailwindcssImage from '../assets/tailwindcss.png';
 import inertiaImage from '../assets/inertia.png';
 import gitImage from '../assets/git.png';
+import typeScriptImage from '../assets/typescript.png';
 
 export const skills = [
     { title: 'Laravel', imageSrc: laravelImage, shortDescription: 'PHP framework for web applications.', link: 'https://laravel.com/' },
@@ -24,4 +25,5 @@ export const skills = [
     { title: 'Tailwind CSS', imageSrc: tailwindcssImage, shortDescription: 'Utility-first CSS framework.', link: 'https://tailwindcss.com/' },
     { title: 'Inertia', imageSrc: inertiaImage, shortDescription: 'SPA framework without APIs.', link: 'https://inertiajs.com/' },
     { title: 'Git', imageSrc: gitImage, shortDescription: 'Distributed version control syste.', link: 'https://git-scm.com/' },
+    { title: 'TypeScript', imageSrc: typeScriptImage, shortDescription: 'Strongly typed programming language for JavaScript.', link: 'https://www.typescriptlang.org/' },
 ];

@@ -66,7 +66,8 @@ const Hero = () => {
                         repeat={Infinity}
                     />
                     <p className="mt-4 text-lg text-gray-300" style={{ fontFamily: 'Open Sans, sans-serif', userSelect: 'none' }}>
-                        I'm a full-stack developer with 1 year of experience in React, Next.js, Node.js, Laravel, and JavaScript, If you would like to know more or collaborate on a project, feel free to reach out!
+                    I am a full-stack developer with 2 years of experience in React, Next.js, Node.js, Laravel, JavaScript, and TypeScript. If you are interested in learning more or discussing potential collaboration opportunities, please do not hesitate to reach out.
+
                     </p>
                     <button
                         className='btn bg-blue-400 text-white px-4 py-2 mt-4 hover:bg-blue-500 transition duration-300 rounded-md flex items-center'

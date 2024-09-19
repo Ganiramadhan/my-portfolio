@@ -1,11 +1,11 @@
-import heroImage from '../assets/dino-kuning.png';
+import heroImage from '../assets/logo.png';
 import { useState } from 'react';
 import { FaArrowLeft, FaArrowRight, FaInfoCircle, FaBriefcase } from 'react-icons/fa';
 import { experienceContent } from '../utils/experienceData';
 import { ClipLoader } from 'react-spinners'; 
 
 const HeroImage = () => (
-    <div className="flex justify-center md:justify-start md:w-1/2 hidden md:block">
+    <div className="flex justify-center md:justify-start md:w-1/2 md:block">
         <div className="relative">
             <img src={heroImage} alt="Your Name" className="w-64 h-64 object-cover" />
             <svg
@@ -60,12 +60,6 @@ const TabContent = ({ activeTab, experienceStep, handlePrevStep, handleNextStep,
                             </span>
                         </>
                     )}
-                    {/* <button
-                        onClick={handleDownloadResume}
-                        className="btn bg-blue-400 text-white px-4 py-2 mt-4 hover:bg-blue-500 transition duration-300 rounded-md flex items-center justify-end ml-auto"
-                    >
-                        My Resume <FiDownload className="ml-2" />
-                    </button> */}
 
                 </div>
             )}
