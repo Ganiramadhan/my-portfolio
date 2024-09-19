@@ -24,7 +24,7 @@ const HeroImage = () => (
     </div>
 );
 
-const TabContent = ({ activeTab, experienceStep, handlePrevStep, handleNextStep, handleDownloadResume }) => {
+const TabContent = ({ activeTab, experienceStep, handlePrevStep, handleNextStep }) => {
     const [showFullText, setShowFullText] = useState(false);
     
     const handleToggleText = () => {
@@ -116,7 +116,7 @@ const AboutMe = () => {
     };
 
     return (
-        <div id="aboutme" className="bg-gradient-to-r from-gray-900 to-gray-700 py-20 px-6 md:px-10 flex items-center justify-center" style={{ minHeight: '100vh' }}>
+        <div id="about" className="bg-gradient-to-r from-gray-900 to-gray-700 py-20 px-6 md:px-10 flex items-center justify-center" style={{ minHeight: '100vh' }}>
             {loading && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-900 bg-opacity-50">
                     <ClipLoader color="#ffffff" size={60} /> 

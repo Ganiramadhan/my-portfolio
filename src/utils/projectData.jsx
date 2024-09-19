@@ -10,11 +10,11 @@ import projectImage9 from '../assets/project9.png';
 export const projects = [
     {
         id: 1,
-        image: projectImage1,
-        title: 'E-Commerce Platform',
-        description: "A comprehensive E-Commerce platform developed using Laravel, Inertia.js, and React.js, featuring a MySQL database. The project includes full user authentication with login and registration functionality.",
-        link: 'https://github.com/Ganiramadhan/E-Commerce-',
-        languages: ['Laravel', 'Inertia.js', 'React.js', 'MySQL']
+        image: projectImage9,
+        title: 'GaniPedia Marketplace',
+        description: "Fish product marketplace built with Laravel 11, Inertia, and React, featuring a login and registration system using middleware for user authentication. The project includes product management with CRUD functionality, integrated with Midtrans as the payment gateway and RajaOngkir for checking shipping costs.",
+        link: 'https://github.com/Ganiramadhan/ganipedia-laravel11',
+        languages: ['Laravel', 'Inertia', 'ReactJs', 'SQLite', 'Tailwind CSS', 'Midtrans', 'Raja Ongkir']
     },
     {
         id: 2,
@@ -32,7 +32,7 @@ export const projects = [
         link: 'https://github.com/Ganiramadhan/fish-marketplace',
         languages: ['TypeScript', 'Tailwind CSS', 'Midtrans', 'Next.js']
     },    
-   
+
     {
         id: 4,
         image: projectImage4,
@@ -49,7 +49,7 @@ export const projects = [
         link: 'https://github.com/Ganiramadhan/todolist-app',
         languages: ['Supabase', 'Express', 'React,Js','Node.Js','Tailwindcss']
     },
-   
+
     {
         id: 6,
         image: projectImage3,
@@ -65,14 +65,6 @@ export const projects = [
         description: "Description: This repository contains the code for a movie listing application that allows users to search, filter, and manage their watchlist of movies. The application is built using React and features responsive design, modern UI elements, and integration with The Movie Database (TMDb) API for fetching movie data.",
         link: 'https://movie-pedia-sage.vercel.app',    
         languages: ['React.js', 'Node.js', 'Tailwind CSS', 'TMDb API']
-    },
-    {
-        id: 8,
-        image: projectImage9,
-        title: 'GaniPedia Post',
-        description: "Fish product marketplace built with Laravel 11, Inertia, and React, featuring a login and registration system using middleware for user authentication. The project includes product management with CRUD functionality, integrated with Midtrans as the payment gateway and RajaOngkir for checking shipping costs.",
-        link: 'https://github.com/Ganiramadhan/ganipedia-laravel11',
-        languages: ['Laravel', 'SQLite', 'Tailwind CSS', 'TMDb API']
     },
     
 ];

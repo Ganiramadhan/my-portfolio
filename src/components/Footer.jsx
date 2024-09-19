@@ -1,4 +1,4 @@
-import { FaFacebook,FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const MyFooter = () => {
     return (
@@ -10,9 +10,6 @@ const MyFooter = () => {
                         <p className="mt-2">"Creating magic with lines of code." 💥</p>
                     </div>
                     <div className="flex space-x-4">
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-500 transition duration-300">
-                            <FaFacebook size={24} />
-                        </a>
                         <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-pink-500 transition duration-300">
                             <FaInstagram size={24} />
                         </a>
