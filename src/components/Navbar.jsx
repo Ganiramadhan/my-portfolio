@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import logoImage from '../assets/logo.png';
+import logoImage from '../assets/myIcon.png';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -40,7 +40,7 @@ const Navbar = () => {
             <div className="container mx-auto p-4 flex justify-between items-center">
                 <div className="flex items-center">
                     {/* Smaller logo */}
-                    <img src={logoImage} alt="ganipedia logo" style={{ width: '40px' }} />
+                    <img src={logoImage} alt="ganipedia logo" style={{ width: '35px' }} />
                     <div className="text-indigo-600 text-xl font-bold ml-2">
                         <span className='text-white'>GaniPedia</span>
                     </div>

@@ -1,4 +1,4 @@
-import heroImage from '../assets/logo.png';
+import heroImage from '../assets/myIcon.png';
 import { useState } from 'react';
 import { FaArrowLeft, FaArrowRight, FaInfoCircle, FaBriefcase } from 'react-icons/fa';
 import { experienceContent } from '../utils/experienceData';
@@ -7,7 +7,11 @@ import { ClipLoader } from 'react-spinners';
 const HeroImage = () => (
     <div className="flex justify-center md:justify-start md:w-1/2 md:block">
         <div className="relative">
-            <img src={heroImage} alt="Your Name" className="w-64 h-64 object-cover" />
+            <img 
+                src={heroImage} 
+                alt="Your Name" 
+                className="w-80 h-80 object-cover rounded-lg" 
+            />
             <svg
                 className="absolute inset-0 w-full h-full"
                 viewBox="0 0 200 200"
@@ -23,6 +27,7 @@ const HeroImage = () => (
         </div>
     </div>
 );
+
 
 const TabContent = ({ activeTab, experienceStep, handlePrevStep, handleNextStep }) => {
     const [showFullText, setShowFullText] = useState(false);
