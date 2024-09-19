@@ -53,7 +53,7 @@ const Navbar = () => {
                                     href={`#${menu.toLowerCase()}`}
                                     className={`text-lg transition-colors duration-300 ease-in-out ${
                                         isScrolled && activeMenu === menu
-                                            ? 'text-white font-semibold bg-blue-500 rounded-md px-3 py-2' 
+                                            ? 'text-white font-semibold bg-blue-500 rounded-md px-3 py-2'
                                             : 'text-white hover:text-gray-300'
                                     }`}
                                     onClick={() => handleMenuClick(menu)}
@@ -74,9 +74,9 @@ const Navbar = () => {
                     </button>
                 </div>
                 <ul
-                    className={`fixed top-0 left-0 h-full w-full bg-gradient-to-b from-indigo-700 via-indigo-800 to-purple-900 flex flex-col items-center justify-center space-y-6 transition-transform transform ${
-                        isOpen ? 'translate-x-0' : 'translate-x-full'
-                    } md:hidden z-50 duration-300 ease-in-out`}
+                    className={`fixed top-0 left-0 h-full w-full bg-gradient-to-r from-gray-600 via-gray-700 to-gray-900 flex flex-col items-center justify-center space-y-6 ${
+                        isOpen ? 'block' : 'hidden'
+                    } md:hidden z-50`}
                 >
                     <li className="absolute top-4 right-4">
                         <button onClick={() => setIsOpen(false)} aria-label="Close Menu">
@@ -89,7 +89,7 @@ const Navbar = () => {
                                 href={`#${menu.toLowerCase()}`}
                                 className={`text-lg transition-colors duration-300 ease-in-out ${
                                     isScrolled && activeMenu === menu
-                                        ? 'text-white font-semibold bg-blue-500 rounded-md px-3 py-2' 
+                                        ? 'text-white font-semibold bg-blue-500 rounded-md px-3 py-2'
                                         : 'text-white hover:text-gray-300'
                                 }`}
                                 onClick={() => handleMenuClick(menu)}
