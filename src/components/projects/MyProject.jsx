@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import { projects } from '../../utils/projectData';
 import ProjectCard from './ProjectCard';
 import ProjectModal from './ProjectModal';
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'; // Importing icons from react-icons
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 const MyProject = () => {
     const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -28,7 +28,6 @@ const MyProject = () => {
         document.body.style.overflow = 'auto';
     };
 
-    // Custom arrow components
     const PrevArrow = ({ onClick }) => (
         <button 
             className="absolute left-0 z-10 p-2 -ml-6 text-white bg-gray-800 rounded-full shadow-lg top-1/2 transform -translate-y-1/2 hover:bg-gray-600"
@@ -49,7 +48,7 @@ const MyProject = () => {
 
     const settings = {
         dots: false,
-        infinite: false,
+        infinite: true, 
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 1,
@@ -61,14 +60,15 @@ const MyProject = () => {
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
-                    infinite: false
+                    infinite: true 
                 }
             },
             {
                 breakpoint: 600,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    infinite: true 
                 }
             }
         ]
@@ -85,7 +85,7 @@ const MyProject = () => {
                 >
                     Some of My Projects
                 </motion.h2>
-                <div className="relative"> {/* Add a relative container to position arrows */}
+                <div className="relative"> 
                     <Slider {...settings}>
                         {projects.map(project => (
                             <ProjectCard
