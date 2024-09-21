@@ -37,10 +37,10 @@ const Hero = () => {
                     initial={{ opacity: 0, x: -100 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, ease: 'easeInOut' }}
-                    className="max-w-3xl w-full md:w-2/3 mt-4 text-center"
+                    className="max-w-5xl w-full md:w-2/3 mt-4 text-center"
                 >
                     <h1 className="text-gray-100 text-5xl font-bold mb-4" style={{ fontFamily: 'JetBrains Mono, monospace', userSelect: 'none' }}>
-                        <span>Hello, I'm</span> <span className="text-blue-400">Gani Ramadhan</span>
+                        <span>Hello, I'm</span> <span className="text-blue-400">Gani Ramadhan👋</span>
                     </h1>
                     <TypeAnimation
                         sequence={[
@@ -50,10 +50,10 @@ const Hero = () => {
                             1000,
                             'Security Analyst',
                             1000
-                        ]}
+                        ]}  
                         wrapper="span"
                         speed={10}
-                        style={{ fontSize: '2.5em', display: 'inline-block', color: '#A0AEC0', fontFamily: 'JetBrains Mono, monospace', userSelect: 'none' }}
+                        style={{ fontSize: '1.7em', display: 'inline-block', color: '#A0AEC0', fontFamily: 'JetBrains Mono, monospace', userSelect: 'none' }}
                         repeat={Infinity}
                     />
                     <p className="mt-4 text-xl text-gray-300" style={{ fontFamily: 'JetBrains Mono, monospace', userSelect: 'none' }}>
