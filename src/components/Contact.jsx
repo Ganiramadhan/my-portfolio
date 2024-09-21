@@ -1,11 +1,12 @@
 import 'leaflet/dist/leaflet.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { FaPaperPlane } from 'react-icons/fa';
 import { icon as leafletIcon } from 'leaflet';
 import { motion } from 'framer-motion';
 import placeHolderMap from '../assets/placeholder.png';
 import { ClipLoader } from 'react-spinners'; 
+import AOS from 'aos'; 
 
 const Contact = () => {
     const customIcon = leafletIcon({
@@ -35,8 +36,16 @@ const Contact = () => {
         }, 2000);
     };
 
+    useEffect(() => {
+        AOS.init({ duration: 1000 }); 
+    }, []);
+
     return (
-        <div id="contact" className="py-20 bg-gradient-to-r from-gray-900 to-gray-700 relative">
+        <div 
+            id="contact" 
+            className="py-20 bg-gradient-to-r from-gray-900 to-gray-700 relative" 
+            style={{ fontFamily: 'JetBrains Mono, monospace', userSelect: 'none' }} 
+        >
             {loading && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-900 bg-opacity-50">
                     <ClipLoader color="#ffffff" size={60} /> 
@@ -48,6 +57,7 @@ const Contact = () => {
                     initial={{ opacity: 0, y: 100 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1.5, ease: "easeInOut" }}
+                    data-aos="fade-up" 
                 >
                     <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
                         Contact Us
@@ -62,6 +72,7 @@ const Contact = () => {
                         initial={{ opacity: 0, x: -100 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 1.5, ease: "easeInOut" }}
+                        data-aos="fade-left" // AOS pada peta
                     >
                         <MapContainer center={[-6.8884592, 107.6273503]} zoom={15} scrollWheelZoom={false} className="h-full w-full rounded-md shadow-lg z-0">
                             <TileLayer
@@ -80,6 +91,7 @@ const Contact = () => {
                         initial={{ opacity: 0, x: 100 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 1.5, ease: "easeInOut" }}
+                        data-aos="fade-right" 
                     >
                         <form className="grid grid-cols-1 gap-y-6" onSubmit={(e) => { e.preventDefault(); handleFormSubmit(); }}>
                             <div>

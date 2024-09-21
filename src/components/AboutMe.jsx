@@ -1,12 +1,13 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Impor stylesheet AOS
 import heroImage from '../assets/myIcon.png';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FaArrowLeft, FaArrowRight, FaInfoCircle, FaBriefcase } from 'react-icons/fa';
 import { experienceContent } from '../utils/experienceData';
 import { ClipLoader } from 'react-spinners'; 
 
-
 const HeroImage = () => (
-    <div className="hidden md:flex justify-center md:justify-start md:w-1/2 relative">
+    <div className="hidden md:flex justify-center md:justify-start md:w-1/2 relative" data-aos="fade-right">
         <div className="relative">
             <img 
                 src={heroImage} 
@@ -37,12 +38,12 @@ const TabContent = ({ activeTab, experienceStep, handlePrevStep, handleNextStep 
     };
 
     return (
-        <div className="text-lg text-gray-700 dark:text-gray-300 space-y-4 no-select">
+        <div className="text-lg text-gray-700 dark:text-gray-300 space-y-4 font-jetbrains no-select">
             {activeTab === 'about' && (
-                <div key="about">
+                <div key="about" data-aos="fade-up">
                     <h1 className="text-3xl font-bold text-center text-gray-800 dark:text-gray-200 mb-6">ABOUT ME</h1>
                     <p>
-                        Hello, I am <span className="highlight">Gani Ramadhan</span>, a passionate <span className="highlight">Fullstack Developer</span> with over a year of experience in building and maintaining web applications. My technical expertise includes <span className="highlight">PHP</span>, <span className="highlight">Laravel</span>, <span className="highlight">JavaScript</span>, <span className="highlight">ReactJS</span>, <span className="highlight">Next.js</span>, and <span className="highlight">Node.js</span>. I am proficient in using CSS frameworks such as <span className="highlight">Tailwind CSS</span> and <span className="highlight">Material UI</span> to create <span className='highlight'>responsive and visually appealing user interfaces.</span>  I have a strong enthusiasm for learning and continually expanding my knowledge, particularly in the field of technology. 
+                        Hello, I am <span className="highlight">Gani Ramadhan</span>, a passionate <span className="highlight">Fullstack Developer</span> with over a year of experience in building and maintaining web applications. My technical expertise includes <span className="highlight">PHP</span>, <span className="highlight">Laravel</span>, <span className="highlight">JavaScript</span>, <span className="highlight">ReactJS</span>, <span className="highlight">Next.js</span>, and <span className="highlight">Node.js</span>. I am proficient in using CSS frameworks such as <span className="highlight">Tailwind CSS</span> and <span className="highlight">Material UI</span> to create <span className='highlight'>responsive and visually appealing user interfaces.</span> I have a strong enthusiasm for learning and continually expanding my knowledge, particularly in the field of technology.
                     </p>
                     {!showFullText && (
                         <span
@@ -55,7 +56,7 @@ const TabContent = ({ activeTab, experienceStep, handlePrevStep, handleNextStep 
                     {showFullText && (
                         <>
                             <p>
-                            My high level of dedication and <span className='highlight'>problem-solving skills </span>enable me to tackle complex challenges effectively. I am committed to delivering high-quality solutions and am always eager to collaborate and create innovative projects. I have a strong enthusiasm for learning and continually expanding my knowledge, particularly in the field of technology. My high level of dedication and <span className='highlight'>problem-solving skills </span>enable me to tackle complex challenges effectively. I am committed to delivering high-quality solutions and am always eager to collaborate and create innovative projects.
+                                My high level of dedication and <span className='highlight'>problem-solving skills </span> enable me to tackle complex challenges effectively. I am committed to delivering high-quality solutions and am always eager to collaborate and create innovative projects.
                             </p>
                             <span
                                 onClick={handleToggleText}
@@ -68,7 +69,7 @@ const TabContent = ({ activeTab, experienceStep, handlePrevStep, handleNextStep 
                 </div>
             )}
             {activeTab === 'experience' && (
-                <div key="experience">
+                <div key="experience" data-aos="fade-up">
                     <h1 className="text-3xl font-bold text-center text-gray-800 dark:text-gray-200 mb-8">Professional history</h1>
                     <h5 className="text-xl font-semibold text-gray-700 dark:text-gray-300 mb-2">{experienceContent[experienceStep].experience}</h5>
                     <p className="text-gray-600 dark:text-gray-400">{experienceContent[experienceStep].date}</p>
@@ -95,11 +96,14 @@ const TabContent = ({ activeTab, experienceStep, handlePrevStep, handleNextStep 
     );
 };
 
-
 const AboutMe = () => {
     const [activeTab, setActiveTab] = useState('about');
     const [experienceStep, setExperienceStep] = useState(0);
     const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+        AOS.init({ duration: 1000 }); // Inisialisasi AOS
+    }, []);
 
     const handleNextStep = () => {
         setExperienceStep((prevStep) => (prevStep < experienceContent.length - 1 ? prevStep + 1 : prevStep));
@@ -109,17 +113,6 @@ const AboutMe = () => {
         setExperienceStep((prevStep) => (prevStep > 0 ? prevStep - 1 : prevStep));
     };
 
-    const handleDownloadResume = () => {
-        setLoading(true);
-        setTimeout(() => {
-            const link = document.createElement('a');
-            link.href = resumePDF; 
-            link.download = 'resume.pdf';
-            link.click();
-            setLoading(false);
-        }, 2000);
-    };
-
     return (
         <div id="about" className="bg-gradient-to-r from-gray-900 to-gray-700 py-20 px-6 md:px-10 flex items-center justify-center" style={{ minHeight: '100vh' }}>
             {loading && (
@@ -127,7 +120,9 @@ const AboutMe = () => {
                     <ClipLoader color="#ffffff" size={60} /> 
                 </div>
             )}
-            <div className="container mx-auto flex flex-col md:flex-row items-center justify-between relative z-10 space-y-10 md:space-y-0">
+            <div className="container mx-auto flex flex-col md:flex-row items-center justify-between relative z-10 space-y-10 md:space-y-0"
+                style={{ fontFamily: 'JetBrains Mono, monospace' }}
+            >
                 <HeroImage />
                 <div className="md:w-2/3 max-w-5xl mx-auto">
                     <div className="bg-white dark:bg-gray-900 shadow-lg rounded-lg p-10">
@@ -148,20 +143,11 @@ const AboutMe = () => {
                             </button>
                         </div>
                         <TabContent 
-                            activeTab={activeTab}
-                            experienceStep={experienceStep}
-                            handlePrevStep={handlePrevStep}
-                            handleNextStep={handleNextStep}
+                            activeTab={activeTab} 
+                            experienceStep={experienceStep} 
+                            handlePrevStep={handlePrevStep} 
+                            handleNextStep={handleNextStep} 
                         />
-                        {/* <div className="flex justify-center mt-6">
-                            <button
-                                onClick={handleDownloadResume}
-                                className="px-6 py-2 bg-blue-400 text-white rounded-lg hover:bg-blue-500 flex items-center"
-                            >
-                                <span className="mr-2">Download Resume</span>
-                                <FaArrowRight />
-                            </button>
-                        </div> */}
                     </div>
                 </div>
             </div>
@@ -170,6 +156,3 @@ const AboutMe = () => {
 };
 
 export default AboutMe;
-
-
-

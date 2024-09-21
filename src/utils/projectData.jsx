@@ -36,7 +36,7 @@ export const projects = [
     {
         id: 4,
         image: projectImage4,
-        title: 'Financial Reporting Website',
+        title: 'Financial Reporting',
         description: "A user-friendly financial reporting platform built with Laravel, Inertia.js, and Bootstrap. This project is designed to present financial data clearly and efficiently to users.",
         link: 'https://keuangan.megamaster.id',
         languages: ['Laravel', 'Inertia.js', 'Bootstrap']

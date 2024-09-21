@@ -19,6 +19,7 @@
     "framer-motion": "^11.2.6",
     "leaflet": "^1.9.4",
     "react": "^18.2.0",
+    "react-confetti": "^6.1.0",
     "react-dom": "^18.2.0",
     "react-icon": "^1.0.0",
     "react-leaflet": "^4.2.1",
@@ -29,6 +30,7 @@
     "react-spinners": "^0.13.8",
     "react-toastify": "^10.0.5",
     "react-type-animation": "^3.2.0",
+    "react-use": "^17.5.1",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {

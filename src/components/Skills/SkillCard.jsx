@@ -17,7 +17,7 @@ const SkillCard = ({ imageSrc, index, totalSkills, isSelected, onClick }) => {
             animate={{ opacity: 1, scale: 1, x: x, y: y }}
             exit={{ opacity: 0, scale: 0, x: 0, y: 0 }}
             transition={{ duration: 0.6, type: 'spring', stiffness: 100, damping: 30 }}
-            style={{ transform: 'translate(-50%, -50%)' }}
+            style={{ transform: 'translate(-50%, -50%)', userSelect: 'none' }} 
             onClick={onClick}
             data-aos="zoom-in"
         >

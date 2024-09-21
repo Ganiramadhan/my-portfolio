@@ -2,7 +2,10 @@ import { FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const MyFooter = () => {
     return (
-        <footer className=" bg-gradient-to-r from-gray-900 to-gray-800 text-gray-300 py-10">
+        <footer
+            className="bg-gradient-to-r from-gray-900 to-gray-800 text-gray-300 py-10"
+            style={{ fontFamily: 'JetBrains Mono, monospace', userSelect: 'none' }} 
+        >
             <div className="container mx-auto px-6 md:px-10">
                 <div className="md:flex md:justify-between">
                     <div className="mb-6 md:mb-0">

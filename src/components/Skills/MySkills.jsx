@@ -7,13 +7,13 @@ const MySkills = () => {
     const [isAnimating, setIsAnimating] = useState(false);
     const [selectedSkillIndex, setSelectedSkillIndex] = useState(null);
     const [isRotating, setIsRotating] = useState(true);
-    const [rotationAngle, setRotationAngle] = useState(0); 
+    const [rotationAngle, setRotationAngle] = useState(0);
 
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (!event.target.closest('.skill-card') && !event.target.closest('.skill-description')) {
                 setSelectedSkillIndex(null);
-                setIsRotating(true); 
+                setIsRotating(true);
             }
         };
 
@@ -27,13 +27,13 @@ const MySkills = () => {
     const handleCardClick = () => {
         setIsAnimating(!isAnimating);
         setSelectedSkillIndex(null);
-        setIsRotating(true); 
+        setIsRotating(true);
     };
 
     const handleSkillClick = (index, event) => {
         event.stopPropagation();
         setSelectedSkillIndex(index);
-        setIsRotating(false); 
+        setIsRotating(false);
     };
 
     const handleLearnMoreClick = () => {
@@ -49,7 +49,7 @@ const MySkills = () => {
     };
 
     return (
-        <div className="py-16 bg-gradient-to-r from-gray-900 to-gray-700 flex justify-center items-center">
+        <div className="py-16 bg-gradient-to-r from-gray-900 to-gray-700 flex justify-center items-center" style={{ fontFamily: 'JetBrains Mono, monospace', userSelect: 'none' }}>
             <div className="relative w-80 h-80 md:w-96 md:h-96 flex justify-center items-center">
                 <motion.div
                     className="absolute w-24 h-24 md:w-32 md:h-32 bg-white rounded-full shadow-lg flex justify-center items-center text-center z-10 cursor-pointer"
