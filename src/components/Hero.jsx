@@ -2,21 +2,17 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import { FaHandshake, FaArrowUp } from 'react-icons/fa';
-import { toast, ToastContainer } from 'react-toastify';
-import heroImage from '../assets/dino-kuning.png';
-import 'react-toastify/dist/ReactToastify.css';
+import Confetti from 'react-confetti'; 
+import { useWindowSize } from 'react-use'; 
 
 const Hero = () => {
     const [showScrollToTop, setShowScrollToTop] = useState(false);
-    const [showAlert, setShowAlert] = useState(false);
+    const [showConfetti, setShowConfetti] = useState(false);
+    const { width, height } = useWindowSize(); 
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 300) {
-                setShowScrollToTop(true);
-            } else {
-                setShowScrollToTop(false);
-            }
+            setShowScrollToTop(window.scrollY > 300);
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -30,25 +26,20 @@ const Hero = () => {
     };
 
     const handleSayHelloClick = () => {
-        if (!showAlert) {
-            toast('Hello friend!');
-            setShowAlert(true); 
-            setTimeout(() => {
-                setShowAlert(false); 
-            }, 6000); 
-        }
+        setShowConfetti(true);
+        setTimeout(() => setShowConfetti(false), 5000); 
     };
 
     return (
         <div>
-            <div id="home" className="bg-gradient-to-r from-gray-900 to-gray-700 py-20 px-6 md:px-10 md:flex md:items-center" style={{ minHeight: '100vh' }}>
+            <div id="home" className="bg-gradient-to-r from-gray-900 to-gray-700 py-20 px-6 md:px-10 flex items-center justify-center" style={{ minHeight: '100vh' }}>
                 <motion.div 
                     initial={{ opacity: 0, x: -100 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, ease: 'easeInOut' }}
-                    className="md:w-1/2 md:pr-10 mt-4"
+                    className="max-w-3xl w-full md:w-2/3 mt-4 text-center"
                 >
-                    <h1 className="text-gray-100 text-4xl font-bold mb-2" style={{ fontFamily: 'Poppins, sans-serif', userSelect: 'none' }}>
+                    <h1 className="text-gray-100 text-5xl font-bold mb-4" style={{ fontFamily: 'JetBrains Mono, monospace', userSelect: 'none' }}>
                         <span>Hello, I'm</span> <span className="text-blue-400">Gani Ramadhan</span>
                     </h1>
                     <TypeAnimation
@@ -62,48 +53,29 @@ const Hero = () => {
                         ]}
                         wrapper="span"
                         speed={10}
-                        style={{ fontSize: '2em', display: 'inline-block', color: '#A0AEC0', fontFamily: 'Poppins, sans-serif', userSelect: 'none' }}
+                        style={{ fontSize: '2.5em', display: 'inline-block', color: '#A0AEC0', fontFamily: 'JetBrains Mono, monospace', userSelect: 'none' }}
                         repeat={Infinity}
                     />
-                    <p className="mt-4 text-lg text-gray-300" style={{ fontFamily: 'Open Sans, sans-serif', userSelect: 'none' }}>
+                    <p className="mt-4 text-xl text-gray-300" style={{ fontFamily: 'JetBrains Mono, monospace', userSelect: 'none' }}>
                         I am a full-stack developer with 2 years of experience in React, Next.js, Node.js, Laravel, JavaScript, and TypeScript. If you are interested in learning more or discussing potential collaboration opportunities, please do not hesitate to reach out.
                     </p>
-                    <button
-                        className='btn bg-blue-400 text-white px-4 py-2 mt-4 hover:bg-blue-500 transition duration-300 rounded-md flex items-center'
-                        onClick={handleSayHelloClick}
-                    >
-                        Say Hello <FaHandshake className="ml-2" />
-                    </button>
-                </motion.div>
-                <motion.div 
-                    initial={{ opacity: 0, x: 100 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 1, ease: 'easeInOut' }}
-                    className="md:w-1/2 mt-10 md:mt-0 relative hidden md:block"
-                >
-                    <div className="relative flex justify-center items-center h-64 md:h-screen">
-                        <svg
-                            className="absolute w-full h-full"
-                            viewBox="0 0 200 200"
-                            xmlns="http://www.w3.org/2000/svg"
-                            style={{ zIndex: 1 }}
+                    <div className="flex justify-center mt-4">
+                        <button
+                            className='bg-blue-400 text-white px-6 py-3 mt-4 hover:bg-blue-500 transition duration-300 rounded-md shadow-lg transform hover:scale-105'
+                            onClick={handleSayHelloClick}
                         >
-                            <path
-                                fill="#87CEEB"
-                                d="M40.2,-60.5C49.7,-52.4,50.4,-34.2,53.1,-19.2C55.9,-4.2,60.8,7.6,59.6,19.8C58.4,32.1,51.1,44.9,40.3,52.7C29.6,60.5,14.8,63.2,1.8,60.8C-11.2,58.4,-22.3,51,-34.7,44.5C-47.1,38,-60.9,32.4,-63.6,22.5C-66.2,12.7,-57.7,-1.4,-51.1,-14.1C-44.5,-26.7,-39.8,-37.9,-31.7,-47.1C-23.6,-56.4,-11.8,-63.8,2.8,-66.9C17.4,-70.1,34.8,-68.7,40.2,-60.5Z"
-                                transform="translate(100 100)"
-                            />
-                        </svg>
-                        <motion.img
-                            whileHover={{ scale: 1.1, cursor: 'pointer' }}
-                            animate={{ y: [0, -10, 0], transition: { duration: 3, repeat: Infinity, ease: 'easeInOut' } }}
-                            className="relative z-10 w-full max-w-xs"
-                            src={heroImage}
-                            alt="Hero Image"
-                        />
+                            Say Hello <FaHandshake className="ml-2 inline-block" />
+                        </button>
                     </div>
                 </motion.div>
             </div>
+            {showConfetti && (
+                <Confetti
+                    width={width}
+                    height={height}
+                />
+            )}
+
             {showScrollToTop && (
                 <button
                     onClick={scrollToTop}
@@ -112,7 +84,6 @@ const Hero = () => {
                     <FaArrowUp className="h-6 w-6 animate-bounce" />
                 </button>
             )}
-            <ToastContainer />
         </div>
     );
 };

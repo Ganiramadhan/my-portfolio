@@ -24,6 +24,7 @@ const ProjectModal = ({ modalIsOpen, closeModal, currentImage, currentTitle, cur
                 initial="hidden"
                 animate="visible"
                 variants={modalVariants}
+                style={{ userSelect: 'none' }} 
             >
                 <button onClick={closeModal} className="text-right text-gray-600 dark:text-gray-400">Close</button>
                 <img src={currentImage} alt="Project" className="w-full h-auto mt-4 rounded-lg" />

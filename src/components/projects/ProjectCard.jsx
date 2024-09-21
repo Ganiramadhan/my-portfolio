@@ -10,14 +10,14 @@ const ProjectCard = ({ project, openModal }) => {
 
     return (
         <motion.div
-            className="p-4 relative"
+            className="p-4"
             data-aos="fade-up"
         >
             <div
-                className="bg-white dark:bg-gray-900 shadow-lg rounded-lg overflow-hidden cursor-pointer"
+                className="bg-white dark:bg-gray-900 shadow-lg rounded-lg overflow-hidden cursor-pointer flex flex-col h-full"
                 data-aos="zoom-in"
             >
-                <div className="relative h-48 p-2">
+                <div className="relative h-48 p-2 flex-grow">
                     <img
                         src={project.image}
                         alt={project.title}
@@ -48,7 +48,7 @@ const ProjectCard = ({ project, openModal }) => {
                         </div>
                     </div>
                 </div>
-                <div className="p-4">
+                <div className="p-4 flex-grow">
                     <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">{project.title}</h3>
                     <p className="text-gray-600 dark:text-gray-400">{project.description.split(' ').slice(0, 10).join(' ')}...</p>
                 </div>
