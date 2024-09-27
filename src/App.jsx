@@ -11,6 +11,7 @@ import SplashScreen from './components/SplashScreen';
 const App = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [progress, setProgress] = useState(0);
+    const [isContentVisible, setIsContentVisible] = useState(false); 
 
     useEffect(() => {
         const updateInterval = 30;
@@ -21,7 +22,10 @@ const App = () => {
                 const nextProgress = prevProgress + increment;
                 if (nextProgress >= 100) {
                     clearInterval(interval);
-                    setTimeout(() => setIsLoading(false), 500);
+                    setTimeout(() => {
+                        setIsLoading(false);
+                        setTimeout(() => setIsContentVisible(true), 300); 
+                    }, 500);
                     return 100;
                 }
                 return nextProgress;
@@ -36,7 +40,11 @@ const App = () => {
             {isLoading ? (
                 <SplashScreen progress={progress} />
             ) : (
-                <>
+                <div
+                    className={`transition-opacity duration-1000 ${
+                        isContentVisible ? 'opacity-100' : 'opacity-0'
+                    }`}
+                >
                     <Navbar />
                     <Hero />
                     <AboutMe />
@@ -44,7 +52,7 @@ const App = () => {
                     <MyProject />
                     <Contact />
                     <MyFooter />
-                </>
+                </div>
             )}
         </>
     );
