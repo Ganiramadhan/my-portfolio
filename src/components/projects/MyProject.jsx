@@ -1,8 +1,7 @@
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Slider from 'react-slick';
-import { motion } from 'framer-motion';
 import { projects } from '../../utils/projectData';
 import ProjectCard from './ProjectCard';
 import ProjectModal from './ProjectModal';
@@ -81,29 +80,18 @@ const MyProject = () => {
             style={{ fontFamily: 'JetBrains Mono, monospace', userSelect: 'none' }} 
         >
             <div className="container mx-auto px-6 md:px-12">
-                <motion.h2
-                    className="text-4xl font-bold text-center text-gray-800 dark:text-gray-200 mb-12"
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1 }}
-                >
+                <h2 className="text-4xl font-bold text-center text-gray-800 dark:text-gray-200 mb-12">
                     Some of My Projects
-                </motion.h2>
+                </h2>
                 <div className="relative"> 
                     <Slider {...settings}>
-                        {projects.map((project, index) => (
-                            <motion.div
-                                key={project.id}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }} 
-                                viewport={{ once: false }}
-                            >
+                        {projects.map((project) => (
+                            <div key={project.id}>
                                 <ProjectCard
                                     project={project}
                                     openModal={openModal}
                                 />
-                            </motion.div>
+                            </div>
                         ))}
                     </Slider>
                 </div>

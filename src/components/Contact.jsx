@@ -1,12 +1,10 @@
 import 'leaflet/dist/leaflet.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { FaPaperPlane } from 'react-icons/fa';
 import { icon as leafletIcon } from 'leaflet';
-import { motion } from 'framer-motion';
 import placeHolderMap from '../assets/placeholder.png';
-import { ClipLoader } from 'react-spinners'; 
-import AOS from 'aos'; 
+import { ClipLoader } from 'react-spinners';
 
 const Contact = () => {
     const customIcon = leafletIcon({
@@ -18,7 +16,7 @@ const Contact = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
-    const [loading, setLoading] = useState(false); 
+    const [loading, setLoading] = useState(false);
 
     const resetInput = () => {
         setName('');
@@ -36,10 +34,6 @@ const Contact = () => {
         }, 2000);
     };
 
-    useEffect(() => {
-        AOS.init({ duration: 1000 }); 
-    }, []);
-
     return (
         <div 
             id="contact" 
@@ -48,32 +42,20 @@ const Contact = () => {
         >
             {loading && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-900 bg-opacity-50">
-                    <ClipLoader color="#ffffff" size={60} /> 
+                    <ClipLoader color="#ffffff" size={60} />
                 </div>
             )}
             <section>
-                <motion.div
-                    className="max-w-7xl mx-auto text-center"
-                    initial={{ opacity: 0, y: 100 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1.5, ease: "easeInOut" }}
-                    data-aos="fade-up" 
-                >
+                <div className="max-w-7xl mx-auto text-center">
                     <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
                         Contact Us
                     </h2>
                     <p className="mt-4 text-lg leading-6 text-gray-500 dark:text-gray-400">
                         We'd love to hear from you! Please fill out the form below to get in touch.
                     </p>
-                </motion.div>
+                </div>
                 <div className="mt-12 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <motion.div
-                        className="h-96 lg:h-auto z-10"
-                        initial={{ opacity: 0, x: -100 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 1.5, ease: "easeInOut" }}
-                        data-aos="fade-left" // AOS pada peta
-                    >
+                    <div className="h-96 lg:h-auto z-10">
                         <MapContainer center={[-6.8884592, 107.6273503]} zoom={15} scrollWheelZoom={false} className="h-full w-full rounded-md shadow-lg z-0">
                             <TileLayer
                                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -85,14 +67,8 @@ const Contact = () => {
                                 </Popup>
                             </Marker>
                         </MapContainer>
-                    </motion.div>
-                    <motion.div
-                        className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg z-10 relative"
-                        initial={{ opacity: 0, x: 100 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 1.5, ease: "easeInOut" }}
-                        data-aos="fade-right" 
-                    >
+                    </div>
+                    <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg z-10 relative">
                         <form className="grid grid-cols-1 gap-y-6" onSubmit={(e) => { e.preventDefault(); handleFormSubmit(); }}>
                             <div>
                                 <label htmlFor="name" className="sr-only">
@@ -145,14 +121,14 @@ const Contact = () => {
                                 <button
                                     type="submit"
                                     className="inline-flex items-center justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-400"
-                                    disabled={loading} 
+                                    disabled={loading}
                                 >
                                     <FaPaperPlane className="mr-2" />
                                     Send Message
                                 </button>
                             </div>
                         </form>
-                    </motion.div>
+                    </div>
                 </div>
             </section>
         </div>

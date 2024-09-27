@@ -22,7 +22,7 @@ const Navbar = () => {
         };
     }, []);
 
-    const handleMenuClick = (menu) => {
+    const menuClick = (menu) => {
         setActiveMenu(menu);
         setIsOpen(false);
         const element = document.getElementById(menu.toLowerCase());
@@ -56,7 +56,7 @@ const Navbar = () => {
                                             ? 'text-white font-semibold bg-blue-500 rounded-md px-3 py-2'
                                             : 'text-white hover:text-gray-300'
                                     }`}
-                                    onClick={() => handleMenuClick(menu)}
+                                    onClick={() => menuClick(menu)}
                                 >
                                     {menu}
                                 </a>
@@ -92,7 +92,7 @@ const Navbar = () => {
                                         ? 'text-white font-semibold bg-blue-500 rounded-md px-3 py-2'
                                         : 'text-white hover:text-gray-300'
                                 }`}
-                                onClick={() => handleMenuClick(menu)}
+                                onClick={() => menuClick(menu)}
                             >
                                 {menu}
                             </a>
