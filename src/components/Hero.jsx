@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { TypeAnimation } from 'react-type-animation';
-import { FaHandshake, FaArrowUp } from 'react-icons/fa';
+import { FaHandshake, FaRocket } from 'react-icons/fa';
 import Confetti from 'react-confetti';
 import { useWindowSize } from 'react-use';
 import AOS from 'aos';
@@ -94,8 +94,9 @@ const Hero = () => {
                 <button
                     onClick={scrollToTop}
                     className="fixed bottom-4 right-4 bg-blue-500 text-white p-3 z-50 rounded-full shadow-lg hover:bg-blue-600 transition duration-300 flex items-center justify-center"
+                    title="Scroll to top"
                 >
-                    <FaArrowUp className="h-6 w-6" />
+                    <FaRocket className="h-6 w-6" />
                 </button>
             )}
         </div>
