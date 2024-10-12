@@ -3,7 +3,6 @@ import { TypeAnimation } from 'react-type-animation';
 import { FaHandshake, FaRocket } from 'react-icons/fa';
 import Confetti from 'react-confetti';
 import { useWindowSize } from 'react-use';
-import AOS from 'aos';
 
 const Hero = () => {
     const [showScrollToTop, setShowScrollToTop] = useState(false);
@@ -11,7 +10,6 @@ const Hero = () => {
     const { width, height } = useWindowSize();
 
     useEffect(() => {
-        AOS.init({ duration: 1000 }); 
         const handleScroll = () => {
             setShowScrollToTop(window.scrollY > 300);
         };
@@ -38,14 +36,10 @@ const Hero = () => {
                 className="bg-gradient-to-r from-gray-900 to-gray-700 py-20 px-6 md:px-10 flex items-center justify-center" 
                 style={{ minHeight: '100vh' }}
             >
-                <div 
-                    className="max-w-5xl w-full md:w-2/3 mt-4 text-center"
-                    data-aos="fade-up"
-                >
+                <div className="max-w-5xl w-full md:w-2/3 mt-4 text-center">
                     <h1 
                         className="text-gray-100 text-5xl font-bold mb-4" 
                         style={{ fontFamily: 'JetBrains Mono, monospace', userSelect: 'none' }}
-                        data-aos="fade-right"
                     >
                         <span>Hello, I'm</span> <span className="text-blue-400">Gani Ramadhan👋</span>
                     </h1>
@@ -62,12 +56,10 @@ const Hero = () => {
                         speed={10}
                         style={{ fontSize: '1.7em', display: 'inline-block', color: '#A0AEC0', fontFamily: 'JetBrains Mono, monospace', userSelect: 'none' }}
                         repeat={Infinity}
-                        data-aos="fade-left"
                     />
                     <p 
                         className="mt-4 text-xl text-gray-300" 
                         style={{ fontFamily: 'JetBrains Mono, monospace', userSelect: 'none' }}
-                        data-aos="fade-up"
                     >
                         I am a full-stack developer with 2 years of experience in React, Next.js, Node.js, Laravel, JavaScript, and TypeScript. If you are interested in learning more or discussing potential collaboration opportunities, please do not hesitate to reach out.
                     </p>
@@ -75,7 +67,6 @@ const Hero = () => {
                         <button
                             className='bg-blue-400 text-white px-6 py-3 mt-4 hover:bg-blue-500 transition duration-300 rounded-md shadow-lg transform hover:scale-105'
                             onClick={sayHello}
-                            data-aos="zoom-in"
                         >
                             Say Hello <FaHandshake className="ml-2 inline-block" />
                         </button>
