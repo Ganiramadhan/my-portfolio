@@ -90,14 +90,14 @@ const Hero = () => {
                 />
             )}
 
-            {showScrollToTop && (
+            {/* {showScrollToTop && (
                 <button
                     onClick={scrollToTop}
                     className="fixed bottom-4 right-4 bg-blue-500 text-white p-3 z-50 rounded-full shadow-lg hover:bg-blue-600 transition duration-300 flex items-center justify-center"
                 >
                     <FaArrowUp className="h-6 w-6" />
                 </button>
-            )}
+            )} */}
         </div>
     );
 };
