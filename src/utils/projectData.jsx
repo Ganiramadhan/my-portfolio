@@ -6,8 +6,17 @@ import projectImage5 from '../assets/project5.png';
 import projectImage6 from '../assets/project6.png';
 import projectImage7 from '../assets/project7.png';
 import projectImage8 from '../assets/project8.png';
+import projectImage9 from '../assets/project9.png';
 
 export const projects = [
+    {
+        id: 9,
+        image: projectImage9,
+        title: 'Batik Product Management',
+        description: "A management system for handling batik data and batik artisans. Key features include CRUD operations, data export, QR code generation for attaching to batik products to provide detailed information to buyers, and a landing page to showcase system information.",
+        link: 'https://batikmerawit.com',
+        languages: ['Laravel', 'Inertia', 'React.js', 'Tailwind CSS', 'MySQL']
+    },
     {
         id: 1,
         image: projectImage1,
@@ -75,5 +84,6 @@ export const projects = [
         link: 'https://github.com/Ganiramadhan/todolist-app',
         languages: ['Supabase', 'Express', 'React,Js','Node.Js','Tailwindcss']
     },
+    
     
 ];
