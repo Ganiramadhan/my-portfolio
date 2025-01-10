@@ -1,18 +1,8 @@
-import 'leaflet/dist/leaflet.css';
 import React, { useState } from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { FaPaperPlane } from 'react-icons/fa';
-import { icon as leafletIcon } from 'leaflet';
-import placeHolderMap from '../assets/placeholder.png';
 import { ClipLoader } from 'react-spinners';
 
 const Contact = () => {
-    const customIcon = leafletIcon({
-        iconUrl: placeHolderMap,
-        iconSize: [30, 30],
-        iconAnchor: [15, 15],
-    });
-
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
@@ -33,6 +23,14 @@ const Contact = () => {
             resetInput();
         }, 2000);
     };
+
+    const mapLocation = {
+        address: 'Jl. Cigadung Raya Timur no 75, Cigadung, Kec. Cibeunying Kaler, Kota Bandung, Jawa Barat 40191',
+        lat: -6.871849,
+        lng: 107.625961,
+    };
+    const googleMapsUrl = `https://www.google.com/maps?q=${encodeURIComponent(mapLocation.address)}&output=embed`;
+
 
     return (
         <div 
@@ -55,18 +53,16 @@ const Contact = () => {
                     </p>
                 </div>
                 <div className="mt-12 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div className="h-96 lg:h-auto z-10">
-                        <MapContainer center={[-6.8884592, 107.6273503]} zoom={15} scrollWheelZoom={false} className="h-full w-full rounded-md shadow-lg z-0">
-                            <TileLayer
-                                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                            />
-                            <Marker position={[-6.8884592, 107.6273503]} icon={customIcon}>
-                                <Popup>
-                                    Gani Pedia
-                                </Popup>
-                            </Marker>
-                        </MapContainer>
+                    <div className="z-10">
+                        {/* Google Map */}
+                        <iframe
+                            title="Google Map"
+                            src={googleMapsUrl}
+                            width="100%"
+                            height="400"
+                            style={{ border: 0 }}
+                            allowFullScreen
+                        ></iframe>
                     </div>
                     <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg z-10 relative">
                         <form className="grid grid-cols-1 gap-y-6" onSubmit={(e) => { e.preventDefault(); handleFormSubmit(); }}>

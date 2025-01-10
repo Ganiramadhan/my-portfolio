@@ -6,19 +6,44 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [activeMenu, setActiveMenu] = useState('');
     const [isScrolled, setIsScrolled] = useState(false);
+    let scrollTimeout;
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 50) {
-                setIsScrolled(true);
-            } else {
-                setIsScrolled(false);
-            }
+            if (scrollTimeout) clearTimeout(scrollTimeout);
+
+            scrollTimeout = setTimeout(() => {
+                if (window.scrollY > 50) {
+                    setIsScrolled(true);
+                } else {
+                    setIsScrolled(false);
+                }
+
+                // Update active menu based on scroll position
+                const sections = ['home', 'about', 'project', 'contact'];
+                let currentSection = '';
+
+                for (let section of sections) {
+                    const element = document.getElementById(section);
+                    if (element) {
+                        const rect = element.getBoundingClientRect();
+                        if (rect.top <= 100 && rect.bottom > 100) {
+                            currentSection = section;
+                            break;
+                        }
+                    }
+                }
+
+                if (currentSection) {
+                    setActiveMenu(currentSection.charAt(0).toUpperCase() + currentSection.slice(1));
+                }
+            }, 50); // Debounce time
         };
 
         window.addEventListener('scroll', handleScroll);
         return () => {
             window.removeEventListener('scroll', handleScroll);
+            clearTimeout(scrollTimeout);
         };
     }, []);
 
@@ -28,6 +53,10 @@ const Navbar = () => {
         const element = document.getElementById(menu.toLowerCase());
         if (element) {
             element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // Add a slight delay before updating the active menu to sync with scroll
+            setTimeout(() => {
+                setActiveMenu(menu);
+            }, 500);
         }
     };
 
@@ -42,7 +71,7 @@ const Navbar = () => {
                 <div className="flex items-center">
                     <img src={logoImage} alt="ganipedia logo" style={{ width: '35px' }} />
                     <div className="text-indigo-600 text-xl font-bold ml-2">
-                        <span className='text-white'>GaniPedia</span>
+                        <span className="text-white">GaniPedia</span>
                     </div>
                 </div>
                 <div className={`hidden md:flex md:items-center md:space-x-6`}>
@@ -52,7 +81,7 @@ const Navbar = () => {
                                 <a
                                     href={`#${menu.toLowerCase()}`}
                                     className={`text-lg transition-colors duration-300 ease-in-out ${
-                                        isScrolled && activeMenu === menu
+                                        activeMenu === menu
                                             ? 'text-white font-semibold bg-blue-500 rounded-md px-3 py-2'
                                             : 'text-white hover:text-gray-300'
                                     }`}
@@ -88,7 +117,7 @@ const Navbar = () => {
                             <a
                                 href={`#${menu.toLowerCase()}`}
                                 className={`text-lg transition-colors duration-300 ease-in-out ${
-                                    isScrolled && activeMenu === menu
+                                    activeMenu === menu
                                         ? 'text-white font-semibold bg-blue-500 rounded-md px-3 py-2'
                                         : 'text-white hover:text-gray-300'
                                 }`}
