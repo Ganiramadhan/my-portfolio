@@ -25,7 +25,7 @@ This is a portfolio website built with **Next.js** and **Tailwind CSS**. The web
    ```
 2. Navigate to the project directory:
    ```bash
-   cd portfolio-website
+   cd new-portfolio
    ```
 3. Install the required dependencies:
    ```bash
