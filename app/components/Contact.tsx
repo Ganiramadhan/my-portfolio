@@ -4,7 +4,6 @@ import React, { useState, useCallback } from 'react';
 import { FaPaperPlane } from 'react-icons/fa';
 import { IoLogoWechat } from "react-icons/io5";
 
-
 const Contact = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -17,7 +16,7 @@ const Contact = () => {
         setMessage('');
     }, []);
 
-    const handleFormSubmit = useCallback((e: any) => {
+    const handleFormSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setLoading(true);
         const whatsappMessage = `https://wa.me/6283878624702?text=Welcome!%0AName:%20${encodeURIComponent(name)}%0AEmail:%20${encodeURIComponent(email)}%0AMessage:%20${encodeURIComponent(message)}`;
@@ -39,13 +38,13 @@ const Contact = () => {
     return (
         <section id='contacts' className="py-20 bg-gradient-to-b from-gray-900 to-black text-white">
             <div className="max-w-6xl mx-auto px-6">
-            {/* Header */}
+                {/* Header */}
                 <div className="flex items-center space-x-3 mb-6">
                     <IoLogoWechat size={28} className="text-gray-200" />
                     <h2 className="text-3xl font-semibold text-gray-100">Contact Us</h2>
                 </div>
                 <p className="text-gray-400 mb-8 max-w-2xl">
-                    We'd love to hear from you! Please fill out the form below to get in touch.
+                    We&apos;d love to hear from you! Please fill out the form below to get in touch.
                 </p>
             </div>
 

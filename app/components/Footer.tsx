@@ -7,7 +7,7 @@ const MyFooter = () => {
                 <div className="md:flex md:justify-between">
                     <div className="mb-6 md:mb-0">
                         <h2 className="text-2xl font-bold text-gray-100">GANI PEDIA</h2>
-                        <p className="mt-2">"Creating magic with lines of code." 💥</p>
+                        <p className="mt-2">{"Creating magic with lines of code."} 💥</p>
                     </div>
                     <div className="flex space-x-4">
                         <a

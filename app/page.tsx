@@ -1,4 +1,3 @@
-import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import MySkills from "./components/Skills";
@@ -9,7 +8,6 @@ import Footer from "./components/Footer";
 export default function Home() {
   return (
     <div className="bg-black min-h-screen">
-      {/* <Navbar /> */}
       <Hero />
       <Projects/>
       <MySkills/>
