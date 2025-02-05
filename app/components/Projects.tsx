@@ -11,7 +11,7 @@ import { FaReact, FaNodeJs, FaDatabase, FaCss3Alt, FaHtml5, FaLaravel, FaServer 
 import { DiJavascript1 } from 'react-icons/di';
 import { SiMongodb, SiTailwindcss, SiNextdotjs, SiBootstrap, SiPostgresql, SiSupabase, SiMysql, SiReactrouter } from 'react-icons/si';
 
-const TechStackIcons: Record<string, JSX.Element> = {
+const TechStackIcons: Record<string, React.ReactNode> = {
   React: <FaReact />,
   Node: <FaNodeJs />,
   SQLite: <FaDatabase />,
@@ -36,7 +36,7 @@ interface Project {
   longDescription: string;
   image: string;
   website: string;
-  techStack: string[]; // Updated to string array
+  techStack: string[]; 
 }
 
 const Shimmer = () => (

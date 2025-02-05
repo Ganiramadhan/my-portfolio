@@ -137,7 +137,7 @@ const Hero = () => {
           <FaNodeJs />
         </motion.div>
 
-        {/* Code-Like Text Box */}
+       {/* Code-Like Text Box */}
         {!isReadMore ? (
           <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
@@ -148,7 +148,7 @@ const Hero = () => {
             <pre className="text-base md:text-xl font-mono text-gray-200">
               <TypeAnimation
                 sequence={[
-                  "01 <Hi, I'm Gani Ramadhan 👋🏻/>\n02 <Full Stack Developer/>\n03 <Crafting Tomorrow's Web, Today. 🔥>",
+                  "01 <Hi, I&apos;m Gani Ramadhan 👋🏻/>\n02 <Full Stack Developer/>\n03 <Crafting Tomorrow&apos;s Web, Today. 🔥>",
                   2000,
                   "", // Clear text before repeating
                   1000,
@@ -162,42 +162,43 @@ const Hero = () => {
           </motion.div>
         ) : (
           <motion.div
-              key="readMoreCard"
-              initial={{ rotateY: 180, opacity: 0 }}
-              animate={{ rotateY: 0, opacity: 1 }}
-              exit={{ rotateY: 180, opacity: 0 }}
-              transition={{ duration: 0.5 }}
-              className="bg-gradient-to-b from-gray-900 to-black p-6 md:p-8 rounded-xl shadow-2xl border border-gray-700 relative backdrop-blur-md overflow-hidden"
-            >
-              <pre className="text-sm md:text-lg font-mono text-gray-200 break-words whitespace-pre-wrap">
-                01 {"<"}Hi, I'm <span className="text-blue-400">Gani Ramadhan,</span> a Full Stack Developer,
-                <span>with over <span className="text-blue-400">3 years of experience</span> in software development
-                </span>
-                {"/>"} <br />
-                02 {"<"}Skilled in{" "}
-                <span className="text-blue-400">
-                  JavaScript, TypeScript, React, Next.js, Nest.js,
-                </span>{" "}
-                and <span className="text-blue-400">Laravel</span>
-                {"/>"} <br />
-                03 {"<"}Building responsive, high-performance, and scalable applications{"/>"} <br />
-                04 {"<"}I have experience with{" "}
-                <span className="text-blue-400">
-                  MySQL, PostgreSQL, Memcached,
-                </span>{" "}
-                and <span className="text-blue-400">Redis</span>
-                {"/>"} <br />
-                05 {"<"}I’m familiar with{" "}
-                <span className="text-blue-400">Kubernetes</span> and{" "}
-                <span className="text-blue-400">Load Balancers</span>
-                {"/>"} <br />
-                06 {"<"}Committed to continuous learning and tech updates{"/>"} <br />
-                08 {"<"}Looking forward to building innovative and impactful solutions{"/>"} <br />
-                09 {"<"}Let's create something amazing together. 🔥{"/>"} <br />
-              </pre>
-            </motion.div>
-
+            key="readMoreCard"
+            initial={{ rotateY: 180, opacity: 0 }}
+            animate={{ rotateY: 0, opacity: 1 }}
+            exit={{ rotateY: 180, opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            className="bg-gradient-to-b from-gray-900 to-black p-6 md:p-8 rounded-xl shadow-2xl border border-gray-700 relative backdrop-blur-md overflow-hidden"
+          >
+            <pre className="text-sm md:text-lg font-mono text-gray-200 break-words whitespace-pre-wrap">
+              01 {"<"}Hi, I&apos;m <span className="text-blue-400">Gani Ramadhan,</span> a Full Stack Developer,
+              <span>with over <span className="text-blue-400">3 years of experience</span> in software development
+              </span>
+              {"/>"} <br />
+              02 {"<"}Skilled in{" "}
+              <span className="text-blue-400">
+                JavaScript, TypeScript, React, Next.js, Nest.js,
+              </span>{" "}
+              and <span className="text-blue-400">Laravel</span>
+              {"/>"} <br />
+              03 {"<"}Building responsive, high-performance, and scalable applications{"/>"} <br />
+              04 {"<"}I have experience with{" "}
+              <span className="text-blue-400">
+                MySQL, PostgreSQL, Memcached,
+              </span>{" "}
+              and <span className="text-blue-400">Redis</span>
+              {"/>"} <br />
+              05 {"<"}I&apos;m familiar with{" "}
+              <span className="text-blue-400">Kubernetes</span> and{" "}
+              <span className="text-blue-400">Load Balancers</span>
+              {"/>"} <br />
+              06 {"<"}Committed to continuous learning and tech updates{"/>"} <br />
+              08 {"<"}Looking forward to building innovative and impactful solutions{"/>"} <br />
+              09 {"<"}Let&apos;s create something amazing together. 🔥{"/>"} <br />
+            </pre>
+          </motion.div>
         )}
+
+
 
         {!isReadMore && (
           <motion.p
