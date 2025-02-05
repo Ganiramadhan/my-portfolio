@@ -1,9 +1,12 @@
 'use client'
 
 import { useState, useEffect } from 'react';
-import { FiArrowUpRight, FiSettings } from 'react-icons/fi';
+import { FiArrowUpRight } from 'react-icons/fi';
 import { FaStar } from 'react-icons/fa';
 import { stacks } from '../utils/skills'; 
+import { SiXcode } from "react-icons/si";
+
+
 
 const Shimmer = () => (
   <div className="animate-pulse flex items-center gap-3 p-4 rounded-lg border border-gray-600 bg-gray-800">
@@ -24,16 +27,16 @@ const MySkills = () => {
   }, []);
 
   return (
-    <section className="py-16 bg-gradient-to-b from-gray-900 to-black text-white">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="flex items-center gap-2 mb-2">
-          <FiSettings size={24} className="text-gray-400" />
-          <h2 className="text-3xl font-semibold text-gray-100">My Skills</h2>
+    <section className="py-12 px-4 sm:px-6 bg-gradient-to-b from-gray-900 to-black text-white"> 
+      <div className="max-w-6xl mx-auto">
+        <div className="flex items-center gap-2 mb-4">
+          <SiXcode size={24} className="text-gray-400" />
+          <h2 className="text-2xl sm:text-3xl font-semibold text-gray-100">My Skills</h2>
         </div>
-        <p className="text-gray-400 mb-8">
+        <p className="text-gray-400 mb-6 sm:mb-8">
           Passionate about continuous learning and mastering new technologies.
         </p>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
           {loading
             ? Array.from({ length: 8 }).map((_, index) => <Shimmer key={index} />)
             : stacks.map((stack, index) => (

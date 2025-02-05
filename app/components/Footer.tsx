@@ -11,7 +11,7 @@ const MyFooter = () => {
                     </div>
                     <div className="flex space-x-4">
                         <a
-                            href="https://instagram.com"
+                            href="https://www.instagram.com/ganiiraaa/?hl=en"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-gray-300 hover:text-white transition duration-300"
@@ -20,7 +20,7 @@ const MyFooter = () => {
                             <FaInstagram size={32} />
                         </a>
                         <a
-                            href="https://www.linkedin.com/in/gani-ramadhan-ab588020a"
+                            href="https://www.linkedin.com/in/ganiramadhan35/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-gray-300 hover:text-white transition duration-300"

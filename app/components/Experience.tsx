@@ -1,8 +1,9 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { FiBriefcase } from 'react-icons/fi';
 import { experiences } from '../utils/experiences'; 
+import { BsPersonWorkspace } from "react-icons/bs";
+import Image from 'next/image';
 
 const Shimmer = () => (
   <div className="animate-pulse flex items-center gap-3 p-4 rounded-lg border border-gray-600 bg-gray-800">
@@ -23,43 +24,49 @@ const Experience = () => {
   }, []);
 
   return (
-    <section className="py-20 bg-gradient-to-b from-black to-gray-900 text-white">
-      <div className="max-w-6xl mx-auto px-6">
-      {/* Header */}
-        <div className="flex items-center space-x-3 mb-6">
-          <FiBriefcase size={28} className="text-gray-200" />
-          <h2 className="text-3xl font-semibold text-gray-100">My Experience</h2>
+    <section className="py-12 px-4 sm:px-6 bg-gradient-to-b from-black to-gray-900 text-white">
+      <div className="max-w-6xl mx-auto">
+        {/* Header */}
+        <div className="flex items-center space-x-3 mb-4 sm:mb-6">
+          <BsPersonWorkspace size={24} className="text-gray-200" />
+          <h2 className="text-2xl sm:text-3xl font-semibold text-gray-100">My Experience</h2>
         </div>
-        <p className="text-gray-400 mb-8 max-w-2xl">
+        <p className="text-gray-400 mb-6 sm:mb-8 max-w-2xl">
           Navigating diverse environments with adaptability and expertise for holistic solutions.
         </p>
         
         {/* Experience Cards */}
-        <div className="space-y-8">
+        <div className="space-y-6 sm:space-y-8">
           {loading
             ? Array.from({ length: 2 }).map((_, index) => <Shimmer key={index} />) 
             : experiences.map((exp, index) => (
                 <div
                   key={index}
-                  className="bg-black/30 border border-gray-700/50 backdrop-blur-xl p-8 rounded-2xl shadow-lg transition-all hover:shadow-xl hover:scale-[1.02] duration-300"
+                  className="bg-black/30 border border-gray-700/50 backdrop-blur-xl p-6 sm:p-8 rounded-2xl shadow-lg transition-all hover:shadow-xl hover:scale-[1.02] duration-300"
                 >
-                  <div className="flex justify-between items-center mb-4">
+                  <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
                     <div className="flex items-center space-x-3">
-                      {/* Card around the icon */}
-                      <div className="p-3 border border-gray-700/60 rounded-xl bg-gray-800/50">
-                        <FiBriefcase size={20} className="text-gray-300" />
+                      {/* Company Logo Image */}
+                      <div className="w-12 h-12  bg-white rounded-lg overflow-hidden">
+                        <Image
+                          src={exp.logo}
+                          alt={`${exp.company} logo`}
+                          width={48}
+                          height={48}
+                          className="object-cover"
+                        />
                       </div>
                       <div>
-                        <h3 className="text-2xl font-semibold text-gray-200">{exp.company}</h3>
+                        <h3 className="text-xl sm:text-2xl font-semibold text-gray-200">{exp.company}</h3>
                         <p className="text-sm text-gray-400">{exp.industry}</p>
                       </div>
                     </div>
-                    <span className="text-gray-400 text-sm">{exp.duration}</span>
+                    <span className="text-gray-400 text-sm mt-2 sm:mt-0">{exp.duration}</span>
                   </div>
                   
                   {/* Job Title */}
-                  <h4 className="text-xl font-bold text-white">{exp.position}</h4>
-                  <p className="text-gray-400 mt-2 leading-relaxed">{exp.description}</p>
+                  <h4 className="text-lg sm:text-xl font-bold text-white">{exp.position}</h4>
+                  <p className="text-gray-400 mt-2 leading-relaxed text-sm sm:text-base">{exp.description}</p>
                 </div>
               ))}
         </div>
@@ -69,3 +76,4 @@ const Experience = () => {
 };
 
 export default Experience;
+

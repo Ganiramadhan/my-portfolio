@@ -2,6 +2,8 @@
 
 import React, { useState, useCallback } from 'react';
 import { FaPaperPlane } from 'react-icons/fa';
+import { IoLogoWechat } from "react-icons/io5";
+
 
 const Contact = () => {
     const [name, setName] = useState('');
@@ -35,11 +37,11 @@ const Contact = () => {
     const googleMapsUrl = `https://www.google.com/maps?q=${encodeURIComponent(mapLocation.address)}&output=embed`;
 
     return (
-        <section className="py-20 bg-gradient-to-b from-gray-900 to-black text-white">
+        <section id='contacts' className="py-20 bg-gradient-to-b from-gray-900 to-black text-white">
             <div className="max-w-6xl mx-auto px-6">
             {/* Header */}
                 <div className="flex items-center space-x-3 mb-6">
-                    <FaPaperPlane size={28} className="text-gray-200" />
+                    <IoLogoWechat size={28} className="text-gray-200" />
                     <h2 className="text-3xl font-semibold text-gray-100">Contact Us</h2>
                 </div>
                 <p className="text-gray-400 mb-8 max-w-2xl">
