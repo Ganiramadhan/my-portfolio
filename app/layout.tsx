@@ -5,7 +5,7 @@ import "./globals.css";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
-  weight: ["400", "700"], // Menambahkan opsi bobot font
+  weight: ["400", "700"],
 });
 
 const geistMono = Geist_Mono({
@@ -15,28 +15,28 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio Gani Ramadhan",
-  description: "Selamat datang di portfolio Gani Ramadhan, seorang pengembang web dengan pengalaman di Next.js dan teknologi modern.",
-  keywords: "portfolio, web developer, Next.js, frontend, Gani Ramadhan",
+  title: "Gani Ramadhan Portfolio",
+  description: "Welcome to Gani Ramadhan's portfolio, a web developer experienced in Next.js and modern technologies.",
+  keywords: "portfolio, web developer, Next.js, frontend, Gani Ramadhan, JavaScript, React",
   openGraph: {
-    title: "Portfolio Gani Ramadhan",
-    description: "Jelajahi karya dan pengalaman saya sebagai pengembang web.",
+    title: "Gani Ramadhan Portfolio",
+    description: "Explore my works and experiences as a web developer.",
     url: "https://gramadhan.cyou", 
-    siteName: "Portfolio Gani Ramadhan",
+    siteName: "Gani Ramadhan Portfolio",
     images: [
       {
         url: "/images/newIco.png", 
-        width: 1200,
-        height: 630,
-        alt: "Portfolio Gani Ramadhan",
+        width: 600,
+        height: 315,
+        alt: "Gani Ramadhan Portfolio",
       },
     ],
     type: "website",
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Portfolio Gani Ramadhan",
-    description: "Jelajahi karya dan pengalaman saya sebagai pengembang web.",
+    card: "summary",
+    title: "Gani Ramadhan Portfolio",
+    description: "Explore my works and experiences as a web developer.",
     images: ["/og-image.jpg"],
   },
 };
@@ -47,7 +47,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id">
+    <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
