@@ -21,11 +21,11 @@ This is a portfolio website built with **Next.js** and **Tailwind CSS**. The web
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/username/portfolio-website.git
+   git clone https://github.com/username/my-portfolio.git
    ```
 2. Navigate to the project directory:
    ```bash
-   cd new-portfolio
+   cd my-portfolio
    ```
 3. Install the required dependencies:
    ```bash
