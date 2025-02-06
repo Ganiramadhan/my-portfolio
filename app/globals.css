@@ -17,6 +17,18 @@
 html {
   scroll-behavior: smooth;
 }
+
+#scrolTopButton {
+  z-index: 50;
+}
+
+#profileContainer{
+  background-image: url("/images/newBg.png");
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.8);
+}
+
 /* body {
   color: var(--foreground);
   background: var(--background);

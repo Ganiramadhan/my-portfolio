@@ -3,12 +3,11 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import myIcon from "../../public/images/profile.png";
-import bgImage from "../../public/images/newBg.png";
 import { FaLinkedin, FaGithub, FaInstagram, FaNodeJs, FaRocket } from "react-icons/fa";
 import { SiLaravel, SiReact, SiJquery, SiTailwindcss, SiBootstrap, SiNextdotjs, SiNestjs, SiPhp } from "react-icons/si";
 import { TypeAnimation } from "react-type-animation";
 import { IoLogoWechat, IoHome } from "react-icons/io5";
+import ScrollToTop from "./ScrollTop";
 
 const Hero = () => {
   const [isReadMore, setIsReadMore] = useState(false);
@@ -31,8 +30,9 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen flex flex-col md:flex-row bg-gradient-to-b from-gray-900 to-black text-white">
-      {/* Sidebar */}
+      <ScrollToTop/>
       
+      {/* Sidebar */}
       <motion.aside
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
@@ -41,16 +41,11 @@ const Hero = () => {
       >
         
         <div 
+          id="profileContainer"
           className="w-36 h-36 md:w-40 md:h-40 flex justify-center items-center overflow-hidden rounded-full"
-          style={{
-            backgroundImage: `url(${bgImage.src})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            filter: "brightness(0.8)",
-          }}
         >
           <Image
-            src={myIcon}
+            src=  "/images/profile.png"
             width={150}
             height={150}
             alt="Profile"
@@ -148,7 +143,7 @@ const Hero = () => {
             <pre className="text-base md:text-xl font-mono text-gray-200">
               <TypeAnimation
                 sequence={[
-                  "01 <Hi, I&apos;m Gani Ramadhan 👋🏻/>\n02 <Full Stack Developer/>\n03 <Crafting Tomorrow&apos;s Web, Today. 🔥>",
+                  "01 <Hi, I'm Gani Ramadhan 👋🏻/>\n02 <Full Stack Developer/>\n03 <Crafting Tomorrow's Web, Today. 🔥>",
                   2000,
                   "", // Clear text before repeating
                   1000,
