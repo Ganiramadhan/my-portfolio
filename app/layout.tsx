@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     siteName: "Gani Ramadhan Portfolio",
     images: [
       {
-        url: "/images/newIco.png", 
+        url: "/images/newIcon.png", 
         width: 600,
         height: 315,
         alt: "Gani Ramadhan Portfolio",
