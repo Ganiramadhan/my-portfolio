@@ -9,6 +9,7 @@ import { TypeAnimation } from "react-type-animation";
 import { IoLogoWechat, IoHome } from "react-icons/io5";
 import ScrollToTop from "./ScrollTop";
 
+
 const Hero = () => {
   const [isReadMore, setIsReadMore] = useState(false);
 
