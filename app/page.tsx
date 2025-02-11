@@ -18,7 +18,7 @@ export default function Home() {
       <Contact />
       <Footer />
 
-      {chatbaseId && (
+      {/* {chatbaseId && (
         <Script
           id="chatbase-script"
           strategy="afterInteractive"
@@ -53,7 +53,7 @@ export default function Home() {
             `,
           }}
         />
-      )}
+      )} */}
     </div>
   );
 }
