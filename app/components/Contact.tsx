@@ -3,6 +3,7 @@
 import React, { useState, useCallback } from 'react';
 import { FaPaperPlane } from 'react-icons/fa';
 import { IoLogoWechat } from "react-icons/io5";
+import { motion } from 'framer-motion';
 
 const Contact = () => {
     const [name, setName] = useState('');
@@ -36,13 +37,26 @@ const Contact = () => {
     const googleMapsUrl = `https://www.google.com/maps?q=${encodeURIComponent(mapLocation.address)}&output=embed`;
 
     return (
-        <section id='contacts' className="py-20 bg-gradient-to-b from-gray-900 to-black text-white">
+        <motion.section 
+            id='contacts' 
+            className="py-20 bg-gradient-to-b from-gray-900 to-black text-white"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+        >
             <div className="max-w-6xl mx-auto px-6">
                 {/* Header */}
-                <div className="flex items-center space-x-3 mb-6">
+                <motion.div 
+                    className="flex items-center space-x-3 mb-6"
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: true }}
+                >
                     <IoLogoWechat size={28} className="text-gray-200" />
                     <h2 className="text-3xl font-semibold text-gray-100">Contact Us</h2>
-                </div>
+                </motion.div>
                 <p className="text-gray-400 mb-8 max-w-2xl">
                     We&apos;d love to hear from you! Please fill out the form below to get in touch.
                 </p>
@@ -50,7 +64,13 @@ const Contact = () => {
 
             <div className="mt-12 max-w-[70rem] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 p-6 bg-gray-900 border border-gray-700 rounded-xl shadow-xl">
                 {/* Google Maps */}
-                <div className="rounded-lg overflow-hidden shadow-md">
+                <motion.div 
+                    className="rounded-lg overflow-hidden shadow-md"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: true }}
+                >
                     <iframe
                         title="Google Map"
                         src={googleMapsUrl}
@@ -59,10 +79,16 @@ const Contact = () => {
                         className="border-0"
                         allowFullScreen
                     ></iframe>
-                </div>
+                </motion.div>
 
                 {/* Contact Form */}
-                <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <motion.div 
+                    className="bg-gray-800 p-6 rounded-lg shadow-lg"
+                    initial={{ opacity: 0, x: 50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: true }}
+                >
                     <form className="grid grid-cols-1 gap-y-6" onSubmit={handleFormSubmit}>
                         <div>
                             <input
@@ -118,9 +144,9 @@ const Contact = () => {
                             </button>
                         </div>
                     </form>
-                </div>
+                </motion.div>
             </div>
-        </section>
+        </motion.section>
     );
 };
 

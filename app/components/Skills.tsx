@@ -5,8 +5,7 @@ import { FiArrowUpRight } from 'react-icons/fi';
 import { FaStar } from 'react-icons/fa';
 import { stacks } from '../utils/skills'; 
 import { SiXcode } from "react-icons/si";
-
-
+import { motion } from 'framer-motion';
 
 const Shimmer = () => (
   <div className="animate-pulse flex items-center gap-3 p-4 rounded-lg border border-gray-600 bg-gray-800">
@@ -40,8 +39,12 @@ const MySkills = () => {
           {loading
             ? Array.from({ length: 8 }).map((_, index) => <Shimmer key={index} />)
             : stacks.map((stack, index) => (
-                <div
+                <motion.div
                   key={index}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="relative flex items-center gap-3 p-4 rounded-lg border border-gray-600 bg-black transition-all duration-300 hover:bg-gray-800 group"
                 >
                   {stack.featured && (
@@ -62,7 +65,7 @@ const MySkills = () => {
                     <p className="font-semibold text-lg text-gray-100">{stack.name}</p>
                     <p className="text-gray-400 text-sm">{stack.category}</p>
                   </div>
-                </div>
+                </motion.div>
               ))}
         </div>
       </div>

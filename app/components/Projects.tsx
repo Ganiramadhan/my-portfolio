@@ -68,15 +68,21 @@ const MyProjects = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {loading ? (
-            Array(6).fill(0).map((_, index) => <Shimmer key={index} />)
+            Array(6)
+              .fill(0)
+              .map((_, index) => <Shimmer key={index} />)
           ) : (
             projects.map((project, index) => (
-              <div
+              <motion.div
                 key={index}
                 className={`${
                   index === 0 || index === 5 ? "md:col-span-2" : ""
                 } bg-gradient from-gray-900 to-black border border-gray-700 p-4 rounded-lg shadow-lg group relative cursor-pointer`}
                 onClick={() => setSelectedProject(project)}
+                initial={{ opacity: 0, y: 50 }} 
+                whileInView={{ opacity: 1, y: 0 }} 
+                transition={{ duration: 0.6, delay: index * 0.1 }} 
+                viewport={{ once: true }} 
               >
                 <div className="w-full h-44 relative">
                   <Image
@@ -87,13 +93,22 @@ const MyProjects = () => {
                     priority
                   />
                 </div>
-                <h3 className="mt-4 text-lg font-semibold group-hover:translate-x-3 transition-transform duration-300">{project.title}</h3>
-                <p className="text-gray-400 group-hover:translate-x-3 transition-transform duration-300">{project.description}</p>
-                <GiClick className="absolute bottom-2 right-2 text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300" size={24} />
-              </div>
+                <h3 className="mt-4 text-lg font-semibold group-hover:translate-x-3 transition-transform duration-300">
+                  {project.title}
+                </h3>
+                <p className="text-gray-400 group-hover:translate-x-3 transition-transform duration-300">
+                  {project.description}
+                </p>
+                <GiClick
+                  className="absolute bottom-2 right-2 text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  size={24}
+                />
+              </motion.div>
             ))
           )}
         </div>
+
+        
       </div>
 
       {selectedProject && (
