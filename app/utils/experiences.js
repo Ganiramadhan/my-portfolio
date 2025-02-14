@@ -2,10 +2,10 @@ export const experiences = [
   {
     company: "Neuronworks Indonesia",
     industry: "IT Consultant",
-    position: "Fullstack Web Developer",
+    position: "Frontend Developer",
     duration: "2023-2024 (1 Year 1 Month)",
     description:
-      "I contributed to the development of a website for internet service installation transactions with one of the largest providers in Indonesia, utilizing JavaScript, jQuery, PHP, and Zend Framework to enhance transaction speed by 40%. Managing PostgreSQL and Oracle databases for efficient data storage and processing, the website improved customer satisfaction by 30%, accelerated transactions, and increased search and order creation efficiency by 40%.",
+      "Contributed to the development of a client-facing website for internet service installation transactions with one of Indonesia’s largest providers. Built a modern, responsive interface using React.js, Next.js, Tailwind CSS, and TypeScript, ensuring maintainability and optimal performance. Integrated REST API for dynamic data handling and optimized front-end components, boosting transaction speed by 40%. Utilized Git and GitHub for version control, enhancing collaboration. UI/UX improvements increased customer satisfaction by 30% and search and order efficiency by 40%.",
     logo: "/images/neuron.png",  
   },
   {
