@@ -4,10 +4,9 @@ import MySkills from "./components/Skills";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import Script from "next/script";
 
 export default function Home() {
-  const chatbaseId = process.env.NEXT_PUBLIC_CHATBASE_ID;
+  // const chatbaseId = process.env.NEXT_PUBLIC_CHATBASE_ID;
 
   return (
     <div className="bg-black min-h-screen">

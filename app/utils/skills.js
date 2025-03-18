@@ -1,5 +1,5 @@
-import { FaNodeJs, FaCloud } from 'react-icons/fa';
-import { SiLaravel, SiReact, SiJquery, SiTailwindcss, SiBootstrap, SiSupabase, SiPostgresql, SiMysql, SiNextdotjs, SiNestjs, SiPhp } from 'react-icons/si';
+import { FaNodeJs } from 'react-icons/fa';
+import { SiLaravel, SiReact, SiTailwindcss, SiPostgresql, SiMysql, SiNextdotjs, SiNestjs, SiPhp } from 'react-icons/si';
 
 export const stacks = [
   { name: 'PHP', category: 'Backend Language', icon: <SiPhp />, color: 'text-blue-600', link: 'https://www.php.net/' },
