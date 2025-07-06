@@ -1,13 +1,13 @@
 export const experiences = [
-  // {
-  //   company: "Drizy Studio",
-  //   industry: "Studio Design",
-  //   position: "Full Stack Developer",
-  //   duration: "2025-2025 (4 Month)",
-  //   description:
-  //     "Responsible for developing and maintaining the Drizy and Drizy Craft platforms using Next.js and NestJS, resulting in a 40% improvement in overall system performance. Managed and optimized PostgreSQL databases, improving query efficiency by 35%. Implemented CI/CD pipelines with Docker, reducing deployment time by over 50%. Configured reverse proxy setups to enhance routing and security, and provided ongoing technical support to ensure 90% system uptime.",
-  //   logo: "/images/drizy.png",  
-  // },
+  {
+    company: "Drizy Studio",
+    industry: "Studio Design",
+    position: "Full Stack Developer",
+    duration: "2025-2025 (3 Month)",
+    description:
+      "Responsible for developing and maintaining the Drizy and Drizy Craft platforms using Next.js and NestJS, resulting in a 40% improvement in overall system performance. Managed and optimized PostgreSQL databases, improving query efficiency by 35%. Implemented CI/CD pipelines with Docker, reducing deployment time by over 50%. Configured reverse proxy setups to enhance routing and security, and provided ongoing technical support to ensure 90% system uptime.",
+    logo: "/images/drizy.png",  
+  },
   {
     company: "Neuronworks Indonesia",
     industry: "IT Consultant",
