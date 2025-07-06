@@ -1,26 +1,26 @@
-# Gunakan image Node.js
-FROM node:18-alpine
+# Gunakan image Node.js sebagai base image
+FROM node:18-alpine AS deps
 
 # Set working directory
 WORKDIR /app
 
-# Copy package.json dan package-lock.json
+# Salin dependency files terlebih dahulu
 COPY package*.json ./
 
 # Install dependencies
 RUN npm install
 
-# Copy semua file project
+# Salin seluruh source code
 COPY . .
 
-# Set environment variable
+# Set production environment
 ENV NODE_ENV=production
 
-# Build Next.js
+# Build Next.js app
 RUN npm run build
 
-# Expose port
-EXPOSE 3001
+# Expose port sesuai yang dipakai Next.js
+EXPOSE 3000
 
-# Jalankan aplikasi
+# Jalankan aplikasi Next.js
 CMD ["npm", "run", "start"]
