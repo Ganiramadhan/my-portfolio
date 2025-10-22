@@ -30,21 +30,14 @@ pipeline {
             steps {
                 echo 'Installing dependencies, linting, and building with Node.js in Docker...'
                 script {
-                    docker.image('node:18-alpine').inside {
-                        sh '''
-                            # Install PNPM
-                            npm install -g pnpm
-                            
-                            # Install dependencies
-                            pnpm install --frozen-lockfile
-                            
-                            # Run linter
-                            pnpm run lint
-                            
-                            # Build Next.js
-                            pnpm run build
-                        '''
-                    }
+                    sh '''
+                        docker run --rm -v $(pwd):/app -w /app node:18-alpine sh -c "
+                        npm install -g pnpm &&
+                        pnpm install --frozen-lockfile &&
+                        pnpm run lint &&
+                        pnpm run build
+                        "
+                    '''
                 }
             }
         }
