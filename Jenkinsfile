@@ -8,7 +8,7 @@ pipeline {
         DOCKER_CREDENTIALS_ID = 'docker-hub-credentials' 
         
         APP_NAME = 'my-portfolio'
-        APP_PORT = '3008'
+        APP_PORT = '3009'
         
         NODE_VERSION = '18'
     }

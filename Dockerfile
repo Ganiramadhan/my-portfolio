@@ -20,7 +20,7 @@ ENV NODE_ENV=production
 RUN npm run build
 
 # Expose port sesuai yang dipakai Next.js
-EXPOSE 3008
+EXPOSE 3009
 
 # Jalankan aplikasi Next.js
 CMD ["npm", "run", "start"]
