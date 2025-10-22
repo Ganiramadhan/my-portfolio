@@ -9,8 +9,6 @@ pipeline {
         
         APP_NAME = 'my-portfolio'
         APP_PORT = '3009'
-        
-        NODE_VERSION = '18'
     }
     
     stages {
@@ -24,53 +22,29 @@ pipeline {
         stage('Environment Info') {
             steps {
                 echo 'Displaying environment information...'
-                sh 'docker --version'
-                sh 'node --version || echo "Node not installed in Jenkins agent"'
-                sh 'pnpm --version || echo "PNPM not installed in Jenkins agent"'
+                sh 'docker --version || echo "Docker not available"'
             }
         }
         
-        stage('Install Dependencies') {
+        stage('Install Dependencies & Build') {
             steps {
-                echo 'Installing dependencies with pnpm...'
+                echo 'Installing dependencies, linting, and building with Node.js in Docker...'
                 script {
-                    sh '''
-                        docker run --rm \
-                        -v $(pwd):/app \
-                        -w /app \
-                        node:18-alpine \
-                        sh -c "npm install -g pnpm && pnpm install --frozen-lockfile"
-                    '''
-                }
-            }
-        }
-        
-        stage('Lint') {
-            steps {
-                echo 'Running ESLint...'
-                script {
-                    sh '''
-                        docker run --rm \
-                        -v $(pwd):/app \
-                        -w /app \
-                        node:18-alpine \
-                        sh -c "npm install -g pnpm && pnpm run lint"
-                    '''
-                }
-            }
-        }
-        
-        stage('Build Application') {
-            steps {
-                echo 'Building Next.js application...'
-                script {
-                    sh '''
-                        docker run --rm \
-                        -v $(pwd):/app \
-                        -w /app \
-                        node:18-alpine \
-                        sh -c "npm install -g pnpm && pnpm run build"
-                    '''
+                    docker.image('node:18-alpine').inside {
+                        sh '''
+                            # Install PNPM
+                            npm install -g pnpm
+                            
+                            # Install dependencies
+                            pnpm install --frozen-lockfile
+                            
+                            # Run linter
+                            pnpm run lint
+                            
+                            # Build Next.js
+                            pnpm run build
+                        '''
+                    }
                 }
             }
         }
@@ -87,7 +61,7 @@ pipeline {
         
         stage('Push to Registry') {
             when {
-                branch 'main' 
+                branch 'main'
             }
             steps {
                 echo 'Pushing Docker image to registry...'
@@ -109,7 +83,7 @@ pipeline {
         
         stage('Deploy') {
             when {
-                branch 'main' 
+                branch 'main'
             }
             steps {
                 echo 'Deploying application...'
@@ -117,9 +91,6 @@ pipeline {
                     sh '''
                         docker stop ${APP_NAME} || true
                         docker rm ${APP_NAME} || true
-                    '''
-                    
-                    sh '''
                         docker run -d \
                         --name ${APP_NAME} \
                         --restart unless-stopped \
@@ -138,7 +109,6 @@ pipeline {
                 echo 'Performing health check...'
                 script {
                     sh 'sleep 10'
-                    
                     sh '''
                         if docker ps | grep -q ${APP_NAME}; then
                             echo "Container ${APP_NAME} is running successfully"
@@ -156,7 +126,6 @@ pipeline {
                 echo 'Cleaning up old Docker images...'
                 script {
                     sh 'docker image prune -f'
-                    
                     sh '''
                         docker images ${DOCKER_IMAGE_NAME} --format "{{.ID}} {{.Tag}}" | \
                         grep -v latest | \
