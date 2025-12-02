@@ -29,6 +29,10 @@ html {
   filter: brightness(0.8);
 }
 
+* {
+  transition: all 0.3s ease;
+}
+
 /* body {
   color: var(--foreground);
   background: var(--background);

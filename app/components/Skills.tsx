@@ -8,11 +8,11 @@ import { SiXcode } from "react-icons/si";
 import { motion } from 'framer-motion';
 
 const Shimmer = () => (
-  <div className="animate-pulse flex items-center gap-3 p-4 rounded-lg border border-gray-600 bg-gray-800">
-    <div className="p-3 rounded-full bg-gray-700 w-10 h-10"></div>
+  <div className="animate-pulse flex items-center gap-3 p-4 rounded-2xl border border-white/10 bg-gray-800/30 backdrop-blur-sm">
+    <div className="p-3 rounded-xl bg-gray-700/50 w-10 h-10"></div>
     <div>
-      <div className="h-4 bg-gray-700 rounded w-24 mb-2"></div>
-      <div className="h-3 bg-gray-700 rounded w-16"></div>
+      <div className="h-4 bg-gray-700/50 rounded-full w-24 mb-2"></div>
+      <div className="h-3 bg-gray-700/50 rounded-full w-16"></div>
     </div>
   </div>
 );
@@ -26,11 +26,11 @@ const MySkills = () => {
   }, []);
 
   return (
-    <section className="py-12 px-4 sm:px-6 bg-gradient-to-b from-gray-900 to-black text-white"> 
+    <section className="py-12 px-4 sm:px-6 bg-gradient-to-b from-slate-900 to-black text-white"> 
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center gap-2 mb-4">
-          <SiXcode size={24} className="text-gray-400" />
-          <h2 className="text-2xl sm:text-3xl font-semibold text-gray-100">My Skills</h2>
+          <SiXcode size={24} className="text-cyan-400" />
+          <h2 className="text-2xl sm:text-3xl font-semibold text-white">My Skills</h2>
         </div>
         <p className="text-gray-400 mb-6 sm:mb-8">
           Passionate about continuous learning and mastering new technologies.
@@ -45,7 +45,7 @@ const MySkills = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="relative flex items-center gap-3 p-4 rounded-lg border border-gray-600 bg-black transition-all duration-300 hover:bg-gray-800 group"
+                  className="relative flex items-center gap-3 p-4 rounded-2xl border border-white/10 bg-gray-900/30 backdrop-blur-sm transition-all duration-300 hover:bg-gray-800/50 hover:border-cyan-500/30 hover:shadow-lg hover:shadow-cyan-500/10 group"
                 >
                   {stack.featured && (
                     <div className="absolute top-2 left-2 text-yellow-400">
@@ -58,7 +58,7 @@ const MySkills = () => {
                   >
                     <FiArrowUpRight />
                   </div>
-                  <div className="p-3 rounded-lg border bg-gray-800 transition-all duration-300">
+                  <div className="p-3 rounded-xl border border-white/10 bg-gray-800/50 backdrop-blur-sm transition-all duration-300 group-hover:scale-110">
                     <div className={`text-2xl ${stack.color}`}>{stack.icon}</div>
                   </div>
                   <div>

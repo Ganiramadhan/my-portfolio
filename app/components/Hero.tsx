@@ -30,7 +30,7 @@ const Hero = () => {
   
 
   return (
-    <section className="min-h-screen flex flex-col md:flex-row bg-gradient-to-b from-gray-900 to-black text-white">
+    <section className="min-h-screen flex flex-col md:flex-row bg-gradient-to-br from-slate-900 via-slate-800 to-black text-white">
       <ScrollToTop/>
       
       {/* Sidebar */}
@@ -38,7 +38,7 @@ const Hero = () => {
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="md:w-1/4 w-full backdrop-blur-md bg-gradient-to-b from-gray-900 to-black border-r border-gray-700 flex flex-col items-center py-8 md:py-12 shadow-lg rounded-tr-3xl rounded-br-3xl"
+        className="md:w-1/4 w-full backdrop-blur-2xl bg-gradient-to-b from-gray-900/50 to-black/50 border-r border-white/10 flex flex-col items-center py-8 md:py-12 shadow-2xl rounded-tr-3xl rounded-br-3xl"
       >
         
         <div 
@@ -56,19 +56,19 @@ const Hero = () => {
         <nav className="mt-8 space-y-5 w-full text-center text-xl">
           <a
             href="#"
-            className="flex items-center justify-center gap-2 text-blue-400 font-semibold hover:text-blue-300 transition"
+            className="flex items-center justify-center gap-2 text-cyan-400 font-semibold hover:text-cyan-300 transition-all duration-300 hover:scale-105"
           >
             <IoHome /> Home
           </a>
           <a
             href="#projects"
-            className="flex items-center justify-center gap-2 text-gray-300 hover:text-blue-400 transition"
+            className="flex items-center justify-center gap-2 text-gray-300 hover:text-cyan-400 transition-all duration-300 hover:scale-105"
           >
             <FaRocket /> Projects
           </a>
           <a
             href="#contacts"
-            className="flex items-center justify-center gap-2 text-gray-300 hover:text-blue-400 transition"
+            className="flex items-center justify-center gap-2 text-gray-300 hover:text-cyan-400 transition-all duration-300 hover:scale-105"
           >
             <IoLogoWechat /> Contact
           </a>
@@ -80,21 +80,21 @@ const Hero = () => {
             <a
               href="https://www.linkedin.com/in/ganiramadhan35/"
               aria-label="LinkedIn"
-              className="hover:text-blue-400 transition"
+              className="hover:text-cyan-400 transition-all duration-300 hover:scale-110"
             >
               <FaLinkedin />
             </a>
             <a
               href="https://github.com/Ganiramadhan"
               aria-label="GitHub"
-              className="hover:text-blue-400 transition"
+              className="hover:text-cyan-400 transition-all duration-300 hover:scale-110"
             >
               <FaGithub />
             </a>
             <a
               href="https://www.instagram.com/ganiiraaa/?hl=en"
               aria-label="Instagram"
-              className="hover:text-blue-400 transition"
+              className="hover:text-cyan-400 transition-all duration-300 hover:scale-110"
             >
               <FaInstagram />
             </a>
@@ -139,7 +139,7 @@ const Hero = () => {
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="bg-gray-800 p-6 md:p-8 rounded-xl shadow-2xl border border-gray-700 relative backdrop-blur-md"
+            className="bg-gray-800/30 p-6 md:p-8 rounded-3xl shadow-2xl border border-white/10 relative backdrop-blur-2xl"
           >
             <pre className="text-base md:text-xl font-mono text-gray-200">
               <TypeAnimation
@@ -163,7 +163,7 @@ const Hero = () => {
             animate={{ rotateY: 0, opacity: 1 }}
             exit={{ rotateY: 180, opacity: 0 }}
             transition={{ duration: 0.5 }}
-            className="bg-gradient-to-b from-gray-900 to-black p-6 md:p-8 rounded-xl shadow-2xl border border-gray-700 relative backdrop-blur-md overflow-hidden"
+            className="bg-gradient-to-b from-gray-900/30 to-black/30 p-6 md:p-8 rounded-3xl shadow-2xl border border-white/10 relative backdrop-blur-2xl overflow-hidden"
           >
             <pre className="text-sm md:text-lg font-mono text-gray-200 break-words whitespace-pre-wrap">
               01 {"<"}Hi, I&apos;m <span className="text-blue-400">Gani Ramadhan,</span> a Full Stack Developer,
@@ -214,14 +214,14 @@ const Hero = () => {
           transition={{ delay: 0.5 }}
           className="mt-6 flex gap-4 flex-wrap justify-center"
         >
-          <button className="bg-blue-500 text-white px-5 py-2 md:px-7 md:py-3 rounded-lg font-bold shadow-lg hover:bg-blue-600 transition"
+          <button className="bg-cyan-500 text-white px-5 py-2 md:px-7 md:py-3 rounded-full font-bold shadow-lg hover:shadow-cyan-500/50 hover:bg-cyan-600 hover:scale-105 transition-all duration-300"
             onClick={workWithme}
           >
             Work with me →
           </button>
           <button
             onClick={handleReadMore}
-            className="bg-gray-700 px-5 py-2 md:px-7 md:py-3 rounded-lg font-bold text-gray-300 shadow-lg hover:bg-gray-600 transition"
+            className="bg-gray-700/50 backdrop-blur-sm px-5 py-2 md:px-7 md:py-3 rounded-full font-bold text-gray-300 shadow-lg hover:bg-gray-600/50 hover:scale-105 transition-all duration-300 border border-white/10"
           >
             {isReadMore ? "Read less ↑" : "Read more ↓"}
           </button>

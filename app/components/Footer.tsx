@@ -2,11 +2,11 @@ import { FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const MyFooter = () => {
     return (
-        <footer className="py-20 bg-gradient-to-b from-black to-gray-900 text-white">
+        <footer className="py-20 bg-gradient-to-b from-black to-slate-900 text-white border-t border-white/10">
             <div className="container mx-auto px-6 md:px-10">
                 <div className="md:flex md:justify-between">
                     <div className="mb-6 md:mb-0">
-                        <h2 className="text-2xl font-bold text-gray-100">GANI PEDIA</h2>
+                        <h2 className="text-2xl font-bold text-white"><span className="text-cyan-400">GANI</span> PEDIA</h2>
                         <p className="mt-2">{"Creating magic with lines of code."} 💥</p>
                     </div>
                     <div className="flex space-x-4">
@@ -14,7 +14,7 @@ const MyFooter = () => {
                             href="https://www.instagram.com/ganiiraaa/?hl=en"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-gray-300 hover:text-white transition duration-300"
+                            className="text-gray-300 hover:text-cyan-400 transition-all duration-300 hover:scale-110"
                             aria-label="Visit our Instagram"
                         >
                             <FaInstagram size={32} />
@@ -23,7 +23,7 @@ const MyFooter = () => {
                             href="https://www.linkedin.com/in/ganiramadhan35/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-gray-300 hover:text-white transition duration-300"
+                            className="text-gray-300 hover:text-cyan-400 transition-all duration-300 hover:scale-110"
                             aria-label="Visit our LinkedIn profile"
                         >
                             <FaLinkedin size={32} />
@@ -32,7 +32,7 @@ const MyFooter = () => {
                             href="https://github.com/Ganiramadhan"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-gray-300 hover:text-white transition duration-300"
+                            className="text-gray-300 hover:text-cyan-400 transition-all duration-300 hover:scale-110"
                             aria-label="Visit our GitHub profile"
                         >
                             <FaGithub size={32} />

@@ -39,7 +39,7 @@ const Contact = () => {
     return (
         <motion.section 
             id='contacts' 
-            className="py-20 bg-gradient-to-b from-gray-900 to-black text-white"
+            className="py-20 bg-gradient-to-b from-slate-900 to-black text-white"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -54,18 +54,18 @@ const Contact = () => {
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
                 >
-                    <IoLogoWechat size={28} className="text-gray-200" />
-                    <h2 className="text-3xl font-semibold text-gray-100">Contact Us</h2>
+                    <IoLogoWechat size={28} className="text-cyan-400" />
+                    <h2 className="text-3xl font-semibold text-white">Contact Us</h2>
                 </motion.div>
                 <p className="text-gray-400 mb-8 max-w-2xl">
                     We&apos;d love to hear from you! Please fill out the form below to get in touch.
                 </p>
             </div>
 
-            <div className="mt-12 max-w-[70rem] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 p-6 bg-gray-900 border border-gray-700 rounded-xl shadow-xl">
+            <div className="mt-12 max-w-[70rem] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 p-6 bg-gray-900/30 backdrop-blur-2xl border border-white/10 rounded-3xl shadow-2xl">
                 {/* Google Maps */}
                 <motion.div 
-                    className="rounded-lg overflow-hidden shadow-md"
+                    className="rounded-2xl overflow-hidden shadow-2xl border border-white/10"
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8 }}
@@ -83,7 +83,7 @@ const Contact = () => {
 
                 {/* Contact Form */}
                 <motion.div 
-                    className="bg-gray-800 p-6 rounded-lg shadow-lg"
+                    className="bg-gray-800/50 backdrop-blur-xl p-6 rounded-2xl shadow-2xl border border-white/10"
                     initial={{ opacity: 0, x: 50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
@@ -99,7 +99,7 @@ const Contact = () => {
                                 required
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}
-                                className="w-full p-4 border border-gray-600 rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                                className="w-full p-4 border border-white/10 rounded-2xl bg-gray-700/50 backdrop-blur-sm text-white placeholder-gray-400 focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-300"
                                 placeholder="Your Name"
                             />
                         </div>
@@ -112,7 +112,7 @@ const Contact = () => {
                                 required
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                className="w-full p-4 border border-gray-600 rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                                className="w-full p-4 border border-white/10 rounded-2xl bg-gray-700/50 backdrop-blur-sm text-white placeholder-gray-400 focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-300"
                                 placeholder="Your Email"
                             />
                         </div>
@@ -123,7 +123,7 @@ const Contact = () => {
                                 required
                                 value={message}
                                 onChange={(e) => setMessage(e.target.value)}
-                                className="w-full p-4 border border-gray-600 rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                                className="w-full p-4 border border-white/10 rounded-2xl bg-gray-700/50 backdrop-blur-sm text-white placeholder-gray-400 focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-300"
                                 placeholder="Your Message"
                                 rows={5}
                             ></textarea>
@@ -131,7 +131,7 @@ const Contact = () => {
                         <div>
                             <button
                                 type="submit"
-                                className="w-full py-4 px-6 flex items-center justify-center space-x-2 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-lg transition-all shadow-lg disabled:bg-gray-500"
+                                className="w-full py-4 px-6 flex items-center justify-center space-x-2 bg-cyan-500 hover:bg-cyan-600 text-white font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
                                 disabled={loading}
                                 aria-label="Send Message"
                             >

@@ -6,11 +6,11 @@ import { BsPersonWorkspace } from "react-icons/bs";
 import Image from 'next/image';
 
 const Shimmer = () => (
-  <div className="animate-pulse flex items-center gap-3 p-4 rounded-lg border border-gray-600 bg-gray-800">
-    <div className="p-3 rounded-full bg-gray-700 w-10 h-10"></div>
+  <div className="animate-pulse flex items-center gap-3 p-4 rounded-3xl border border-white/10 bg-gray-800/30 backdrop-blur-sm">
+    <div className="p-3 rounded-xl bg-gray-700/50 w-10 h-10"></div>
     <div>
-      <div className="h-4 bg-gray-700 rounded w-24 mb-2"></div>
-      <div className="h-3 bg-gray-700 rounded w-16"></div>
+      <div className="h-4 bg-gray-700/50 rounded-full w-24 mb-2"></div>
+      <div className="h-3 bg-gray-700/50 rounded-full w-16"></div>
     </div>
   </div>
 );
@@ -24,12 +24,12 @@ const Experience = () => {
   }, []);
 
   return (
-    <section className="py-12 px-4 sm:px-6 bg-gradient-to-b from-black to-gray-900 text-white">
+    <section className="py-12 px-4 sm:px-6 bg-gradient-to-b from-black to-slate-900 text-white">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="flex items-center space-x-3 mb-4 sm:mb-6">
-          <BsPersonWorkspace size={24} className="text-gray-200" />
-          <h2 className="text-2xl sm:text-3xl font-semibold text-gray-100">My Experience</h2>
+          <BsPersonWorkspace size={24} className="text-cyan-400" />
+          <h2 className="text-2xl sm:text-3xl font-semibold text-white">My Experience</h2>
         </div>
         <p className="text-gray-400 mb-6 sm:mb-8 max-w-2xl">
           Navigating diverse environments with adaptability and expertise for holistic solutions.
@@ -42,7 +42,7 @@ const Experience = () => {
             : experiences.map((exp, index) => (
                 <div
                   key={index}
-                  className="bg-black/30 border border-gray-700/50 backdrop-blur-xl p-6 sm:p-8 rounded-2xl shadow-lg transition-all hover:shadow-xl hover:scale-[1.02] duration-300"
+                  className="bg-gray-900/30 border border-white/10 backdrop-blur-2xl p-6 sm:p-8 rounded-3xl shadow-2xl transition-all hover:shadow-cyan-500/20 hover:shadow-2xl hover:scale-[1.02] hover:border-cyan-500/30 duration-300"
                 >
                   <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
                     <div className="flex items-center space-x-3">

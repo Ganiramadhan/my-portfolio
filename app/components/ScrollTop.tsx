@@ -29,8 +29,8 @@ const ScrollToTop = () => {
      id="scrolTopButton"
       onClick={scrollToTop}
       aria-label="Scroll Top"
-      className={`fixed bottom-6 right-6 p-3 rounded-full bg-blue-600 text-white shadow-lg transition-opacity duration-300 ${
-        isVisible ? "opacity-100" : "opacity-0"
+      className={`fixed bottom-6 right-6 p-4 rounded-full bg-cyan-500 text-white shadow-2xl hover:shadow-cyan-500/50 hover:bg-cyan-600 hover:scale-110 transition-all duration-300 backdrop-blur-sm ${
+        isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
     >
       <FaArrowUp size={20} />
