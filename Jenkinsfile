@@ -18,23 +18,6 @@ pipeline {
                 echo 'Displaying environment information...'
                 sh 'docker --version'
                 sh 'ls -la'
-                sh 'pwd'
-            }
-        }
-        
-        stage('Install Dependencies & Build') {
-            steps {
-                echo 'Installing dependencies, linting, and building with Node.js in Docker...'
-                script {
-                    sh '''
-                        docker run --rm -v $(pwd):/app -w /app node:18-alpine sh -c "
-                        npm install -g pnpm &&
-                        pnpm install --frozen-lockfile &&
-                        pnpm run lint &&
-                        pnpm run build
-                        "
-                    '''
-                }
             }
         }
         
