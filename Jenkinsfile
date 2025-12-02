@@ -13,17 +13,12 @@ pipeline {
     }
     
     stages {
-        stage('Checkout') {
-            steps {
-                echo 'Checking out code from repository...'
-                checkout scm
-            }
-        }
-        
         stage('Environment Info') {
             steps {
                 echo 'Displaying environment information...'
-                sh 'docker --version || echo "Docker not available"'
+                sh 'docker --version'
+                sh 'ls -la'
+                sh 'pwd'
             }
         }
         
@@ -135,15 +130,12 @@ pipeline {
     post {
         success {
             echo 'Pipeline completed successfully!'
+            echo 'Cleaning up workspace...'
+            cleanWs()
         }
         
         failure {
             echo 'Pipeline failed!'
-        }
-        
-        always {
-            echo 'Cleaning up workspace...'
-            cleanWs()
         }
     }
 }
