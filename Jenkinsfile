@@ -2,13 +2,14 @@ pipeline {
     agent any
     
     environment {
-        DOCKER_IMAGE_NAME = 'my-portfolio'
-        DOCKER_TAG = "${env.BUILD_NUMBER}"
-        DOCKER_REGISTRY = ''
-        DOCKER_CREDENTIALS_ID = 'docker-hub-credentials' 
+        DOCKER_IMAGE_NAME = 'registry.ganipedia.xyz/ganipedia-portfolio'
+        DOCKER_TAG = "v1.0.${env.BUILD_NUMBER}"
+        DOCKER_REGISTRY = 'registry.ganipedia.xyz'
+        DOCKER_CREDENTIALS_ID = 'ganipedia-registry'
         
-        APP_NAME = 'my-portfolio'
+        APP_NAME = 'ganipedia-portfolio'
         APP_PORT = '3008'
+        CONTAINER_PORT = '3000'
     }
     
     stages {
@@ -47,7 +48,7 @@ pipeline {
                 echo 'Building Docker image...'
                 script {
                     sh "docker build -t ${DOCKER_IMAGE_NAME}:${DOCKER_TAG} ."
-                    sh "docker build -t ${DOCKER_IMAGE_NAME}:latest ."
+                    sh "docker tag ${DOCKER_IMAGE_NAME}:${DOCKER_TAG} ${DOCKER_IMAGE_NAME}:latest"
                 }
             }
         }
@@ -87,8 +88,8 @@ pipeline {
                         docker run -d \
                         --name ${APP_NAME} \
                         --restart unless-stopped \
-                        -p ${APP_PORT}:${APP_PORT} \
-                        ${DOCKER_IMAGE_NAME}:latest
+                        -p ${APP_PORT}:${CONTAINER_PORT} \
+                        ${DOCKER_IMAGE_NAME}:${DOCKER_TAG}
                     '''
                 }
             }
