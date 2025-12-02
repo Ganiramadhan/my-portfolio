@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ganipedia-portfolio
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ganipedia-portfolio
+  template:
+    metadata:
+      labels:
+        app: ganipedia-portfolio
+    spec:
+      containers:
+      - name: ganipedia-portfolio
+        image: registry.ganipedia.xyz/ganipedia-portfolio:v1.0.1
+        ports:
+        - containerPort: 3008
+      imagePullSecrets:
+      - name: ganipedia-registry
