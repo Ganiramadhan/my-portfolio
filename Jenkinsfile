@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'docker:latest'
+            args '-v /var/run/docker.sock:/var/run/docker.sock --user root'
+        }
+    }
     
     environment {
         DOCKER_IMAGE_NAME = 'registry.ganipedia.xyz/ganipedia-portfolio'
