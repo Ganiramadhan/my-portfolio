@@ -15,6 +15,7 @@ COPY . .
 
 # Set production environment
 ENV NODE_ENV=production
+ENV PORT=3008
 
 # Build Next.js app
 RUN npm run build
