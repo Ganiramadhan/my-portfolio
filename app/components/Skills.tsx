@@ -1,72 +1,54 @@
 'use client'
 
-import { useState, useEffect } from 'react';
-import { FiArrowUpRight } from 'react-icons/fi';
-import { FaStar } from 'react-icons/fa';
+import { FiExternalLink } from 'react-icons/fi';
 import { stacks } from '../utils/skills'; 
-import { SiXcode } from "react-icons/si";
-import { motion } from 'framer-motion';
-
-const Shimmer = () => (
-  <div className="animate-pulse flex items-center gap-3 p-4 rounded-2xl border border-white/10 bg-gray-800/30 backdrop-blur-sm">
-    <div className="p-3 rounded-xl bg-gray-700/50 w-10 h-10"></div>
-    <div>
-      <div className="h-4 bg-gray-700/50 rounded-full w-24 mb-2"></div>
-      <div className="h-3 bg-gray-700/50 rounded-full w-16"></div>
-    </div>
-  </div>
-);
+import { HiCode } from 'react-icons/hi';
 
 const MySkills = () => {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 1000);
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
-    <section className="py-12 px-4 sm:px-6 bg-gradient-to-b from-slate-900 to-black text-white"> 
+    <section id="skills" className="py-24 px-6 bg-[#0f0f0f] text-white"> 
       <div className="max-w-6xl mx-auto">
-        <div className="flex items-center gap-2 mb-4">
-          <SiXcode size={24} className="text-cyan-400" />
-          <h2 className="text-2xl sm:text-3xl font-semibold text-white">My Skills</h2>
+        {/* Section Header */}
+        <div className="mb-12">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="p-2 bg-blue-500/10 rounded-lg">
+              <HiCode className="w-6 h-6 text-blue-500" />
+            </div>
+            <h2 className="text-3xl font-bold text-white">Skills & Technologies</h2>
+          </div>
+          <p className="text-zinc-400 max-w-2xl">
+            Technologies and tools I use to bring ideas to life. Always learning and exploring new technologies.
+          </p>
         </div>
-        <p className="text-gray-400 mb-6 sm:mb-8">
-          Passionate about continuous learning and mastering new technologies.
-        </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
-          {loading
-            ? Array.from({ length: 8 }).map((_, index) => <Shimmer key={index} />)
-            : stacks.map((stack, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.2 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="relative flex items-center gap-3 p-4 rounded-2xl border border-white/10 bg-gray-900/30 backdrop-blur-sm transition-all duration-300 hover:bg-gray-800/50 hover:border-cyan-500/30 hover:shadow-lg hover:shadow-cyan-500/10 group"
-                >
-                  {stack.featured && (
-                    <div className="absolute top-2 left-2 text-yellow-400">
-                      <FaStar />
-                    </div>
-                  )}
-                  <div
-                    className="absolute top-2 right-2 text-gray-400 opacity-0 transform translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0 group-hover:rotate-45 cursor-pointer"
-                    onClick={() => window.open(stack.link, '_blank')}
-                  >
-                    <FiArrowUpRight />
-                  </div>
-                  <div className="p-3 rounded-xl border border-white/10 bg-gray-800/50 backdrop-blur-sm transition-all duration-300 group-hover:scale-110">
-                    <div className={`text-2xl ${stack.color}`}>{stack.icon}</div>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-lg text-gray-100">{stack.name}</p>
-                    <p className="text-gray-400 text-sm">{stack.category}</p>
-                  </div>
-                </motion.div>
-              ))}
+
+        {/* Skills Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+          {stacks.map((stack, index) => (
+            <div
+              key={index}
+              onClick={() => window.open(stack.link, '_blank')}
+              className="group relative flex items-center gap-4 p-4 rounded-xl bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 hover:bg-zinc-800/50 transition-colors cursor-pointer"
+            >
+              {/* Icon */}
+              <div className="p-3 rounded-lg bg-zinc-800 group-hover:bg-zinc-700 transition-colors">
+                <div className={`text-2xl ${stack.color}`}>{stack.icon}</div>
+              </div>
+              
+              {/* Info */}
+              <div className="flex-1 min-w-0">
+                <p className="font-medium text-white truncate">{stack.name}</p>
+                <p className="text-zinc-500 text-sm truncate">{stack.category}</p>
+              </div>
+
+              {/* External Link Icon */}
+              <FiExternalLink className="w-4 h-4 text-zinc-600 opacity-0 group-hover:opacity-100 transition-opacity" />
+
+              {/* Featured indicator */}
+              {stack.featured && (
+                <div className="absolute -top-1 -right-1 w-3 h-3 bg-blue-500 rounded-full" />
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </section>

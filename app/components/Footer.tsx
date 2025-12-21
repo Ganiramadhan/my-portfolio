@@ -1,53 +1,93 @@
 import { FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { HiMail, HiLocationMarker, HiHeart } from 'react-icons/hi';
 
 const MyFooter = () => {
+    const socialLinks = [
+        { icon: <FaGithub className="w-5 h-5" />, href: "https://github.com/Ganiramadhan", label: "GitHub" },
+        { icon: <FaLinkedin className="w-5 h-5" />, href: "https://www.linkedin.com/in/ganiramadhan35/", label: "LinkedIn" },
+        { icon: <FaInstagram className="w-5 h-5" />, href: "https://www.instagram.com/ganiiraaa/?hl=en", label: "Instagram" },
+    ];
+
+    const navLinks = [
+        { label: "Home", href: "#home" },
+        { label: "Projects", href: "#projects" },
+        { label: "Skills", href: "#skills" },
+        { label: "Experience", href: "#experience" },
+        { label: "Contact", href: "#contacts" },
+    ];
+
     return (
-        <footer className="py-20 bg-gradient-to-b from-black to-slate-900 text-white border-t border-white/10">
-            <div className="container mx-auto px-6 md:px-10">
-                <div className="md:flex md:justify-between">
-                    <div className="mb-6 md:mb-0">
-                        <h2 className="text-2xl font-bold text-white"><span className="text-cyan-400">GANI</span> PEDIA</h2>
-                        <p className="mt-2">{"Creating magic with lines of code."} 💥</p>
+        <footer className="bg-[#0f0f0f] text-white border-t border-zinc-800">
+            <div className="max-w-6xl mx-auto px-6 py-16">
+                <div className="grid md:grid-cols-3 gap-12 mb-12">
+                    {/* Brand */}
+                    <div>
+                        <h2 className="text-2xl font-bold mb-4">
+                            <span className="text-blue-500">Gani</span>Pedia
+                        </h2>
+                        <p className="text-zinc-400 mb-6 max-w-sm">
+                            Full Stack Developer crafting modern web experiences with clean code and creative solutions.
+                        </p>
+                        <div className="flex gap-3">
+                            {socialLinks.map((social, index) => (
+                                <a
+                                    key={index}
+                                    href={social.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label={social.label}
+                                    className="p-2.5 bg-zinc-800/50 hover:bg-zinc-700 border border-zinc-800 rounded-lg text-zinc-400 hover:text-white transition-colors"
+                                >
+                                    {social.icon}
+                                </a>
+                            ))}
+                        </div>
                     </div>
-                    <div className="flex space-x-4">
-                        <a
-                            href="https://www.instagram.com/ganiiraaa/?hl=en"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-gray-300 hover:text-cyan-400 transition-all duration-300 hover:scale-110"
-                            aria-label="Visit our Instagram"
-                        >
-                            <FaInstagram size={32} />
-                        </a>
-                        <a
-                            href="https://www.linkedin.com/in/ganiramadhan35/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-gray-300 hover:text-cyan-400 transition-all duration-300 hover:scale-110"
-                            aria-label="Visit our LinkedIn profile"
-                        >
-                            <FaLinkedin size={32} />
-                        </a>
-                        <a
-                            href="https://github.com/Ganiramadhan"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-gray-300 hover:text-cyan-400 transition-all duration-300 hover:scale-110"
-                            aria-label="Visit our GitHub profile"
-                        >
-                            <FaGithub size={32} />
-                        </a>
+
+                    {/* Quick Links */}
+                    <div>
+                        <h3 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider mb-4">
+                            Quick Links
+                        </h3>
+                        <ul className="space-y-3">
+                            {navLinks.map((link, index) => (
+                                <li key={index}>
+                                    <a
+                                        href={link.href}
+                                        className="text-zinc-400 hover:text-white transition-colors"
+                                    >
+                                        {link.label}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Contact Info */}
+                    <div>
+                        <h3 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider mb-4">
+                            Contact
+                        </h3>
+                        <ul className="space-y-3">
+                            <li className="flex items-center gap-3 text-zinc-400">
+                                <HiMail className="w-5 h-5 text-zinc-500" />
+                                <a href="mailto:ganiramadhan35@gmail.com" className="hover:text-white transition-colors">
+                                    ganiramadhan35@gmail.com
+                                </a>
+                            </li>
+                            <li className="flex items-center gap-3 text-zinc-400">
+                                <HiLocationMarker className="w-5 h-5 text-zinc-500" />
+                                <span>Bandung, Indonesia</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div className="mt-6 border-t border-gray-700 pt-6 md:flex md:justify-between">
-                    <div className="md:w-1/2">
-                        <h3 className="text-lg font-semibold text-gray-100">Contact Us</h3>
-                        <p className="mt-2">Jl. Cigadung, Kec. Cibeunying Kaler, Kota Bandung</p>
-                        <p className="mt-1">Email: ganiramadhan35@gmail.com</p>
-                    </div>
-                </div>
-                <div className="mt-6 text-center text-gray-500 text-sm">
-                    &copy; 2025 GaniPedia. All rights reserved.
+
+                {/* Bottom Bar */}
+                <div className="pt-8 border-t border-zinc-800">
+                    <p className="text-center text-zinc-500 text-sm flex items-center justify-center gap-1">
+                        &copy; {new Date().getFullYear()} GaniPedia. All rights reserved.
+                    </p>
                 </div>
             </div>
         </footer>

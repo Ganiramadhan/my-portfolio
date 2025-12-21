@@ -15,29 +15,54 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Gani Ramadhan Portfolio",
-  description: "Welcome to Gani Ramadhan's portfolio, a web developer experienced in Next.js and modern technologies.",
-  keywords: "portfolio, web developer, Next.js, frontend, Gani Ramadhan, JavaScript, React",
+  metadataBase: new URL('https://gramadhan.cyou'),
+  title: {
+    default: "Gani Ramadhan - Full Stack Developer",
+    template: "%s | Gani Ramadhan"
+  },
+  description: "Full Stack Developer with 3+ years of experience building scalable web applications using React, Next.js, Node.js, and Laravel. Based in Bandung, Indonesia.",
+  keywords: ["Full Stack Developer", "Web Developer", "React Developer", "Next.js", "Laravel", "Node.js", "TypeScript", "Gani Ramadhan", "Bandung", "Indonesia", "Software Engineer"],
+  authors: [{ name: "Gani Ramadhan", url: "https://gramadhan.cyou" }],
+  creator: "Gani Ramadhan",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
-    title: "Gani Ramadhan Portfolio",
-    description: "Explore my works and experiences as a web developer.",
-    url: "https://gramadhan.cyou", 
+    type: "website",
+    locale: "en_US",
+    url: "https://gramadhan.cyou",
     siteName: "Gani Ramadhan Portfolio",
+    title: "Gani Ramadhan - Full Stack Developer",
+    description: "Full Stack Developer specializing in React, Next.js, and Laravel. Building modern, scalable web applications.",
     images: [
       {
-        url: "/images/newIcon.png", 
-        width: 600,
-        height: 315,
-        alt: "Gani Ramadhan Portfolio",
+        url: "/images/newIcon.png",
+        width: 1200,
+        height: 630,
+        alt: "Gani Ramadhan - Full Stack Developer",
       },
     ],
-    type: "website",
   },
   twitter: {
-    card: "summary",
-    title: "Gani Ramadhan Portfolio",
-    description: "Explore my works and experiences as a web developer.",
-    images: ["/og-image.jpg"],
+    card: "summary_large_image",
+    title: "Gani Ramadhan - Full Stack Developer",
+    description: "Full Stack Developer specializing in React, Next.js, and Laravel.",
+    images: ["/images/newIcon.png"],
+    creator: "@ganiiraaa",
+  },
+  verification: {
+    google: "your-google-verification-code",
+  },
+  alternates: {
+    canonical: "https://gramadhan.cyou",
   },
 };
 

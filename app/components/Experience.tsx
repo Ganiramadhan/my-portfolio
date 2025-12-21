@@ -1,74 +1,81 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import { experiences } from '../utils/experiences'; 
-import { BsPersonWorkspace } from "react-icons/bs";
+import { HiBriefcase, HiCalendar, HiOfficeBuilding } from 'react-icons/hi';
 import Image from 'next/image';
 
-const Shimmer = () => (
-  <div className="animate-pulse flex items-center gap-3 p-4 rounded-3xl border border-white/10 bg-gray-800/30 backdrop-blur-sm">
-    <div className="p-3 rounded-xl bg-gray-700/50 w-10 h-10"></div>
-    <div>
-      <div className="h-4 bg-gray-700/50 rounded-full w-24 mb-2"></div>
-      <div className="h-3 bg-gray-700/50 rounded-full w-16"></div>
-    </div>
-  </div>
-);
-
 const Experience = () => {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 1000); 
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
-    <section className="py-12 px-4 sm:px-6 bg-gradient-to-b from-black to-slate-900 text-white">
+    <section id="experience" className="py-24 px-6 bg-[#0a0a0a] text-white">
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <div className="flex items-center space-x-3 mb-4 sm:mb-6">
-          <BsPersonWorkspace size={24} className="text-cyan-400" />
-          <h2 className="text-2xl sm:text-3xl font-semibold text-white">My Experience</h2>
+        {/* Section Header */}
+        <div className="mb-12">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="p-2 bg-blue-500/10 rounded-lg">
+              <HiBriefcase className="w-6 h-6 text-blue-500" />
+            </div>
+            <h2 className="text-3xl font-bold text-white">Work Experience</h2>
+          </div>
+          <p className="text-zinc-400 max-w-2xl">
+            My professional journey in software development, working with diverse teams and technologies.
+          </p>
         </div>
-        <p className="text-gray-400 mb-6 sm:mb-8 max-w-2xl">
-          Navigating diverse environments with adaptability and expertise for holistic solutions.
-        </p>
         
-        {/* Experience Cards */}
-        <div className="space-y-6 sm:space-y-8">
-          {loading
-            ? Array.from({ length: 2 }).map((_, index) => <Shimmer key={index} />) 
-            : experiences.map((exp, index) => (
-                <div
-                  key={index}
-                  className="bg-gray-900/30 border border-white/10 backdrop-blur-2xl p-6 sm:p-8 rounded-3xl shadow-2xl transition-all hover:shadow-cyan-500/20 hover:shadow-2xl hover:scale-[1.02] hover:border-cyan-500/30 duration-300"
-                >
-                  <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
-                    <div className="flex items-center space-x-3">
-                      {/* Company Logo Image */}
-                      <div className="w-12 h-12  bg-white rounded-lg overflow-hidden">
+        {/* Experience Timeline */}
+        <div className="relative">
+          {/* Timeline Line */}
+          <div className="hidden md:block absolute left-8 top-0 bottom-0 w-px bg-zinc-800" />
+
+          <div className="space-y-8">
+            {experiences.map((exp, index) => (
+              <div
+                key={index}
+                className="relative md:pl-20"
+              >
+                {/* Timeline Dot */}
+                <div className="hidden md:flex absolute left-6 top-6 w-5 h-5 bg-blue-600 rounded-full border-4 border-[#0a0a0a] z-10" />
+
+                {/* Card */}
+                <div className="p-6 md:p-8 rounded-xl bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-colors">
+                  {/* Header */}
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+                    <div className="flex items-center gap-4">
+                      {/* Company Logo */}
+                      <div className="w-12 h-12 bg-white rounded-lg overflow-hidden flex-shrink-0">
                         <Image
                           src={exp.logo}
                           alt={`${exp.company} logo`}
                           width={48}
                           height={48}
-                          className="object-cover"
+                          className="object-cover w-full h-full"
+                          loading="lazy"
                         />
                       </div>
                       <div>
-                        <h3 className="text-xl sm:text-2xl font-semibold text-gray-200">{exp.company}</h3>
-                        <p className="text-sm text-gray-400">{exp.industry}</p>
+                        <h3 className="text-xl font-semibold text-white">{exp.company}</h3>
+                        <div className="flex items-center gap-2 text-zinc-500 text-sm">
+                          <HiOfficeBuilding className="w-4 h-4" />
+                          {exp.industry}
+                        </div>
                       </div>
                     </div>
-                    <span className="text-gray-400 text-sm mt-2 sm:mt-0">{exp.duration}</span>
+                    <div className="flex items-center gap-2 text-zinc-400 text-sm bg-zinc-800/50 px-3 py-1.5 rounded-lg w-fit">
+                      <HiCalendar className="w-4 h-4" />
+                      {exp.duration}
+                    </div>
                   </div>
                   
-                  {/* Job Title */}
-                  <h4 className="text-lg sm:text-xl font-bold text-white">{exp.position}</h4>
-                  <p className="text-gray-400 mt-2 leading-relaxed text-sm sm:text-base">{exp.description}</p>
+                  {/* Position */}
+                  <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-blue-500/10 text-blue-400 rounded-lg text-sm font-medium mb-4">
+                    {exp.position}
+                  </div>
+
+                  {/* Description */}
+                  <p className="text-zinc-400 leading-relaxed">{exp.description}</p>
                 </div>
-              ))}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -76,4 +83,4 @@ const Experience = () => {
 };
 
 export default Experience;
-
+                      

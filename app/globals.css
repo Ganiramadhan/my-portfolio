@@ -3,40 +3,74 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #0f0f0f;
+  --foreground: #fafafa;
+  --accent: #3b82f6;
+  --accent-light: #60a5fa;
+  --surface: #1a1a1a;
+  --surface-light: #262626;
+  --border: #2a2a2a;
+  --text-primary: #fafafa;
+  --text-secondary: #a1a1aa;
+  --text-muted: #71717a;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 #scrolTopButton {
   z-index: 50;
 }
 
-#profileContainer{
+#profileContainer {
   background-image: url("/images/newBg.png");
   background-size: cover;
   background-position: center;
-  filter: brightness(0.8);
+  filter: brightness(0.85);
 }
 
-* {
-  transition: all 0.3s ease;
+/* Smooth transitions for interactive elements only */
+a, button, input, textarea {
+  transition: all 0.2s ease;
 }
 
-/* body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-} */
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--accent);
+  color: white;
+}
 
 
