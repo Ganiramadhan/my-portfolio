@@ -1,5 +1,5 @@
 import { FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
-import { HiMail, HiLocationMarker, HiHeart } from 'react-icons/hi';
+import { HiMail, HiLocationMarker } from 'react-icons/hi';
 
 const MyFooter = () => {
     const socialLinks = [
