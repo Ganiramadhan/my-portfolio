@@ -6,17 +6,24 @@ import Image from 'next/image';
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-24 px-6 bg-[#0a0a0a] text-white">
-      <div className="max-w-6xl mx-auto">
+    <section id="experience" className="py-24 px-4 bg-[#0a0a0a] text-white min-h-screen relative overflow-hidden">
+      {/* Subtle Background */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/3 -left-48 w-96 h-96 bg-blue-500/3 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/3 -right-48 w-96 h-96 bg-purple-500/3 rounded-full blur-3xl" />
+      </div>
+
+      <div className="max-w-5xl mx-auto relative">
         {/* Section Header */}
-        <div className="mb-12">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="p-2 bg-blue-500/10 rounded-lg">
-              <HiBriefcase className="w-6 h-6 text-blue-500" />
-            </div>
-            <h2 className="text-3xl font-bold text-white">Work Experience</h2>
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-zinc-800/40 border border-zinc-700/30 rounded-full mb-6">
+            <HiBriefcase className="w-4 h-4 text-blue-400" />
+            <span className="text-sm text-zinc-400 font-medium">Career</span>
           </div>
-          <p className="text-zinc-400 max-w-2xl">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Work Experience
+          </h2>
+          <p className="text-zinc-500 max-w-xl mx-auto text-lg">
             My professional journey in software development, working with diverse teams and technologies.
           </p>
         </div>
@@ -24,43 +31,43 @@ const Experience = () => {
         {/* Experience Timeline */}
         <div className="relative">
           {/* Timeline Line */}
-          <div className="hidden md:block absolute left-8 top-0 bottom-0 w-px bg-zinc-800" />
+          <div className="hidden md:block absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-zinc-700 via-zinc-800 to-transparent" />
 
-          <div className="space-y-8">
+          <div className="space-y-6">
             {experiences.map((exp, index) => (
               <div
                 key={index}
-                className="relative md:pl-20"
+                className="relative md:pl-16"
               >
                 {/* Timeline Dot */}
-                <div className="hidden md:flex absolute left-6 top-6 w-5 h-5 bg-blue-600 rounded-full border-4 border-[#0a0a0a] z-10" />
+                <div className="hidden md:flex absolute left-4 top-8 w-4 h-4 bg-zinc-800 rounded-full border-2 border-blue-500/60 z-10" />
 
                 {/* Card */}
-                <div className="p-6 md:p-8 rounded-xl bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-colors">
+                <div className="group p-6 md:p-7 rounded-2xl bg-zinc-900/50 border border-zinc-800/40 hover:border-zinc-700/60 transition-all duration-300">
                   {/* Header */}
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
                     <div className="flex items-center gap-4">
                       {/* Company Logo */}
-                      <div className="w-12 h-12 bg-white rounded-lg overflow-hidden flex-shrink-0">
+                      <div className="w-11 h-11 bg-white rounded-xl overflow-hidden flex-shrink-0">
                         <Image
                           src={exp.logo}
                           alt={`${exp.company} logo`}
-                          width={48}
-                          height={48}
+                          width={44}
+                          height={44}
                           className="object-cover w-full h-full"
                           loading="lazy"
                         />
                       </div>
                       <div>
-                        <h3 className="text-xl font-semibold text-white">{exp.company}</h3>
+                        <h3 className="text-lg font-semibold text-white">{exp.company}</h3>
                         <div className="flex items-center gap-2 text-zinc-500 text-sm">
-                          <HiOfficeBuilding className="w-4 h-4" />
+                          <HiOfficeBuilding className="w-3.5 h-3.5" />
                           {exp.industry}
                         </div>
                       </div>
                     </div>
-                    <div className="flex items-center gap-2 text-zinc-400 text-sm bg-zinc-800/50 px-3 py-1.5 rounded-lg w-fit">
-                      <HiCalendar className="w-4 h-4" />
+                    <div className="flex items-center gap-2 text-zinc-500 text-sm bg-zinc-800/40 px-3 py-1.5 rounded-lg w-fit">
+                      <HiCalendar className="w-3.5 h-3.5" />
                       {exp.duration}
                     </div>
                   </div>
@@ -71,7 +78,7 @@ const Experience = () => {
                   </div>
 
                   {/* Description */}
-                  <p className="text-zinc-400 leading-relaxed">{exp.description}</p>
+                  <p className="text-zinc-400 leading-relaxed text-[15px]">{exp.description}</p>
                 </div>
               </div>
             ))}
@@ -83,4 +90,3 @@ const Experience = () => {
 };
 
 export default Experience;
-                      

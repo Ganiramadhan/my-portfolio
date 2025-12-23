@@ -55,32 +55,39 @@ const Contact = () => {
     ];
 
     return (
-        <section id='contacts' className="py-24 px-6 bg-[#0a0a0a] text-white">
-            <div className="max-w-6xl mx-auto">
+        <section id='contacts' className="py-24 px-4 bg-[#0a0a0a] text-white min-h-screen relative overflow-hidden">
+            {/* Subtle Background */}
+            <div className="absolute inset-0 pointer-events-none">
+                <div className="absolute top-1/4 -right-48 w-96 h-96 bg-blue-500/3 rounded-full blur-3xl" />
+                <div className="absolute bottom-1/4 -left-48 w-96 h-96 bg-purple-500/3 rounded-full blur-3xl" />
+            </div>
+
+            <div className="max-w-5xl mx-auto relative">
                 {/* Section Header */}
-                <div className="mb-12">
-                    <div className="flex items-center gap-3 mb-4">
-                        <div className="p-2 bg-blue-500/10 rounded-lg">
-                            <HiMail className="w-6 h-6 text-blue-500" />
-                        </div>
-                        <h2 className="text-3xl font-bold text-white">Get In Touch</h2>
+                <div className="text-center mb-14">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-zinc-800/40 border border-zinc-700/30 rounded-full mb-6">
+                        <HiMail className="w-4 h-4 text-blue-400" />
+                        <span className="text-sm text-zinc-400 font-medium">Contact</span>
                     </div>
-                    <p className="text-zinc-400 max-w-2xl">
+                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                        Get In Touch
+                    </h2>
+                    <p className="text-zinc-500 max-w-xl mx-auto text-lg">
                         Have a project in mind or want to collaborate? I&apos;d love to hear from you.
                     </p>
                 </div>
 
-                <div className="grid lg:grid-cols-2 gap-12">
+                <div className="grid lg:grid-cols-2 gap-10">
                     {/* Left Side - Contact Info & Map */}
-                    <div className="space-y-8">
+                    <div className="space-y-6">
                         {/* Contact Cards */}
-                        <div className="space-y-4">
+                        <div className="space-y-3">
                             {contactInfo.map((info, index) => (
                                 <div
                                     key={index}
-                                    className="flex items-center gap-4 p-4 bg-zinc-900/50 border border-zinc-800 rounded-xl"
+                                    className="flex items-center gap-4 p-4 bg-zinc-900/50 border border-zinc-800/40 rounded-xl hover:border-zinc-700/60 transition-all duration-300"
                                 >
-                                    <div className="p-3 bg-zinc-800 rounded-lg text-blue-400">
+                                    <div className="p-2.5 bg-zinc-800/60 rounded-lg text-blue-400">
                                         {info.icon}
                                     </div>
                                     <div>
@@ -103,13 +110,13 @@ const Contact = () => {
                         </div>
 
                         {/* Map */}
-                        <div className="rounded-xl overflow-hidden border border-zinc-800 h-64">
+                        <div className="rounded-xl overflow-hidden border border-zinc-800/40 h-56">
                             <iframe
                                 title="Location"
                                 src={googleMapsUrl}
                                 width="100%"
                                 height="100%"
-                                className="border-0"
+                                className="border-0 grayscale-[30%] hover:grayscale-0 transition-all duration-500"
                                 allowFullScreen
                                 loading="lazy"
                             />
@@ -120,9 +127,9 @@ const Contact = () => {
                     <div>
                         <form 
                             onSubmit={handleFormSubmit}
-                            className="p-6 md:p-8 bg-zinc-900/50 border border-zinc-800 rounded-xl"
+                            className="p-6 bg-zinc-900/50 border border-zinc-800/40 rounded-xl"
                         >
-                            <div className="space-y-5">
+                            <div className="space-y-4">
                                 <div>
                                     <label htmlFor="name" className="block text-sm font-medium text-zinc-400 mb-2">
                                         Your Name
@@ -135,7 +142,7 @@ const Contact = () => {
                                         required
                                         value={name}
                                         onChange={(e) => setName(e.target.value)}
-                                        className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-700 rounded-lg text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
+                                        className="w-full px-4 py-3 bg-zinc-800/40 border border-zinc-700/40 rounded-lg text-white placeholder-zinc-600 focus:outline-none focus:border-blue-500/60 focus:ring-1 focus:ring-blue-500/30 transition-colors"
                                         placeholder="John Doe"
                                     />
                                 </div>
@@ -151,7 +158,7 @@ const Contact = () => {
                                         required
                                         value={email}
                                         onChange={(e) => setEmail(e.target.value)}
-                                        className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-700 rounded-lg text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
+                                        className="w-full px-4 py-3 bg-zinc-800/40 border border-zinc-700/40 rounded-lg text-white placeholder-zinc-600 focus:outline-none focus:border-blue-500/60 focus:ring-1 focus:ring-blue-500/30 transition-colors"
                                         placeholder="john@example.com"
                                     />
                                 </div>
@@ -165,7 +172,7 @@ const Contact = () => {
                                         required
                                         value={message}
                                         onChange={(e) => setMessage(e.target.value)}
-                                        className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-700 rounded-lg text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors resize-none"
+                                        className="w-full px-4 py-3 bg-zinc-800/40 border border-zinc-700/40 rounded-lg text-white placeholder-zinc-600 focus:outline-none focus:border-blue-500/60 focus:ring-1 focus:ring-blue-500/30 transition-colors resize-none"
                                         placeholder="Tell me about your project..."
                                         rows={5}
                                     />
@@ -173,13 +180,13 @@ const Contact = () => {
                                 <button
                                     type="submit"
                                     disabled={loading}
-                                    className="w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-600/50 disabled:cursor-not-allowed text-white font-medium py-3 px-6 rounded-lg transition-colors"
+                                    className="w-full flex items-center justify-center gap-2 bg-blue-500 hover:bg-blue-400 disabled:bg-blue-500/40 disabled:cursor-not-allowed text-white font-medium py-3 px-6 rounded-xl transition-all duration-300"
                                 >
                                     {loading ? (
                                         <span>Sending...</span>
                                     ) : (
                                         <>
-                                            <HiPaperAirplane className="w-5 h-5" />
+                                            <HiPaperAirplane className="w-4 h-4" />
                                             <span>Send Message</span>
                                         </>
                                     )}
