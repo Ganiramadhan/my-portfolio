@@ -73,4 +73,55 @@ a, button, input, textarea {
   color: white;
 }
 
+/* Marquee Animation */
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-marquee-left {
+  animation: marquee-left 35s linear infinite;
+}
+
+.animate-marquee-right {
+  animation: marquee-right 35s linear infinite;
+}
+
+/* Individual row hover - pause only the hovered row */
+.marquee-row:hover .animate-marquee-left,
+.marquee-row:hover .animate-marquee-right {
+  animation-play-state: paused;
+}
+
+/* Typing animation */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #3b82f6 }
+}
+
+.typing-text {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #3b82f6;
+  animation: typing 2s steps(14, end), blink-caret 0.75s step-end infinite;
+}
+
 
