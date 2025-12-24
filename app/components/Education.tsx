@@ -6,7 +6,6 @@ const education = [
   {
     degree: "D3 Manajemen Informatika",
     institution: "Politeknik LP3I Bandung",
-    year: "2021 - 2024",
     description: "Focused on information systems management, web development, database design, and software engineering."
   }
 ];
@@ -20,6 +19,11 @@ const certifications = [
   {
     title: "Fullstack Developer",
     issuer: "Jagoo IT",
+    year: "2024"
+  },
+    {
+    title: "Project Management",
+    issuer: "Dicoding Indonesia",
     year: "2024"
   },
     {
@@ -71,12 +75,7 @@ const Education = () => {
                   key={index}
                   className="p-5 bg-zinc-900/50 border border-zinc-800/40 rounded-xl"
                 >
-                  <div className="flex items-start justify-between gap-4 mb-2">
-                    <h4 className="text-lg font-semibold text-white">{edu.degree}</h4>
-                    <span className="text-xs text-zinc-500 bg-zinc-800/50 px-2.5 py-1 rounded-lg whitespace-nowrap">
-                      {edu.year}
-                    </span>
-                  </div>
+                  <h4 className="text-lg font-semibold text-white mb-2">{edu.degree}</h4>
                   <p className="text-blue-400 text-sm mb-2">{edu.institution}</p>
                   <p className="text-zinc-500 text-sm">{edu.description}</p>
                 </div>
