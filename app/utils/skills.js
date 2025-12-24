@@ -14,7 +14,8 @@ import {
   SiGo,
   SiTrpc,
   SiKubernetes,
-  SiTypescript
+  SiTypescript,
+  SiApachecassandra
 } from 'react-icons/si';
 
 export const stacks = [
@@ -36,6 +37,7 @@ export const stacks = [
   // Databases
   { name: 'PostgreSQL', category: 'Database', icon: <SiPostgresql />, color: 'text-blue-400', link: 'https://www.postgresql.org/', featured: true },
   { name: 'MySQL', category: 'Database', icon: <SiMysql />, color: 'text-orange-400', link: 'https://www.mysql.com/' },
+  { name: 'Cassandra', category: 'NoSQL Database', icon: <SiApachecassandra />, color: 'text-teal-400', link: 'https://cassandra.apache.org/', featured: true },
 
   // Messaging & Streaming
   { name: 'RabbitMQ', category: 'Message Broker', icon: <SiRabbitmq />, color: 'text-orange-500', link: 'https://www.rabbitmq.com/', featured: true },
