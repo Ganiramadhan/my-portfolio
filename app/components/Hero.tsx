@@ -177,15 +177,14 @@ const Hero = () => {
               {/* Image Container */}
               <div 
                 id="profileContainer"
-                className="relative w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden border border-zinc-700/50 bg-zinc-900 shadow-2xl"
+                className="relative w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden border border-zinc-700/50 bg-zinc-900"
               >
                 <Image
                   src="/images/new-profile.png"
                   fill
                   alt="Gani Ramadhan - Full Stack Developer"
-                  className="object-cover group-hover:scale-105 transition-all duration-500"
+                  className="object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-500"
                   priority
-                  quality={100}
                   sizes="(max-width: 768px) 256px, 288px"
                 />
               </div>

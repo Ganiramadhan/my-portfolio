@@ -5,9 +5,10 @@ import Image from "next/image";
 import { HiX, HiExternalLink, HiFolder, HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import { projects, Project } from '../utils/projects';
 
-import { FaNodeJs, FaDatabase, FaCss3Alt, FaHtml5, FaLaravel, FaServer } from 'react-icons/fa';
+import { FaNodeJs, FaDatabase, FaCss3Alt, FaHtml5, FaLaravel, FaServer, FaDocker, FaStripe } from 'react-icons/fa';
 import { DiJavascript1, DiRedis } from 'react-icons/di';
-import { SiMongodb, SiTailwindcss, SiNextdotjs, SiBootstrap, SiPostgresql, SiSupabase, SiMysql, SiReactrouter, SiTypescript, SiShadcnui, SiReactquery, SiRabbitmq } from 'react-icons/si';
+import { SiMongodb, SiTailwindcss, SiNextdotjs, SiBootstrap, SiPostgresql, SiSupabase, SiMysql, SiReactrouter, SiTypescript, SiShadcnui, SiReactquery, SiRabbitmq, SiNestjs } from 'react-icons/si';
+import { TbTopologyStarRing3, TbApi } from 'react-icons/tb';
 
 const TechStackIcons: Record<string, React.ReactNode> = {
   Node: <FaNodeJs />,
@@ -30,6 +31,11 @@ const TechStackIcons: Record<string, React.ReactNode> = {
   Tanstack: <SiReactquery />,
   Redis: <DiRedis />,
   RabbitMQ: <SiRabbitmq />,
+  NestJS: <SiNestjs />,
+  gRPC: <TbApi />,
+  Docker: <FaDocker />,
+  Microservices: <TbTopologyStarRing3 />,
+  Stripe: <FaStripe />,
 };
 
 // Image Carousel Component
