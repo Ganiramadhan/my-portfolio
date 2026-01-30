@@ -1,5 +1,14 @@
 export const experiences = [
   {
+    company: "POSDIGI - PT. POS DIGITAL INDONESIA",
+    industry: "Fintech",
+    position: "Full Stack Developer",
+    duration: "2025 - Present",
+    description:
+      "Responsible for maintaining and enhancing the NDE (Nota Dinas Elektronik) system, ensuring seamless electronic memo management for internal operations. Managed and updated Pos Indonesia's corporate landing page and CMS platform, improving content management efficiency and user experience. Spearheaded the development of an eContract B2B platform from scratch using modern web technologies, enabling automated contract management and digital signing capabilities for business partners. Implemented comprehensive CI/CD pipelines using Docker and Jenkins, automating deployment processes and reducing release time by 60%. Configured and maintained multi-environment server infrastructure (development, staging, and production), ensuring system stability, security, and scalability. Collaborated with cross-functional teams to gather requirements, design solutions, and deliver high-quality features that support digital transformation initiatives.",
+    logo: "/images/posdigi.png",  
+  },
+  {
     company: "Drizy Studio",
     industry: "Studio Design",
     position: "Full Stack Developer",
