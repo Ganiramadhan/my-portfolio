@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#2563eb" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b1020" media="(prefers-color-scheme: dark)" />
+
+    <link rel="icon" type="image/webp" sizes="64x64" href="/favicon-64.webp" />
+    <link rel="icon" type="image/webp" sizes="256x256" href="/favicon.webp" />
+    <link rel="apple-touch-icon" href="/favicon.webp" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preload" as="image" href="/profile-gani.webp" type="image/webp" fetchpriority="high" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+    />
+
+    <title>Gani Ramadhan — Full Stack Engineer Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio of Gani Ramadhan, a Bandung-based full-stack engineer building reliable web products with React, Next.js, Go, Laravel, PostgreSQL, Cassandra, Redis, Docker, and Kubernetes."
+    />
+    <meta name="author" content="Gani Ramadhan" />
+    <meta name="geo.region" content="ID-JB" />
+    <meta name="geo.placename" content="Bandung, West Java, Indonesia" />
+    <meta name="geo.position" content="-6.9175;107.6191" />
+    <meta name="ICBM" content="-6.9175, 107.6191" />
+    <meta name="language" content="en" />
+    <meta
+      name="keywords"
+      content="Gani Ramadhan, Full Stack Engineer, React, Next.js, TypeScript, NestJS, Go, Laravel, PostgreSQL, Cassandra, Redis, RabbitMQ, Docker, Kubernetes, Jenkins, Grafana, Indonesia"
+    />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://ganiramadhan.site/" />
+    <link rel="alternate" href="https://ganiramadhan.site/" hreflang="en" />
+    <link rel="alternate" href="https://ganiramadhan.site/" hreflang="id" />
+    <link rel="alternate" href="https://ganiramadhan.site/" hreflang="ja" />
+    <link rel="alternate" href="https://ganiramadhan.site/" hreflang="x-default" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Gani Ramadhan" />
+    <meta property="og:title" content="Gani Ramadhan — Full Stack Engineer Portfolio" />
+    <meta property="og:description" content="Reliable web products built with React, Next.js, Go, Laravel, PostgreSQL, Cassandra, Redis, Docker, and Kubernetes." />
+    <meta property="og:url" content="https://ganiramadhan.site/" />
+    <meta property="og:image" content="https://ganiramadhan.site/profile-gani.webp" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="id_ID" />
+    <meta property="og:locale:alternate" content="ja_JP" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Gani Ramadhan — Full Stack Engineer Portfolio" />
+    <meta name="twitter:description" content="Reliable web products built with React, Next.js, Go, Laravel, PostgreSQL, Cassandra, Redis, Docker, and Kubernetes." />
+    <meta name="twitter:image" content="https://ganiramadhan.site/profile-gani.webp" />
+
+    <script id="page-schema" type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Gani Ramadhan",
+        "url": "https://ganiramadhan.site",
+        "jobTitle": "Full Stack Engineer",
+        "image": "https://ganiramadhan.site/profile-gani.webp",
+        "email": "ganiramadhan35@gmail.com",
+        "telephone": "+6283878624702",
+        "nationality": "Indonesia",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Bandung",
+          "addressRegion": "West Java",
+          "addressCountry": "ID"
+        },
+        "homeLocation": {
+          "@type": "Place",
+          "name": "Bandung, Indonesia",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -6.9175,
+            "longitude": 107.6191
+          }
+        },
+        "areaServed": [
+          { "@type": "Country", "name": "Indonesia" },
+          { "@type": "AdministrativeArea", "name": "West Java" },
+          { "@type": "City", "name": "Bandung" },
+          { "@type": "Place", "name": "Remote" }
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/in/ganiramadhan35/",
+          "https://github.com/Ganiramadhan"
+        ],
+        "knowsAbout": [
+          "TypeScript",
+          "React",
+          "Next.js",
+          "NestJS",
+          "Go",
+          "Laravel",
+          "PostgreSQL",
+          "Apache Cassandra",
+          "Redis",
+          "RabbitMQ",
+          "Docker",
+          "Kubernetes",
+          "Jenkins",
+          "Grafana"
+        ]
+      }
+    </script>
+
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          if (t === 'dark') {
+            document.documentElement.classList.add('dark');
+          }
+          var lang = localStorage.getItem('lang') || 'en';
+          document.documentElement.setAttribute('lang', lang === 'id' ? 'id' : lang === 'ja' ? 'ja' : 'en');
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

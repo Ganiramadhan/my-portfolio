@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  portfolio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: portfolio-app
+    expose:
+      - "3302"
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=production
+      - PORT=3302
+      - HOST=0.0.0.0
+    networks:
+      ganipedia:
+        aliases:
+          - portfolio-app
+
+networks:
+  ganipedia:
+    external: true

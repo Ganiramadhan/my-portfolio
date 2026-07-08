@@ -1,0 +1,299 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "common": {
+    "language": "Language",
+    "theme": "Theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System",
+    "menu": "Menu",
+    "close": "Close",
+    "viewAll": "View all",
+    "viewProject": "View project",
+    "viewSource": "View source",
+    "downloadCV": "Download CV",
+    "getInTouch": "Get in touch",
+    "available": "Available for work",
+    "scrollDown": "Scroll down",
+    "readMore": "Read more",
+    "loading": "Loading…",
+    "present": "Present",
+    "all": "All",
+    "backToTop": "Back to top",
+    "navigation": "Main navigation",
+    "page": "Page",
+    "featured": "Featured",
+    "preferences": "Preferences"
+  },
+  "sidebar": {
+    "cta": "Have a product or system you want to build?"
+  },
+  "hero": {
+    "greeting": "Hi, I'm Gani Ramadhan",
+    "role": "Product-focused full-stack engineer",
+    "title": "I build reliable web products with clean interfaces and solid systems.",
+    "lead": "I turn business requirements into full-stack applications that are easy to use, stable at the system level, and ready to evolve with the team.",
+    "subtitle": "From user experience to backend architecture and deployment, I build systems as one coherent product—not a loose collection of features.",
+    "footerLine": "Experience across B2B platforms, internal systems, CMS, e-commerce, and data-driven applications.",
+    "ctaPrimary": "Explore my work",
+    "ctaSecondary": "Start a conversation",
+    "trustedBy": "Professional experience",
+    "dashboardLabel": "Portfolio overview",
+    "dashboardSubtitle": "Digital products shaped by business context and backed by solid engineering.",
+    "currently": "Currently",
+    "workMode": "Open to professional collaboration",
+    "connect": "Find me online",
+    "focus": {
+      "frontend": "Frontend systems",
+      "backend": "Backend & API",
+      "devops": "Cloud & DevOps"
+    },
+    "stats": {
+      "experience": "Years of professional experience",
+      "projects": "Projects delivered",
+      "clients": "Clients & collaborations",
+      "stars": "Core technologies"
+    },
+    "capabilities": {
+      "product": "Product Engineering",
+      "frontend": "Frontend Systems",
+      "backend": "Backend & API",
+      "cloud": "Cloud Delivery",
+      "performance": "Performance",
+      "architecture": "Clean Architecture"
+    },
+    "summerGreeting": "Hello, I'm Gani Ramadhan",
+    "summerRole": "Product engineer / full-stack developer",
+    "summerTitle": "Digital products that work as well as they look.",
+    "summerLead": "I design and build full-stack interfaces that feel clear, structured, and ready to ship.",
+    "stripPrimary": "Professional product engineering",
+    "stripSecondary": "Clean interface · Reliable system",
+    "scene": {
+      "system": "Product system / 01",
+      "role": "Full-stack engineer",
+      "profile": "Profile preview",
+      "production": "From idea to production",
+      "status": "System status",
+      "shipping": "Shipping useful software.",
+      "design": "Design",
+      "build": "Build",
+      "scale": "Scale",
+      "stack": "Core stack",
+      "architecture": "Architecture",
+      "uiLayer": "UI layer",
+      "apiLayer": "API layer",
+      "dataLayer": "Data layer",
+      "deliveryReady": "Production-ready"
+    }
+  },
+  "about": {
+    "eyebrow": "How I work",
+    "title": "Building with product context and clear engineering foundations.",
+    "p1": "I look at each feature through user workflows, business needs, and system impact. The goal is not just to ship, but to make the product easier to operate and improve.",
+    "p2": "My work spans frontend, backend, databases, integrations, and deployment with a practical approach to maintainability and long-term clarity.",
+    "skillsTitle": "Core toolkit",
+    "highlights": {
+      "h1": "Products, not features",
+      "h1d": "Every technical decision should support the user experience and business outcome.",
+      "h2": "Fast, not fragile",
+      "h2d": "Prioritizing performance, reliability, and release workflows teams can trust.",
+      "h3": "Built to evolve",
+      "h3d": "Modular architecture that remains readable, testable, maintainable, and adaptable.",
+      "h4": "Clear collaboration",
+      "h4d": "Turning cross-functional needs into concrete decisions and focused execution."
+    }
+  },
+  "projects": {
+    "eyebrow": "Selected work",
+    "title": "Selected projects focused on workflows and real outcomes.",
+    "subtitle": "A focused selection of platforms, internal tools, and websites built to simplify processes, speed up work, and support operations.",
+    "filters": {
+      "all": "All",
+      "web": "Web",
+      "mobile": "Mobile",
+      "fullstack": "Full-stack",
+      "design": "Design"
+    },
+    "items": {
+      "saku": {
+        "title": "SAKU Finance",
+        "description": "An AI-powered personal finance SaaS for natural-language transaction logging, receipt OCR, multi-wallet management, budgets, goals, billing reminders, and actionable financial insights."
+      },
+      "mekarjaya": {
+        "title": "Mekarjaya Village Profile Website",
+        "description": "An official village website for public information transparency, village profiles, news, announcements, galleries, public services, authentication, and a CMS dashboard for independent content management."
+      },
+      "hrmis": {
+        "title": "BPD Abujapi HRMIS",
+        "description": "An HR management system for employee data, attendance, payroll, and performance evaluation with real-time processing."
+      },
+      "drizy": {
+        "title": "DrizyCraft",
+        "description": "A digital design e-commerce platform with microservices, Stripe payments, Redis caching, and gRPC communication."
+      },
+      "cms": {
+        "title": "Abujapi Admin CMS",
+        "description": "A CMS for the BPD Abujapi profile site with media management and role-based access."
+      },
+      "profile": {
+        "title": "BPD Abujapi Profile Website",
+        "description": "A responsive organization profile website for services, company information, and CMS-managed content."
+      },
+      "batik": {
+        "title": "Batik Merawit",
+        "description": "A batik product management system with CRUD operations, data export, QR codes, and a product showcase."
+      }
+    }
+  },
+  "experience": {
+    "eyebrow": "The journey",
+    "title": "Professional experience building products for real teams.",
+    "subtitle": "Roles across interface development, backend systems, integrations, optimization, and deployment workflows.",
+    "focusLabel": "Role focus",
+    "responsibilitiesLabel": "Key responsibilities",
+    "showStack": "Show all stack",
+    "hideStack": "Show less",
+    "showResponsibilities": "Show more details",
+    "hideResponsibilities": "Show less",
+    "items": {
+      "lead": {
+        "role": "Full Stack Developer",
+        "summary": "Working on internal product systems used by operational teams, with responsibility across frontend implementation, backend integration, deployment flow, and maintainability.",
+        "b1": "Maintain and improve the Electronic Official Memo system, including UI workflows, document handling, approval flow, and reliability fixes for internal communication.",
+        "b2": "Develop an eContract B2B platform from scratch for contract lifecycle management, digital signing preparation, user roles, and business process automation.",
+        "b3": "Implement CI/CD pipelines with Docker and Jenkins across development, staging, and production so releases are repeatable and easier to monitor."
+      },
+      "senior": {
+        "role": "Full Stack Developer",
+        "summary": "Built and supported commerce-oriented platforms where product experience, API design, payment flow, and operational stability had to move together.",
+        "b1": "Developed and maintained Drizy and DrizyCraft features with Next.js and NestJS, covering storefront pages, dashboard flows, and API-backed product operations.",
+        "b2": "Optimized PostgreSQL queries, Redis caching strategy, and application flows to reduce avoidable latency and improve day-to-day performance.",
+        "b3": "Set up Docker-based deployment, reverse proxy configuration, environment management, and production support for smoother delivery."
+      },
+      "mid": {
+        "role": "Frontend Developer",
+        "summary": "Focused on frontend systems for transactional workflows, translating product requirements into clear interfaces connected to production APIs.",
+        "b1": "Built an internet service installation transaction interface for a major Indonesian provider, including forms, validation states, and order flow screens.",
+        "b2": "Created responsive components with React, Next.js, TypeScript, and Tailwind CSS while keeping patterns reusable across related screens.",
+        "b3": "Integrated REST APIs and improved search, filtering, ordering, and error states to make operator workflows easier to complete."
+      },
+      "junior": {
+        "role": "Full Stack Web Developer",
+        "b1": "Developed a company profile website using Laravel, Inertia.js, React, and MySQL.",
+        "b2": "Built an internal financial reporting system to improve access to company information.",
+        "b3": "Implemented structured data management and reporting features for internal operations."
+      },
+      "freelance": {
+        "role": "Full Stack Web Developer",
+        "summary": "Delivered end-to-end web products and operational systems across finance, HR, CMS, company profiles, and community management workflows.",
+        "b1": "Built SAKU, an AI personal finance app for automatic transaction recording through AI chat and receipt or transaction scanning.",
+        "b2": "Integrated Google OAuth, Turnstile, Google Analytics, Microsoft Clarity, Sentry, and production observability workflows.",
+        "b3": "Built backend and infrastructure flows with Redis, RabbitMQ, Docker, Kubernetes, Grafana, Loki, and Promtail.",
+        "b4": "Built an HRIS management system for BPD Abujapi Jabar covering employee data and HR operations.",
+        "b5": "Built Batik Merawit management features for product data, catalog workflows, and admin operations.",
+        "b6": "Built village websites, company profile sites, and admin CMS systems for publishing and managing organizational information."
+      }
+    }
+  },
+  "testimonials": {
+    "eyebrow": "Kind words",
+    "title": "What clients say",
+    "items": {}
+  },
+  "chatbot": {
+    "title": "Portfolio assistant",
+    "subtitle": "Ask about projects, experience, stack, or collaboration fit.",
+    "intro": "Hi, I’m here to help you quickly understand Gani’s work and technical focus.",
+    "prompt": "Try asking about selected projects or full-stack experience.",
+    "placeholder": "Ask a question…",
+    "open": "Open portfolio assistant",
+    "close": "Close chat",
+    "reset": "Reset conversation",
+    "send": "Send message",
+    "helper": "Ask about fit, projects, stack, experience, or how to collaborate.",
+    "thinking": "Thinking…",
+    "error": "Sorry, I could not reach the assistant right now. Please try again in a moment.",
+    "shortcuts": {
+      "projects": "Which projects are strongest?",
+      "strengths": "What are Gani's strengths?",
+      "stack": "Explain the tech stack",
+      "contact": "How can I contact Gani?"
+    }
+  },
+  "contact": {
+    "eyebrow": "Let's connect",
+    "title": "Have a product, system, or workflow that needs better software?",
+    "subtitle": "Share the context, goals, and constraints. I am open to full-time roles, selected projects, and focused product collaborations.",
+    "form": {
+      "name": "Your name",
+      "namePh": "Jane Doe",
+      "email": "Email address",
+      "emailPh": "jane@company.com",
+      "subject": "Subject",
+      "subjectPh": "Project inquiry",
+      "message": "Message",
+      "messagePh": "Tell me about your project…",
+      "send": "Send via WhatsApp",
+      "sent": "WhatsApp has opened. Please review and send the message.",
+      "error": "Please fill out all fields.",
+      "whatsappIntro": "Hi Gani, I am contacting you from your portfolio.",
+      "whatsappName": "Name",
+      "whatsappEmail": "Email",
+      "whatsappSubject": "Subject"
+    },
+    "info": {
+      "emailLabel": "Email",
+      "locationLabel": "Location",
+      "responseLabel": "Response time",
+      "response": "Within 24 hours"
+    }
+  },
+  "footer": {
+    "tagline": "Full-stack web development with clean interfaces, reliable systems, and practical delivery.",
+    "navigation": "Navigation",
+    "social": "Social",
+    "legal": "Legal",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "rights": "All rights reserved."
+  },
+  "seo": {
+    "home": {
+      "title": "Gani Ramadhan — Full Stack Engineer Portfolio",
+      "description": "Portfolio of Gani Ramadhan, a Bandung-based full-stack engineer building reliable web products with React, Next.js, Go, Laravel, PostgreSQL, Cassandra, Redis, Docker, and Kubernetes."
+    },
+    "about": {
+      "title": "About Gani Ramadhan — Full Stack Engineer",
+      "description": "Learn how Gani Ramadhan approaches product engineering, clean interfaces, backend systems, data stores, deployment workflows, and maintainable architecture."
+    },
+    "projects": {
+      "title": "Projects — Gani Ramadhan",
+      "description": "Selected projects by Gani Ramadhan, including HRIS, CMS, e-commerce, AI finance, company profile, and operational web systems built for real workflows."
+    },
+    "experience": {
+      "title": "Experience — Gani Ramadhan",
+      "description": "Professional full-stack experience across POSDIGI, Drizy Studio, Neuronworks Indonesia, and freelance product work covering frontend, backend, infrastructure, and observability."
+    },
+    "contact": {
+      "title": "Contact Gani Ramadhan",
+      "description": "Contact Gani Ramadhan for full-time engineering roles, selected projects, and product collaborations involving modern web systems and reliable delivery."
+    },
+    "notFound": {
+      "title": "Page Not Found",
+      "description": "The requested page could not be found on Gani Ramadhan's portfolio."
+    }
+  },
+  "notFound": {
+    "title": "Page not found",
+    "subtitle": "The page you're looking for doesn't exist or has been moved.",
+    "back": "Back to home",
+    "projects": "View projects",
+    "eyebrow": "404 / Missing route"
+  }
+}

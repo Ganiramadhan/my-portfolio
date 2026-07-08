@@ -1,0 +1,291 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "about": "概要",
+    "projects": "制作実績",
+    "experience": "経験",
+    "contact": "連絡"
+  },
+  "common": {
+    "language": "言語",
+    "theme": "テーマ",
+    "light": "ライト",
+    "dark": "ダーク",
+    "system": "システム",
+    "menu": "メニュー",
+    "close": "閉じる",
+    "viewAll": "すべて見る",
+    "viewProject": "プロジェクトを見る",
+    "viewSource": "ソースを見る",
+    "downloadCV": "CVをダウンロード",
+    "getInTouch": "相談する",
+    "available": "現在対応可能",
+    "scrollDown": "下へスクロール",
+    "readMore": "続きを読む",
+    "loading": "読み込み中…",
+    "present": "現在",
+    "all": "すべて",
+    "backToTop": "上に戻る",
+    "navigation": "メインナビゲーション",
+    "page": "ページ",
+    "featured": "注目",
+    "preferences": "表示設定"
+  },
+  "sidebar": {
+    "cta": "作りたいプロダクトや改善したいシステムがありますか？"
+  },
+  "hero": {
+    "greeting": "こんにちは、Gani Ramadhanです",
+    "role": "プロダクト志向のフルスタック開発者",
+    "title": "クリーンで信頼でき、成長に合わせて改善しやすいウェブプロダクトを作ります。",
+    "lead": "プロダクト要件を、使いやすく、保守しやすく、実際のチーム運用に耐えるフルスタックアプリケーションへ落とし込みます。",
+    "subtitle": "UIからバックエンド、デプロイまで、一つの体験として整ったシステムを作ります。",
+    "footerLine": "B2Bプラットフォーム、社内システム、CMS、EC、データ駆動アプリの開発経験。",
+    "ctaPrimary": "制作実績を見る",
+    "ctaSecondary": "相談する",
+    "trustedBy": "実務経験",
+    "dashboardLabel": "ポートフォリオ概要",
+    "dashboardSubtitle": "ビジネス文脈に寄り添い、堅実な設計で形にするデジタルプロダクト。",
+    "currently": "現在",
+    "workMode": "プロフェッショナルな協業に対応可能",
+    "connect": "オンラインでつながる",
+    "focus": {
+      "frontend": "フロントエンド設計",
+      "backend": "バックエンド & API",
+      "devops": "クラウド & DevOps"
+    },
+    "stats": {
+      "experience": "実務経験年数",
+      "projects": "納品プロジェクト",
+      "clients": "クライアント・協業",
+      "stars": "主要技術"
+    },
+    "capabilities": {
+      "product": "プロダクトエンジニアリング",
+      "frontend": "フロントエンド基盤",
+      "backend": "バックエンド & API",
+      "cloud": "クラウドデリバリー",
+      "performance": "パフォーマンス",
+      "architecture": "クリーンアーキテクチャ"
+    },
+    "summerGreeting": "こんにちは、Gani Ramadhanです",
+    "summerRole": "プロダクトエンジニア / フルスタック開発者",
+    "summerTitle": "見た目も動きも心地よいデジタルプロダクト。",
+    "summerLead": "明確で構造的、すぐに届けられるフルスタックUIを設計・開発します。",
+    "stripPrimary": "プロダクトエンジニアリング",
+    "stripSecondary": "クリーンなUI · 信頼できるシステム",
+    "scene": {
+      "system": "プロダクトシステム / 01",
+      "role": "フルスタックエンジニア",
+      "profile": "プロフィールプレビュー",
+      "production": "アイデアから本番へ",
+      "status": "システム状態",
+      "shipping": "役に立つソフトウェアを届ける。",
+      "design": "設計",
+      "build": "構築",
+      "scale": "拡張",
+      "stack": "主要スタック",
+      "architecture": "アーキテクチャ",
+      "uiLayer": "UIレイヤー",
+      "apiLayer": "APIレイヤー",
+      "dataLayer": "データレイヤー",
+      "deliveryReady": "本番運用を意識した構成"
+    }
+  },
+  "about": {
+    "eyebrow": "仕事の進め方",
+    "title": "プロダクトパートナーの視点で考え、エンジニアとして実装します。",
+    "p1": "「機能が動く」だけで終わらせず、誰が使い、何を解決し、どう成長に耐えるかを考えます。",
+    "p2": "フロントエンド、バックエンド、DB、連携、デプロイまで横断して、使う人にはシンプルで、内部は堅実なプロダクトを作ります。",
+    "skillsTitle": "主な技術",
+    "highlights": {
+      "h1": "機能ではなくプロダクト",
+      "h1d": "技術判断は、ユーザー体験と事業上の成果につながることを重視します。",
+      "h2": "速く、壊れにくく",
+      "h2d": "パフォーマンス、信頼性、安心して使えるリリースフローを優先します。",
+      "h3": "育てやすい設計",
+      "h3d": "読みやすく、テストしやすく、保守・拡張しやすいモジュール構成を大切にします。",
+      "h4": "明確な協業",
+      "h4d": "関係者の要望を具体的な判断と実装タスクへ落とし込みます。"
+    }
+  },
+  "projects": {
+    "eyebrow": "制作実績",
+    "title": "見せるだけではなく、実際に使われるプロダクト。",
+    "subtitle": "業務を整理し、運用を速くし、より良い体験を作るために開発したシステムです。",
+    "filters": {
+      "all": "すべて",
+      "web": "ウェブ",
+      "mobile": "モバイル",
+      "fullstack": "フルスタック",
+      "design": "デザイン"
+    },
+    "items": {
+      "saku": {
+        "title": "SAKU Finance",
+        "description": "自然言語での取引記録、レシートOCR、複数ウォレット、予算、目標、請求リマインダー、実用的な金融インサイトに対応したAI家計管理SaaSです。"
+      },
+      "mekarjaya": {
+        "title": "Mekarjaya 村プロフィールサイト",
+        "description": "村の情報公開、プロフィール、ニュース、お知らせ、ギャラリー、住民向けサービス、ログイン、CMSダッシュボードを備えた公式サイトです。"
+      },
+      "hrmis": {
+        "title": "BPD Abujapi HRMIS",
+        "description": "従業員データ、勤怠、給与、評価管理を扱う人事管理システム。リアルタイム処理を意識して構築しました。"
+      },
+      "drizy": {
+        "title": "DrizyCraft",
+        "description": "デジタルデザイン商品のECプラットフォーム。マイクロサービス、Stripe決済、Redisキャッシュ、gRPC連携を活用しています。"
+      },
+      "cms": {
+        "title": "Abujapi Admin CMS",
+        "description": "BPD Abujapiのプロフィールサイト向けCMS。メディア管理とロールベースアクセスを備えています。"
+      },
+      "profile": {
+        "title": "BPD Abujapi プロフィールサイト",
+        "description": "サービス、組織情報、CMS管理コンテンツを掲載するレスポンシブなコーポレートサイトです。"
+      },
+      "batik": {
+        "title": "Batik Merawit",
+        "description": "バティック商品のデータ管理システム。CRUD、データ出力、QRコード、商品紹介ページを実装しました。"
+      }
+    }
+  },
+  "experience": {
+    "eyebrow": "経歴",
+    "title": "プロダクトとエンジニアリングを横断した実務経験。",
+    "subtitle": "実際のユーザーに向けて、UI、バックエンド、デプロイの流れを構築してきた主な経験です。",
+    "focusLabel": "役割の焦点",
+    "responsibilitiesLabel": "主な担当領域",
+    "showStack": "すべての技術を見る",
+    "hideStack": "少なく表示",
+    "showResponsibilities": "詳細をさらに表示",
+    "hideResponsibilities": "少なく表示",
+    "items": {
+      "lead": {
+        "role": "フルスタック開発者",
+        "summary": "運用チームが使う社内プロダクトを担当し、フロントエンド、バックエンド連携、デプロイフロー、保守性まで横断して改善しています。",
+        "b1": "電子公文書メモシステムを保守・改善し、UIワークフロー、文書管理、承認フロー、信頼性改善を担当。",
+        "b2": "契約ライフサイクル管理、電子署名準備、ユーザーロール、業務自動化を含むB2B向けeContractをゼロから開発。",
+        "b3": "DockerとJenkinsで開発・ステージング・本番向けCI/CDを整備し、再現性のあるリリースを支援。"
+      },
+      "senior": {
+        "role": "フルスタック開発者",
+        "summary": "EC系プラットフォームを担当し、プロダクト体験、API設計、決済フロー、運用安定性をまとめて改善しました。",
+        "b1": "Next.jsとNestJSでDrizyおよびDrizyCraftの機能を開発・保守し、ストアフロント、ダッシュボード、商品運用を実装。",
+        "b2": "PostgreSQLクエリ、Redisキャッシュ、アプリケーションフローを最適化し、不要な遅延を削減。",
+        "b3": "Dockerベースのデプロイ、リバースプロキシ、環境管理、本番運用サポートを担当。"
+      },
+      "mid": {
+        "role": "フロントエンド開発者",
+        "summary": "取引系ワークフローのフロントエンドを担当し、プロダクト要件を本番APIとつながる分かりやすい画面へ落とし込みました。",
+        "b1": "大手インドネシア通信事業者向けに、インターネット設置申込UI、フォーム、検証状態、注文フロー画面を構築。",
+        "b2": "React、Next.js、TypeScript、Tailwind CSSで再利用しやすいレスポンシブコンポーネントを実装。",
+        "b3": "REST API連携、検索、フィルタ、注文、エラー状態を改善し、オペレーターの作業を進めやすくしました。"
+      },
+      "junior": {
+        "role": "フルスタックウェブ開発者",
+        "b1": "Laravel、Inertia.js、React、MySQLを用いて企業プロフィールサイトを開発。",
+        "b2": "社内情報へのアクセスを改善する財務レポートシステムを構築。",
+        "b3": "社内運用に向けたデータ管理とレポート機能を整備。"
+      },
+      "freelance": {
+        "role": "フルスタックウェブ開発者",
+        "summary": "金融、HR、CMS、会社紹介サイト、コミュニティ管理などの領域で、要件整理から実装・運用まで一貫して担当しています。",
+        "b1": "AIチャットとレシート・取引スキャンで自動記録できるAI個人向け家計管理アプリ「SAKU」を開発。",
+        "b2": "Google OAuth、Turnstile、Google Analytics、Microsoft Clarity、Sentry、本番監視フローを統合。",
+        "b3": "Redis、RabbitMQ、Docker、Kubernetes、Grafana、Loki、Promtailを用いたバックエンド・インフラ構成を実装。",
+        "b4": "BPD Abujapi Jabar向けに従業員データとHR運用を扱うHRIS管理システムを構築。",
+        "b5": "Batik Merawit向けに商品データ、カタログ、管理画面の運用機能を構築。",
+        "b6": "村のウェブサイト、会社紹介サイト、管理CMSを制作し、情報発信とコンテンツ管理を支援。"
+      }
+    }
+  },
+  "chatbot": {
+    "title": "ポートフォリオアシスタント",
+    "subtitle": "制作実績、経験、技術スタック、協業について質問できます。",
+    "intro": "Ganiの仕事と技術的な強みを素早く理解できるようにサポートします。",
+    "prompt": "制作実績やフルスタック経験について質問してみてください。",
+    "placeholder": "質問を入力…",
+    "open": "アシスタントを開く",
+    "close": "チャットを閉じる",
+    "reset": "会話をリセット",
+    "send": "メッセージを送信",
+    "helper": "適性、制作実績、技術スタック、経験、協業方法について質問できます。",
+    "thinking": "考えています…",
+    "error": "現在アシスタントに接続できません。少し時間をおいて再度お試しください。",
+    "shortcuts": {
+      "projects": "強みのある制作実績は？",
+      "strengths": "Ganiの強みは？",
+      "stack": "技術スタックを教えて",
+      "contact": "連絡方法は？"
+    }
+  },
+  "contact": {
+    "eyebrow": "お問い合わせ",
+    "title": "アイデア、改善したいシステム、作りたいプロダクトがありますか？",
+    "subtitle": "背景と課題を教えてください。フルタイム、限定的なプロジェクト、プロダクト協業に対応できます。",
+    "form": {
+      "name": "お名前",
+      "namePh": "山田 太郎",
+      "email": "メールアドレス",
+      "emailPh": "taro@company.com",
+      "subject": "件名",
+      "subjectPh": "プロジェクト相談",
+      "message": "メッセージ",
+      "messagePh": "プロジェクトについて教えてください…",
+      "send": "WhatsAppで送信",
+      "sent": "WhatsAppが開きました。内容を確認して送信してください。",
+      "error": "すべての項目を入力してください。",
+      "whatsappIntro": "こんにちは、ポートフォリオから連絡しています。",
+      "whatsappName": "お名前",
+      "whatsappEmail": "メール",
+      "whatsappSubject": "件名"
+    },
+    "info": {
+      "emailLabel": "メール",
+      "locationLabel": "所在地",
+      "responseLabel": "返信目安",
+      "response": "24時間以内"
+    }
+  },
+  "footer": {
+    "tagline": "クリーンなUI、信頼できるシステム、実用的なデリバリーを大切にしたフルスタック開発。",
+    "navigation": "ナビゲーション",
+    "social": "ソーシャル",
+    "rights": "無断転載を禁じます。"
+  },
+  "seo": {
+    "home": {
+      "title": "Gani Ramadhan — Full Stack Engineer Portfolio",
+      "description": "Gani Ramadhanのポートフォリオ。React、Next.js、Go、Laravel、PostgreSQL、Cassandra、Redis、Docker、Kubernetesを活用して信頼できるウェブプロダクトを開発します。"
+    },
+    "about": {
+      "title": "Gani Ramadhanについて — Full Stack Engineer",
+      "description": "プロダクトエンジニアリング、クリーンなUI、バックエンド、データストア、デプロイ、保守しやすい設計への取り組みを紹介します。"
+    },
+    "projects": {
+      "title": "制作実績 — Gani Ramadhan",
+      "description": "HRIS、CMS、EC、AI家計管理、会社紹介サイト、業務システムなど、実際のワークフロー向けに開発した制作実績です。"
+    },
+    "experience": {
+      "title": "経験 — Gani Ramadhan",
+      "description": "POSDIGI、Drizy Studio、Neuronworks Indonesia、フリーランスでのフロントエンド、バックエンド、インフラ、監視領域の実務経験。"
+    },
+    "contact": {
+      "title": "お問い合わせ — Gani Ramadhan",
+      "description": "フルタイム、限定的なプロジェクト、モダンなWebシステムやプロダクト開発の協業についてGani Ramadhanへ相談できます。"
+    },
+    "notFound": {
+      "title": "ページが見つかりません",
+      "description": "Gani Ramadhanのポートフォリオで指定されたページが見つかりません。"
+    }
+  },
+  "notFound": {
+    "title": "ページが見つかりません",
+    "subtitle": "お探しのページは存在しないか、移動されました。",
+    "back": "ホームへ戻る",
+    "projects": "制作実績を見る",
+    "eyebrow": "404 / 存在しないページ"
+  }
+}

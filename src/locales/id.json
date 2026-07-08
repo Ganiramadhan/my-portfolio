@@ -1,0 +1,299 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "about": "Tentang",
+    "projects": "Proyek",
+    "experience": "Pengalaman",
+    "contact": "Kontak"
+  },
+  "common": {
+    "language": "Bahasa",
+    "theme": "Tema",
+    "light": "Terang",
+    "dark": "Gelap",
+    "system": "Sistem",
+    "menu": "Menu",
+    "close": "Tutup",
+    "viewAll": "Lihat semua",
+    "viewProject": "Lihat proyek",
+    "viewSource": "Lihat kode",
+    "downloadCV": "Unduh CV",
+    "getInTouch": "Hubungi saya",
+    "available": "Tersedia untuk proyek",
+    "scrollDown": "Gulir ke bawah",
+    "readMore": "Selengkapnya",
+    "loading": "Memuat…",
+    "present": "Sekarang",
+    "all": "Semua",
+    "backToTop": "Kembali ke atas",
+    "navigation": "Navigasi utama",
+    "page": "Halaman",
+    "featured": "Unggulan",
+    "preferences": "Preferensi"
+  },
+  "sidebar": {
+    "cta": "Punya produk atau sistem yang ingin dibangun?"
+  },
+  "hero": {
+    "greeting": "Halo, saya Gani Ramadhan",
+    "role": "Full-stack engineer berorientasi produk",
+    "title": "Saya membangun produk web yang bersih, andal, dan mudah dikembangkan.",
+    "lead": "Saya menerjemahkan kebutuhan bisnis menjadi aplikasi full-stack yang mudah digunakan, stabil di sisi sistem, dan siap dikembangkan bersama kebutuhan tim.",
+    "subtitle": "Dari pengalaman pengguna hingga arsitektur backend dan deployment, saya membangun sistem sebagai satu kesatuan—bukan sekadar kumpulan fitur.",
+    "footerLine": "Berpengalaman membangun platform B2B, sistem internal, CMS, e-commerce, dan aplikasi berbasis data.",
+    "ctaPrimary": "Jelajahi karya",
+    "ctaSecondary": "Mulai percakapan",
+    "trustedBy": "Pengalaman profesional",
+    "dashboardLabel": "Ringkasan portfolio",
+    "dashboardSubtitle": "Produk digital yang dirancang dengan konteks bisnis, dibangun dengan engineering yang solid.",
+    "currently": "Saat ini",
+    "workMode": "Terbuka untuk kolaborasi profesional",
+    "connect": "Temukan saya",
+    "focus": {
+      "frontend": "Sistem frontend",
+      "backend": "Backend & API",
+      "devops": "Cloud & DevOps"
+    },
+    "stats": {
+      "experience": "Tahun pengalaman profesional",
+      "projects": "Proyek yang dikerjakan",
+      "clients": "Kolaborasi & klien",
+      "stars": "Teknologi utama"
+    },
+    "capabilities": {
+      "product": "Rekayasa Produk",
+      "frontend": "Sistem Frontend",
+      "backend": "Backend & API",
+      "cloud": "Delivery Cloud",
+      "performance": "Performa",
+      "architecture": "Arsitektur Bersih"
+    },
+    "summerGreeting": "Halo, saya Gani Ramadhan",
+    "summerRole": "Product engineer / full-stack developer",
+    "summerTitle": "Produk digital yang bekerja sebaik tampilannya.",
+    "summerLead": "Saya merancang dan membangun antarmuka full-stack yang jelas, terstruktur, dan siap dikirim.",
+    "stripPrimary": "Product engineering profesional",
+    "stripSecondary": "Antarmuka bersih · Sistem andal",
+    "scene": {
+      "system": "Sistem produk / 01",
+      "role": "Full-stack engineer",
+      "profile": "Preview profil",
+      "production": "Dari ide ke produksi",
+      "status": "Status sistem",
+      "shipping": "Mengirim software yang berguna.",
+      "design": "Desain",
+      "build": "Bangun",
+      "scale": "Skala",
+      "stack": "Stack utama",
+      "architecture": "Arsitektur",
+      "uiLayer": "UI layer",
+      "apiLayer": "API layer",
+      "dataLayer": "Data layer",
+      "deliveryReady": "Siap produksi"
+    }
+  },
+  "about": {
+    "eyebrow": "Cara saya bekerja",
+    "title": "Membangun dengan konteks produk dan fondasi engineering yang jelas.",
+    "p1": "Saya melihat setiap fitur dari alur pengguna, kebutuhan bisnis, dan dampaknya ke sistem. Tujuannya bukan hanya selesai, tetapi benar-benar membantu pekerjaan berjalan lebih baik.",
+    "p2": "Saya terbiasa bekerja di frontend, backend, database, integrasi, dan deployment dengan pendekatan yang sederhana, terukur, dan mudah dirawat.",
+    "skillsTitle": "Perangkat kerja utama",
+    "highlights": {
+      "h1": "Produk, bukan fitur",
+      "h1d": "Setiap keputusan teknis harus mendukung pengalaman pengguna dan tujuan bisnis.",
+      "h2": "Cepat tanpa rapuh",
+      "h2d": "Mengutamakan performa, reliability, dan alur rilis yang dapat dipercaya.",
+      "h3": "Siap untuk tumbuh",
+      "h3d": "Arsitektur modular yang mudah dibaca, diuji, dirawat, dan dikembangkan.",
+      "h4": "Kolaborasi yang jernih",
+      "h4d": "Menerjemahkan kebutuhan lintas tim menjadi keputusan dan eksekusi yang konkret."
+    }
+  },
+  "projects": {
+    "eyebrow": "Karya terpilih",
+    "title": "Proyek terpilih yang fokus pada alur kerja dan hasil nyata.",
+    "subtitle": "Beberapa platform, sistem internal, dan website yang dibangun untuk menyederhanakan proses, mempercepat pekerjaan, dan mendukung operasional.",
+    "filters": {
+      "all": "Semua",
+      "web": "Web",
+      "mobile": "Mobile",
+      "fullstack": "Full-stack",
+      "design": "Desain"
+    },
+    "items": {
+      "saku": {
+        "title": "SAKU Finance",
+        "description": "Platform SaaS keuangan pribadi berbasis AI untuk pencatatan transaksi dengan bahasa natural, scan struk lewat OCR, multi-wallet, budget, goals, pengingat tagihan, dan insight finansial yang bisa ditindaklanjuti."
+      },
+      "mekarjaya": {
+        "title": "Website Profil Desa Mekarjaya",
+        "description": "Website resmi Desa Mekarjaya untuk transparansi informasi publik, profil desa, berita, pengumuman, galeri, layanan masyarakat, login, dan dashboard CMS agar perangkat desa dapat mengelola konten secara mandiri."
+      },
+      "hrmis": {
+        "title": "HRMIS BPD Abujapi Jabar",
+        "description": "Sistem manajemen SDM untuk mengelola data pegawai, kehadiran, payroll, dan evaluasi kinerja dengan pemrosesan data real-time."
+      },
+      "drizy": {
+        "title": "DrizyCraft",
+        "description": "Platform e-commerce produk desain digital dengan arsitektur microservices, pembayaran Stripe, caching Redis, dan komunikasi gRPC."
+      },
+      "cms": {
+        "title": "Admin Abujapi CMS",
+        "description": "CMS untuk mengelola konten website profil BPD Abujapi Jabar, dilengkapi pengelolaan media dan akses berbasis peran."
+      },
+      "profile": {
+        "title": "Website Profil BPD Abujapi Jabar",
+        "description": "Website profil organisasi yang responsif untuk menampilkan layanan, informasi perusahaan, dan konten yang dikelola melalui CMS."
+      },
+      "batik": {
+        "title": "Batik Merawit",
+        "description": "Sistem pengelolaan data produk batik dengan operasi CRUD, ekspor data, QR code, dan halaman showcase produk."
+      }
+    }
+  },
+  "experience": {
+    "eyebrow": "Perjalanan",
+    "title": "Pengalaman profesional membangun produk yang digunakan tim nyata.",
+    "subtitle": "Peran yang mencakup pengembangan antarmuka, sistem backend, integrasi, optimasi, dan alur deployment.",
+    "focusLabel": "Fokus peran",
+    "responsibilitiesLabel": "Tanggung jawab utama",
+    "showStack": "Lihat semua stack",
+    "hideStack": "Tampilkan lebih sedikit",
+    "showResponsibilities": "Lihat detail lainnya",
+    "hideResponsibilities": "Tampilkan lebih sedikit",
+    "items": {
+      "lead": {
+        "role": "Full Stack Developer",
+        "summary": "Mengerjakan sistem produk internal yang digunakan tim operasional, dengan cakupan frontend, integrasi backend, alur deployment, dan maintainability.",
+        "b1": "Memelihara dan mengembangkan sistem Nota Dinas Elektronik, termasuk alur UI, pengelolaan dokumen, alur approval, dan perbaikan reliability.",
+        "b2": "Mengembangkan platform eContract B2B dari awal untuk lifecycle kontrak, persiapan tanda tangan digital, role pengguna, dan otomasi proses bisnis.",
+        "b3": "Menerapkan pipeline CI/CD dengan Docker dan Jenkins di development, staging, dan production agar rilis lebih repeatable dan mudah dipantau."
+      },
+      "senior": {
+        "role": "Full Stack Developer",
+        "summary": "Membangun dan mendukung platform commerce yang menuntut pengalaman produk, desain API, pembayaran, dan stabilitas operasional berjalan selaras.",
+        "b1": "Mengembangkan dan memelihara fitur Drizy serta DrizyCraft dengan Next.js dan NestJS, mencakup storefront, dashboard flow, dan operasi produk berbasis API.",
+        "b2": "Mengoptimalkan query PostgreSQL, strategi caching Redis, dan alur aplikasi untuk mengurangi latency yang tidak perlu.",
+        "b3": "Menyiapkan deployment berbasis Docker, konfigurasi reverse proxy, environment management, dan support production."
+      },
+      "mid": {
+        "role": "Frontend Developer",
+        "summary": "Berfokus pada sistem frontend untuk alur transaksional, menerjemahkan kebutuhan produk menjadi antarmuka yang jelas dan terhubung ke API produksi.",
+        "b1": "Mengembangkan antarmuka transaksi pemasangan layanan internet untuk provider besar Indonesia, termasuk form, validasi, dan layar order flow.",
+        "b2": "Membangun komponen responsif dengan React, Next.js, TypeScript, dan Tailwind CSS dengan pola yang reusable.",
+        "b3": "Mengintegrasikan REST API serta memperbaiki pencarian, filtering, ordering, dan error state agar alur kerja operator lebih mudah diselesaikan."
+      },
+      "junior": {
+        "role": "Full Stack Web Developer",
+        "b1": "Mengembangkan website profil perusahaan dengan Laravel, Inertia.js, React, dan MySQL.",
+        "b2": "Membangun sistem pelaporan keuangan internal untuk mempercepat akses informasi perusahaan.",
+        "b3": "Menyusun fitur pengelolaan data dan laporan agar proses operasional lebih terstruktur."
+      },
+      "freelance": {
+        "role": "Full Stack Web Developer",
+        "summary": "Menangani produk web dan sistem operasional end-to-end untuk kebutuhan keuangan, HR, CMS, profil perusahaan, dan sistem manajemen komunitas.",
+        "b1": "Membangun SAKU, aplikasi keuangan pribadi berbasis AI untuk pencatatan transaksi otomatis lewat chat AI dan scan struk/transaksi.",
+        "b2": "Mengintegrasikan OAuth Google, Turnstile, Google Analytics, Microsoft Clarity, Sentry, dan alur observability untuk kebutuhan production.",
+        "b3": "Mengerjakan backend dan infrastruktur dengan Redis, RabbitMQ, Docker, Kubernetes, Grafana, Loki, dan Promtail.",
+        "b4": "Membangun HRIS management untuk BPD Abujapi Jabar, mencakup modul data pegawai dan operasional HR.",
+        "b5": "Membangun sistem manajemen Batik Merawit untuk pengelolaan data produk, katalog, dan kebutuhan admin.",
+        "b6": "Mengerjakan website desa, company profile, dan admin CMS untuk kebutuhan publikasi konten serta pengelolaan informasi."
+      }
+    }
+  },
+  "testimonials": {
+    "eyebrow": "Testimoni",
+    "title": "Apa kata klien",
+    "items": {}
+  },
+  "chatbot": {
+    "title": "Asisten portfolio",
+    "subtitle": "Tanyakan proyek, pengalaman, stack, atau kecocokan kolaborasi.",
+    "intro": "Halo, saya bantu Anda memahami karya dan fokus teknis Gani dengan cepat.",
+    "prompt": "Coba tanyakan proyek terpilih atau pengalaman full-stack.",
+    "placeholder": "Tulis pertanyaan…",
+    "open": "Buka asisten portfolio",
+    "close": "Tutup chat",
+    "reset": "Reset percakapan",
+    "send": "Kirim pesan",
+    "helper": "Tanyakan kecocokan role, proyek, stack, pengalaman, atau cara kolaborasi.",
+    "thinking": "Sedang memikirkan jawaban…",
+    "error": "Maaf, asisten belum bisa dihubungi sekarang. Coba lagi sebentar lagi.",
+    "shortcuts": {
+      "projects": "Project paling kuat apa?",
+      "strengths": "Apa kelebihan Gani?",
+      "stack": "Jelaskan tech stack-nya",
+      "contact": "Bagaimana cara kontak Gani?"
+    }
+  },
+  "contact": {
+    "eyebrow": "Mari terhubung",
+    "title": "Punya produk, sistem, atau alur kerja yang perlu dibuat lebih baik?",
+    "subtitle": "Ceritakan konteks, tujuan, dan batasannya. Saya terbuka untuk peluang full-time, proyek terpilih, dan kolaborasi produk yang jelas.",
+    "form": {
+      "name": "Nama Anda",
+      "namePh": "Budi Santoso",
+      "email": "Alamat email",
+      "emailPh": "budi@perusahaan.com",
+      "subject": "Subjek",
+      "subjectPh": "Pertanyaan proyek",
+      "message": "Pesan",
+      "messagePh": "Ceritakan tentang proyek Anda…",
+      "send": "Kirim via WhatsApp",
+      "sent": "WhatsApp telah dibuka. Silakan periksa dan kirim pesannya.",
+      "error": "Mohon isi semua kolom.",
+      "whatsappIntro": "Halo Gani, saya menghubungi dari portfolio.",
+      "whatsappName": "Nama",
+      "whatsappEmail": "Email",
+      "whatsappSubject": "Subjek"
+    },
+    "info": {
+      "emailLabel": "Email",
+      "locationLabel": "Lokasi",
+      "responseLabel": "Waktu respons",
+      "response": "Dalam 24 jam"
+    }
+  },
+  "footer": {
+    "tagline": "Full-stack web development dengan antarmuka bersih, sistem andal, dan delivery yang praktis.",
+    "navigation": "Navigasi",
+    "social": "Sosial",
+    "legal": "Legal",
+    "privacy": "Privasi",
+    "terms": "Ketentuan",
+    "rights": "Seluruh hak dilindungi."
+  },
+  "seo": {
+    "home": {
+      "title": "Gani Ramadhan — Portfolio Full Stack Engineer",
+      "description": "Portfolio Gani Ramadhan, full-stack engineer berbasis di Bandung yang membangun produk web andal dengan React, Next.js, Go, Laravel, PostgreSQL, Cassandra, Redis, Docker, dan Kubernetes."
+    },
+    "about": {
+      "title": "Tentang Gani Ramadhan — Full Stack Engineer",
+      "description": "Pelajari pendekatan Gani Ramadhan dalam product engineering, antarmuka bersih, sistem backend, data store, alur deployment, dan arsitektur yang mudah dirawat."
+    },
+    "projects": {
+      "title": "Proyek — Gani Ramadhan",
+      "description": "Proyek terpilih Gani Ramadhan, termasuk HRIS, CMS, e-commerce, AI finance, profil perusahaan, dan sistem operasional web untuk alur kerja nyata."
+    },
+    "experience": {
+      "title": "Pengalaman — Gani Ramadhan",
+      "description": "Pengalaman full-stack profesional di POSDIGI, Drizy Studio, Neuronworks Indonesia, dan freelance product work mencakup frontend, backend, infrastruktur, dan observability."
+    },
+    "contact": {
+      "title": "Kontak Gani Ramadhan",
+      "description": "Hubungi Gani Ramadhan untuk peluang full-time engineering, proyek terpilih, dan kolaborasi produk dengan sistem web modern dan delivery yang andal."
+    },
+    "notFound": {
+      "title": "Halaman Tidak Ditemukan",
+      "description": "Halaman yang diminta tidak ditemukan di portfolio Gani Ramadhan."
+    }
+  },
+  "notFound": {
+    "title": "Halaman tidak ditemukan",
+    "subtitle": "Halaman yang Anda cari tidak ada atau telah dipindahkan.",
+    "back": "Kembali ke beranda",
+    "projects": "Lihat proyek",
+    "eyebrow": "404 / Rute tidak tersedia"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Gani Ramadhan — Portfolio",
+  "short_name": "Gani.dev",
+  "description": "Full Stack Engineer portfolio for reliable web products, product engineering, and modern backend systems.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b1020",
+  "theme_color": "#2563eb",
+  "icons": [
+    { "src": "/favicon-64.webp", "sizes": "64x64", "type": "image/webp", "purpose": "any" },
+    { "src": "/favicon.webp", "sizes": "256x256", "type": "image/webp", "purpose": "any maskable" }
+  ]
+}

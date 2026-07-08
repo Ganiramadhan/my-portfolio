@@ -1,0 +1,33 @@
+# Gani Ramadhan
+
+> Full Stack Engineer based in Bandung, West Java, Indonesia.
+
+Canonical site: https://ganiramadhan.site
+
+Primary pages:
+- Portfolio home: https://ganiramadhan.site/
+- Projects: https://ganiramadhan.site/projects
+- Experience: https://ganiramadhan.site/experience
+- About: https://ganiramadhan.site/about
+- Contact: https://ganiramadhan.site/contact
+
+Profile:
+Gani Ramadhan is a Bandung-based full stack engineer focused on reliable web products, product engineering, clean interfaces, backend systems, data stores, infrastructure, and observability.
+
+Core technologies:
+React, Next.js, TypeScript, Go, Laravel, PostgreSQL, Cassandra, Redis, RabbitMQ, Docker, Kubernetes, Jenkins, Grafana, Loki, Promtail.
+
+Location and service area:
+Bandung, West Java, Indonesia. Available for Indonesian and remote software engineering work.
+
+Representative projects:
+- SAKU Finance: AI-powered personal finance SaaS with natural-language transaction logging, OCR, wallets, budgets, goals, reminders, and finance insights.
+- Mekarjaya Village: village profile and operational web system.
+- HRMIS Abujapi: HR management system for employee data, attendance, payroll, and performance workflows.
+- Abujapi CMS and company profile: content management and profile systems.
+- Batik Merawit: commerce and product catalog web platform.
+
+Contact:
+- Email: ganiramadhan35@gmail.com
+- LinkedIn: https://www.linkedin.com/in/ganiramadhan35/
+- GitHub: https://github.com/Ganiramadhan
