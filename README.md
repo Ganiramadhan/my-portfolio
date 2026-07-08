@@ -55,16 +55,18 @@ pnpm build
 The production image runs `server.js`, serving the built Vite app and `/api/chat`.
 
 ```bash
-docker build -t portfolio-app:latest .
+docker build -t my-portfolio:latest .
 docker run -d \
-  --name portfolio-app \
+  --name my-portfolio \
   --restart unless-stopped \
   --env-file .env \
+  --network ganipedia \
+  --network-alias my-portfolio \
   --expose 3302 \
-  portfolio-app:latest
+  my-portfolio:latest
 ```
 
-When running behind a reverse proxy, attach the container to the proxy's Docker network and route traffic to the container alias and internal port. Host port publishing is not required when the reverse proxy shares the same Docker network.
+When running behind a reverse proxy, attach the container to the proxy's Docker network and route traffic to `http://my-portfolio:3302`. Host port publishing is not required when the reverse proxy shares the same Docker network.
 
 ## CI/CD
 

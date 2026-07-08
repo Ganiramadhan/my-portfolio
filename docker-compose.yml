@@ -1,11 +1,9 @@
-version: '3.8'
-
 services:
   portfolio:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: portfolio-app
+    container_name: my-portfolio
     expose:
       - "3302"
     restart: unless-stopped
@@ -15,10 +13,16 @@ services:
       - NODE_ENV=production
       - PORT=3302
       - HOST=0.0.0.0
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://127.0.0.1:3302/healthz >/dev/null 2>&1 || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
     networks:
       ganipedia:
         aliases:
-          - portfolio-app
+          - my-portfolio
 
 networks:
   ganipedia:

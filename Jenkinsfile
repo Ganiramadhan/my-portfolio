@@ -77,6 +77,52 @@ Alias       : ${NETWORK_ALIAS}:${CONTAINER_PORT}
             }
         }
 
+        stage('Validate Configuration') {
+            when {
+                branch 'main'
+            }
+            steps {
+                withCredentials([
+                    string(credentialsId: "${REGISTRY_HOST_CREDENTIALS_ID}", variable: 'REGISTRY'),
+                    string(credentialsId: "${REGISTRY_USERNAME_CREDENTIALS_ID}", variable: 'DOCKER_USER'),
+                    string(credentialsId: "${REGISTRY_PASSWORD_CREDENTIALS_ID}", variable: 'DOCKER_PASS'),
+                    string(credentialsId: "${DEPLOY_HOST_CREDENTIALS_ID}", variable: 'DEPLOY_HOST'),
+                    string(credentialsId: "${DEPLOY_SSH_PORT_CREDENTIALS_ID}", variable: 'DEPLOY_SSH_PORT'),
+                    string(credentialsId: "${DEPLOY_SSH_USER_CREDENTIALS_ID}", variable: 'DEPLOY_SSH_USER'),
+                    string(credentialsId: "${DEPLOY_SSH_PASSWORD_CREDENTIALS_ID}", variable: 'SSH_PASS'),
+                    string(credentialsId: "${CLAUDE_API_KEY_CREDENTIALS_ID}", variable: 'CLAUDE_API_KEY'),
+                    string(credentialsId: "${CLAUDE_MODEL_CREDENTIALS_ID}", variable: 'CLAUDE_MODEL')
+                ]) {
+                    sh '''
+                        set -euo pipefail
+                        set +x
+
+                        for name in REGISTRY DOCKER_USER DOCKER_PASS DEPLOY_HOST DEPLOY_SSH_PORT DEPLOY_SSH_USER SSH_PASS CLAUDE_API_KEY CLAUDE_MODEL; do
+                            eval "value=\\${$name:-}"
+                            if [ -z "$value" ]; then
+                                echo "ERROR: required Jenkins credential value $name is empty." >&2
+                                exit 1
+                            fi
+                        done
+
+                        case "$REGISTRY" in
+                            http://*|https://*)
+                                echo "ERROR: docker-registry-host must not include http:// or https://." >&2
+                                exit 1
+                                ;;
+                        esac
+
+                        case "$DEPLOY_SSH_PORT" in
+                            *[!0-9]*|'')
+                                echo "ERROR: SSH port credential must be numeric." >&2
+                                exit 1
+                                ;;
+                        esac
+                    '''
+                }
+            }
+        }
+
         stage('Build Image') {
             when {
                 branch 'main'
@@ -409,7 +455,6 @@ REMOTE_VERIFY
     post {
         always {
             sh '''
-                docker logout >/dev/null 2>&1 || true
                 docker image prune -f >/dev/null 2>&1 || true
             '''
         }
