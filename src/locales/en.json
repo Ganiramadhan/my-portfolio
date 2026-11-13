@@ -133,6 +133,10 @@
         "title": "BPD Abujapi HRMIS",
         "description": "An HR management system for employee data, attendance, payroll, and performance evaluation with real-time processing."
       },
+      "sakuHrmis": {
+        "title": "SAKU – Employee Administration System",
+        "description": "An all-in-one employee administration platform for security guards and staff at BPD Abujapi Jabar: attendance, patrol, shift scheduling, leave requests, payslips, and credit applications in one mobile app, backed by a web portal and a scalable backend."
+      },
       "drizy": {
         "title": "DrizyCraft",
         "description": "A digital design e-commerce platform with microservices, Stripe payments, Redis caching, and gRPC communication."

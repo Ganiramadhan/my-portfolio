@@ -78,6 +78,21 @@ export const PROJECTS: Project[] = [
     featured: true,
   },
   {
+    id: 'p2b',
+    slug: 'saku-hrmis-mobile',
+    titleKey: 'projects.items.sakuHrmis.title',
+    descriptionKey: 'projects.items.sakuHrmis.description',
+    image: '/images/projects/saku-hrmis-1.png',
+    images: [
+      '/images/projects/saku-hrmis-1.png',
+    ],
+    tags: ['Go', 'Next.js', 'Flutter', 'TypeScript', 'PostgreSQL', 'Kubernetes', 'RabbitMQ', 'Redis'],
+    category: 'fullstack',
+    demoUrl: 'https://saku.bpdabujapijabar.or.id/',
+    year: 2025,
+    featured: true,
+  },
+  {
     id: 'p3',
     slug: 'abujapi-cms',
     titleKey: 'projects.items.cms.title',

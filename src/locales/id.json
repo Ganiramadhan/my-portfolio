@@ -133,6 +133,10 @@
         "title": "HRMIS BPD Abujapi Jabar",
         "description": "Sistem manajemen SDM untuk mengelola data pegawai, kehadiran, payroll, dan evaluasi kinerja dengan pemrosesan data real-time."
       },
+      "sakuHrmis": {
+        "title": "SAKU – Sistem Administrasi Kepegawaian",
+        "description": "Platform administrasi kepegawaian untuk satpam dan karyawan BPD Abujapi Jabar: absensi, patroli, jadwal shift, pengajuan izin, slip gaji, dan pengajuan kredit dalam satu aplikasi mobile, didukung portal web dan backend yang scalable."
+      },
       "drizy": {
         "title": "DrizyCraft",
         "description": "Platform e-commerce produk desain digital dengan arsitektur microservices, pembayaran Stripe, caching Redis, dan komunikasi gRPC."
