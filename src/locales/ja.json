@@ -133,6 +133,10 @@
         "title": "BPD Abujapi HRMIS",
         "description": "従業員データ、勤怠、給与、評価管理を扱う人事管理システム。リアルタイム処理を意識して構築しました。"
       },
+      "sakuHrmis": {
+        "title": "SAKU – 従業員管理システム",
+        "description": "BPD Abujapi Jabarの警備員・従業員向けオールインワン勤怠管理プラットフォーム。勤怠、巡回、シフト管理、休暇申請、給与明細、融資申請をひとつのモバイルアプリで提供し、Webポータルとスケーラブルなバックエンドで支えています。"
+      },
       "drizy": {
         "title": "DrizyCraft",
         "description": "デジタルデザイン商品のECプラットフォーム。マイクロサービス、Stripe決済、Redisキャッシュ、gRPC連携を活用しています。"
